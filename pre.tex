@@ -1,0 +1,214 @@
+% Capa
+\begin{titlepage}
+% Se quiser uma figura de fundo na capa ative o pacote wallpaper
+% e descomente a linha abaixo.
+% \ThisCenterWallPaper{0.8}{nomedafigura}
+
+\begin{center}
+{\LARGE Luis Felipe Sant'Ana}
+\par
+\vspace{200pt}
+{\Huge  Balanceamento de Carga Dinâmico em Aglomerados de GPUs }
+\par
+\vfill
+\textbf{{\large Santo André}\\
+{\large 2014}}
+\end{center}
+\end{titlepage}
+
+% A partir daqui páginas sem cabeçalho
+\pagestyle{empty}
+% Faz com que a página seguinte sempre seja ímpar (insere pg em branco)
+\cleardoublepage
+
+% Números das páginas em algarismos romanos
+\pagenumbering{roman}
+
+% Página de Rosto
+\begin{center}
+{\LARGE Luis Felipe Sant'Ana}
+\par
+\vspace{200pt}
+{\Huge  Balanceamento de Carga Dinâmico em Aglomerados de GPUs}
+\end{center}
+\par
+\vspace{90pt}
+\hspace*{175pt}\parbox{7.8cm}{{\large Dissertação Apresentada ao Centro de Matemática, Computação e 
+Cognição da Universidade Federal do ABC, para a obtenção do Título de Mestre em Ciência da Computação.}}
+
+\par
+\vspace{1em}
+\hspace*{175pt}\parbox{7.6cm}{{\large Orientador: Dr. Raphael Y. de Camargo}}
+
+\par
+\vfill
+\begin{center}
+\textbf{{\large Santo André}\\
+{\large 2014}}
+\end{center}
+
+\newpage
+
+% Ficha Catalográfica
+\hspace{8em}\fbox{\begin{minipage}{11cm}
+Sant Ana, Luis F.
+
+\hspace{2em} Balanceamento de Carga Dinâmico em Aglomerados de GPUs
+
+\hspace{2em}10 páginas
+
+\hspace{2em}Dissertação de Mestrado - Centro de Matemática, Computação e Cognição da Universidade Federal do ABC.
+
+\begin{enumerate}
+\item Programação Paralela 
+\item Balanceamento de Carga
+\item GPGPU
+\end{enumerate}
+I. Universidade Federal do ABC. Centro de Matemática, Computação e Cognição.
+
+\end{minipage}}
+\par
+\vspace{2em}
+\begin{center}
+{\LARGE\textbf{Comissão Julgadora:}}
+
+\par
+\vspace{8em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l}
+\rule{16em}{1px} 	& \rule{15em}{1px} \\
+Prof. Dr. 		& Prof. Dr. \\
+XX		&  YY
+\end{tabular*}
+
+\par
+\vspace{10em}
+\parbox{16em}{\rule{16em}{1px} \\
+Prof. Dr. \\
+Raphael Yokoingawa de Camargo}
+\end{center}
+
+%%\newpage
+
+% Dedicatória
+% Posição do texto na página
+%%\vspace*{0.75\textheight}
+%%\begin{flushright}
+%%  \emph{Dedico este trabalho a todos aqueles que me ajudaram na busca do conhecimento.}
+%%\end{flushright}
+
+%\newpage
+
+% Epígrafe
+%%\vspace*{0.4\textheight}
+%%\noindent{\LARGE\textbf{Bonito}}
+% Tudo que você escreve no verbatim é renderizado literalmente (comandos não são interpretados e os espaços são respeitados)
+%%\begin{verbatim}
+%%O que é bonito?
+%%É o que persegue o infinito;
+%%Mas eu não sou
+%%Eu não sou, não…
+%%Eu gosto é do inacabado,
+%%O imperfeito, o estragado, o que dançou
+%O que dançou…
+%Eu quero mais erosão
+%Menos granito.
+%Namorar o zero e o não,
+%Escrever tudo o que desprezo
+%E desprezar tudo o que acredito.
+%Eu não quero a gravação, não,
+%Eu quero o grito.
+%Que a gente vai, a gente vai
+%E fica a obra,
+%Mas eu persigo o que falta
+%Não o que sobra.
+%%%%Eu quero tudo que dá e passa.
+%Quero tudo que se despe,
+%Se despede, e despedaça.
+%O que é bonito…
+%%\end{verbatim}
+%%\begin{flushright}
+%%Lenine e Bráulio Tavares
+%%\end{flushright}
+
+\newpage
+
+% Agradecimentos
+
+% Espaçamento duplo
+%\begin{doublespacing}
+
+%\noindent{\LARGE\textbf{Agradecimentos}}
+
+%Agradeço ao meu orientador, amigos de curso e todos aqueles que contribuiram de alguma %forma à minha formação. 
+
+%\end{doublespacing}
+%\newpage
+
+\vspace*{10pt}
+% Abstract
+\begin{center}
+  \emph{\begin{large}Resumo\end{large}}\label{resumo}
+\vspace{2pt}
+\end{center}
+% Pode parecer estranho, mas colocar uma frase por linha ajuda a organizar e reescrever o texto quando necessário.
+% Além disso, ajuda se você estiver comparando versões diferentes do mesmo texto.
+% Para separar parágrafos utilize uma linha em branco.
+\noindent
+\begin{doublespacing}
+O uso de GPUs em aplicações científicas está cada vez mais difundido, com
+aplicações em áreas como física, química e bioinformática. Mesmo com o ganho de
+desempenho obtido com o uso de uma GPU, algumas aplicações ainda requerem
+elevados tempos de execução. Para esses problemas a utilização de
+\textit{clusters} de GPUs surgem como uma possível solução. Mas é comum termos
+máquinas contendo GPUs com variadas capacidades e de diferentes gerações,
+resultando em \textit{clusters} heterogêneos. Neste cenário, um dos pontos fundamentais é
+o balanceamento de carga entre as diferentes GPUs, com o objetivo de maximizar a
+utilização das GPUs e/ou minimizar o tempo de execução da aplicação. Este
+projeto tem como objetivo o desenvolvimento de um algoritmo de balanceamento de
+cargas dinâmico entre GPUs heterogêneas. Implementaremos o algoritmo em uma
+biblioteca existente que facilita o desenvolvimento de aplicações para
+aglomerados de GPUs e compararemos seu desempenho com outros algoritmos de
+balanceamento de carga.
+\end{doublespacing}
+\par
+\vspace{1em}
+\noindent\textbf{Palavras-chave:} Programação Paralela, Balanceamento de Carga, GPGPU.
+\newpage
+
+% Criei a página do abstract na mão, por isso tem bem mais comandos do que o resumo acima, apesar de serem idênticas.
+\vspace*{10pt}
+% Abstract
+\begin{center}
+  \emph{\begin{large}Abstract\end{large}}\label{abstract}
+\vspace{2pt}
+\end{center}
+\begin{doublespacing}
+% Selecionar a linguagem acerta os padrões de hifenação diferentes entre inglês e português.
+
+\selectlanguage{english}
+\noindent
+The use of GPUs for scientific applications is becoming more widespread, with applications in fields such as physics, chemistry and bioinformatics. Even with the performance gain obtained by using a GPU, some applications require even higher execution times. For these problems the use of GPU clusters arise as a possible solution. But it is common to machines containing GPUs with different capabilities and different generations, resulting in heterogeneous clusters. In this scenario, one of the key points is the load balancing between different GPUs, with the goal of maximizing the use of GPUs and / or minimize the execution time of the application. This project aims to develop an algorithm for dynamic load balancing among heterogeneous GPUs. We implement the algorithm in an existing library that facilitates the development of applications for clusters of GPUs and compare their performance with other load balancing algorithms.
+\end{doublespacing}
+\par
+\vspace{1em}
+\noindent\textbf{Keywords:} Parallel Programming, Load Balancing, CUDA, GPGPU. 
+
+% Voltando ao português...
+
+\selectlanguage{brazilian|
+
+%\newpage
+
+% Lista de figuras
+%\listoffigures
+
+% Lista de tabelas
+%\listoftables
+
+% Abreviações
+% Para imprimir as abreviações siga as instruções em 
+% http://code.google.com/p/mestre-em-latex/wiki/ListaDeAbreviaturas
+\printnomenclature
+
+% Índice
+\tableofcontents
