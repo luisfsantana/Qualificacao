@@ -11,7 +11,9 @@
 \usepackage{cmap}
 
 % Codificação da fonte
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
+\usepackage{times}
+
 
 % Essencial para colocar funções e outros símbolos matemáticos
 \usepackage{amsmath,amssymb,amsfonts,textcomp}
@@ -81,6 +83,11 @@
 \usepackage[notintoc,portuguese]{nomencl}
 \makenomenclature
 
+
+
+\usepackage{cite}
+
+
 %% Notas de rodapé
 % Lidar com notas de rodapé em diversas situações
 \usepackage{footnote}
@@ -118,8 +125,6 @@
 % Formatar as unidades com as distâncias corretas
 \usepackage[tight]{units}
 
-%citacoes
-%\usepackage[num, overcite]{abntcite}
 
 %% Cabeçalho e rodapé
 % Controlar os cabeçalhos e rodapés
@@ -161,6 +166,10 @@
 % Título do projeto
 \newcommand{\titulo}{Título original do projeto}
 \newcommand{\nomedoaluno}{Nome Completo do Aluno}
+
+
+\renewcommand\citeleft{(}
+\renewcommand\citeright{)}
 
 %% Pacotes não implementados
 % Para não sobrar espaços em branco estranhos

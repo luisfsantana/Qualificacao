@@ -19,7 +19,7 @@
 \contentsline {subsubsection}{The Total Tardiness - Dynamic Programming}{7}{section*.9}
 \contentsline {subsubsection}{The Total Tardiness - An Approximation Scheme}{7}{section*.10}
 \contentsline {subsubsection}{The Total Weighted Tardiness (problema fortemente NP-Dif\IeC {\'\i }cil)}{7}{section*.11}
-\contentsline {subsubsection}{The Total Earliness and Tardiness}{8}{section*.12}
+\contentsline {subsubsection}{The Total Earliness and Tardiness}{7}{section*.12}
 \contentsline {subsubsection}{Primary and Secondary Objectives}{8}{section*.13}
 \contentsline {subsubsection}{Multiple Objectives: A Parametric Analysis}{8}{section*.14}
 \contentsline {subsubsection}{Job Families with Setup Times}{8}{section*.15}
