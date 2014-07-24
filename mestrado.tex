@@ -26,24 +26,18 @@
 
 % Pacotes e comandos customizados
 \include{meta}
-\usepackage{times}
-%\usepackage[brazil]{babel}
-%\usepackage{listings}
-\usepackage{graphicx}
-\usepackage{epstopdf}
-
-\usepackage[utf8]{inputenc}
-%\usepackage{color}
-%\usepackage{colortbl}
 
 % Início do texto
 \begin{document}
 
 \include{pre}   % Capa, prefácio e afins
-%\include{cap1}	% Capítulo 1: Introdução
-%\include{cap2}	% Capítulo 2: ... Experimentos
-%\include{cap3} % Capitulo 4: Explicação da Implementação da MLP e resultados preliminares
-%\include{final}	% Capítulo 3: Considerações Finais
+\include{Introducao}	% Capítulo 1: Introdução
+\include{Escalonamento}	% Capítulo 2: ... Escalonamento
+\include{TrabalhosRelacionados}            % Capitulo 3: Trabalhos Relacionados
+\include{Algoritmo}	% Capítulo 4: Considerações Finais
+\include{Implementacao}%capitulo 5
+\include{Resultados} %Capitulo 6
+\include{PlanoTrabalho} %Capitulo 7
 
 % Formato da bibliografia
 \bibliographystyle{apalike}
@@ -51,7 +45,7 @@
 \bibliography{bibQualificacacao}
 
 % Apêndice(s)
-%\include{apendice}
+%\include{apendice}c
 
 % Fim do texto
 \end{document}

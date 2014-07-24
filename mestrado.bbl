@@ -1,0 +1,177 @@
+\begin{thebibliography}{}
+
+\bibitem[Acosta et~al., 2012]{acosta}
+Acosta, A., Blanco, V., and Almeida, F. (2012).
+\newblock Towards the dynamic load balancing on heterogeneous multi-gpu
+  systems.
+\newblock In {\em Parallel and Distributed Processing with Applications (ISPA),
+  2012 IEEE 10th International Symposium on}, pages 646--653.
+
+\bibitem[Augonnet et~al., 2010]{starpu}
+Augonnet, C., Thibault, S., and Namyst, R. (2010).
+\newblock Starpu: a runtime system for scheduling tasks over accelerator-based
+  multicore machines.
+\newblock Rapport de recherche RR-7240, Laboratoire Bordelais de Recherche en
+  Informatique - LaBRI, RUNTIME - INRIA Bordeaux - Sud-Ouest,
+  http://hal.inria.fr/inria-00467677/PDF/RR-7240.pdf.
+
+\bibitem[Ayguade et~al., 2009]{StarSs}
+Ayguade, E., Badia, R., Cabrera, D., Duran, A., Gonzalez, M., Igual, F.,
+  Jimenez, D., Labarta, J., Martorell, X., Mayo, R., Perez, J., and
+  Quintana-Ort{\'\i}, E. (2009).
+\newblock A proposal to extend the openmp tasking model for heterogeneous
+  architectures.
+\newblock In M{\"u}ller, M., Supinski, B., and Chapman, B., editors, {\em
+  Evolving OpenMP in an Age of Extreme Parallelism}, volume 5568 of {\em
+  Lecture Notes in Computer Science}, pages 154--167. Springer Berlin
+  Heidelberg.
+
+\bibitem[Borelli et~al., 2012]{rozante}
+Borelli, F., Camargo, R., Martins, D., Stransky, B., and Rozante, L. (2012).
+\newblock Accelerating gene regulatory networks inference through gpu/cuda
+  programming.
+\newblock In {\em Computational Advances in Bio and Medical Sciences (ICCABS),
+  2012 IEEE 2nd International Conference on}, pages 1--6.
+
+\bibitem[Camargo et~al., 2011]{visualizacao}
+Camargo, E., Kostin, S., and Pinto, R. (2011).
+\newblock A tool for scientific visualization based on particle tracing
+  algorithm on graphics processing units.
+\newblock In {\em Sistemas Computacionais (WSCAD-SSC), 2011 Simposio em}, pages
+  10--10.
+
+\bibitem[Cederman and Tsigas, 2008]{graphics}
+Cederman, D. and Tsigas, P. (2008).
+\newblock On dynamic load balancing on graphics processors.
+\newblock In {\em Proceedings of the 23rd ACM SIGGRAPH/EUROGRAPHICS symposium
+  on Graphics hardware}, GH '08, pages 57--64, Aire-la-Ville, Switzerland,
+  Switzerland. Eurographics Association.
+
+\bibitem[Chen et~al., 2010]{dynamicLoad}
+Chen, L., Villa, O., Krishnamoorthy, S., and Gao, G. (2010).
+\newblock Dynamic load balancing on single- and multi-gpu systems.
+\newblock In {\em Parallel Distributed Processing (IPDPS), 2010 IEEE
+  International Symposium on}, pages 1--12.
+
+\bibitem[{CUDA Development Core Team}, 2012]{cuda}
+{CUDA Development Core Team} (2012).
+\newblock {CUDA 4.1 Programming Guide}.
+
+\bibitem[de~Camargo, 2011]{siang}
+de~Camargo, R. (2011).
+\newblock A multi-gpu algorithm for communication in neuronal network
+  simulations.
+\newblock In {\em High Performance Computing (HiPC), 2011 18th International
+  Conference on}, pages 1--10.
+
+\bibitem[de~Camargo, 2012]{raphael}
+de~Camargo, R. (2012).
+\newblock A load distribution algorithm based on profiling for heterogeneous
+  gpu clusters.
+\newblock In {\em Applications for Multi-Core Architectures (WAMCA), 2012 Third
+  Workshop on}, pages 1--6.
+
+\bibitem[Diamos and Yalamanchili, 2008]{harmony}
+Diamos, G.~F. and Yalamanchili, S. (2008).
+\newblock Harmony: an execution model and runtime for heterogeneous many core
+  systems.
+\newblock In {\em Proceedings of the 17th international symposium on High
+  performance distributed computing}, HPDC '08, pages 197--200, New York, NY,
+  USA. ACM.
+
+\bibitem[Fan et~al., 2004]{cluster}
+Fan, Z., Qiu, F., Kaufman, A., and Yoakum-Stover, S. (2004).
+\newblock Gpu cluster for high performance computing.
+\newblock In {\em Proceedings of the 2004 ACM/IEEE conference on
+  Supercomputing}, SC '04, pages 47--, Washington, DC, USA. IEEE Computer
+  Society.
+
+\bibitem[Foley and Sugerman, 2005]{kdtree}
+Foley, T. and Sugerman, J. (2005).
+\newblock Kd-tree acceleration structures for a gpu raytracer.
+\newblock In {\em Proceedings of the ACM SIGGRAPH/EUROGRAPHICS conference on
+  Graphics hardware}, pages 15--22, New York, NY, USA. ACM.
+
+\bibitem[Graham, 1966]{graham66}
+Graham, R.~L. (1966).
+\newblock Bounds for certain multiprocessing anomalies.
+\newblock {\em Bell System Technical Journal}, 45(9):1563--1581.
+
+\bibitem[Guevara et~al., 2009]{tasks}
+Guevara, M., Gregg, C., Hazelwood, K., and Skadron, K. (2009).
+\newblock Enabling task parallelism in the cuda scheduler.
+\newblock In {\em Workshop on Programming Models for Emerging Architectures},
+  PMEA, pages 69--76, Raleigh, NC.
+
+\bibitem[Kim et~al., 2012]{snucl}
+Kim, J., Seo, S., Lee, J., Nah, J., Jo, G., and Lee, J. (2012).
+\newblock Snucl: an opencl framework for heterogeneous cpu/gpu clusters.
+\newblock In {\em Proceedings of the 26th ACM international conference on
+  Supercomputing}, ICS '12, pages 341--352, New York, NY, USA. ACM.
+
+\bibitem[Leung, 2004]{handbook-sched}
+Leung, J. Y.~T., editor (2004).
+\newblock {\em Handbook of Scheduling: Algorithms, Models, and Performance
+  Analysis}.
+\newblock Computer and Information Science Series. Chapman \& Hall/CRC Press,
+  Boca Raton, FL, USA, 1 edition.
+
+\bibitem[Li et~al., 2011]{Aprendizado}
+Li, Q., Salman, R., Test, E., Strack, R., and Kecman, V. (2011).
+\newblock Gpusvm: a comprehensive cuda based support vector machine package.
+\newblock {\em Central European Journal of Computer Science}, 1(4):387--405.
+
+\bibitem[Linderman et~al., 2008]{merge}
+Linderman, M.~D., Collins, J.~D., Wang, H., and Meng, T.~H. (2008).
+\newblock Merge: a programming model for heterogeneous multi-core systems.
+\newblock {\em SIGPLAN Not.}, 43(3):287--296.
+
+\bibitem[M.~Mller et~al., 2007]{ray}
+M.~Mller, C., Strengert, M., and Ertl, T. (2007).
+\newblock Adaptive load balancing for raycasting of non-uniformly bricked
+  volumes.
+\newblock {\em Parallel Comput.}, 33(6):406--419.
+
+\bibitem[Miyoshi et~al., 2012]{Flat}
+Miyoshi, T., Irie, H., Shima, K., Honda, H., Kondo, M., and Yoshinaga, T.
+  (2012).
+\newblock Flat: a gpu programming framework to provide embedded mpi.
+\newblock In {\em Proceedings of the 5th Annual Workshop on General Purpose
+  Processing with Graphics Processing Units}, GPGPU-5, pages 20--29, New York,
+  NY, USA. ACM.
+
+\bibitem[Owens et~al., 2008]{gpu}
+Owens, D., Houston, M., Luebke, D., Green, S., Stone, J.~E., and Phillips,
+  J.~C. (2008).
+\newblock {GPU} computing.
+\newblock {\em Proceedings of the IEEE}, 96(1):879--899.
+
+\bibitem[Riegel et~al., 2009]{fluido}
+Riegel, E., Indinger, T., and Adams, N.~A. (2009).
+\newblock Implementation of a lattice--boltzmann method for numerical fluid
+  mechanics using the nvidia cuda technology.
+\newblock {\em Computer Science - Research and Development}, 23(3-4):241--247.
+
+\bibitem[Teodoro et~al., 2009]{Anthill}
+Teodoro, G., Sachetto, R., Sertel, O., Gurcan, M., Meira, W., Catalyurek, U.,
+  and Ferreira, R. (2009).
+\newblock Coordinating the use of gpu and cpu for improving performance of
+  compute intensive applications.
+\newblock In {\em Cluster Computing and Workshops, 2009. CLUSTER '09. IEEE
+  International Conference on}, pages 1--10.
+
+\bibitem[Wang et~al., 2011a]{appCientificas}
+Wang, L., Huang, M., Narayana, V.~K., and El-Ghazawi, T. (2011a).
+\newblock Scaling scientific applications on clusters of hybrid multicore/gpu
+  nodes.
+\newblock In {\em Proceedings of the 8th ACM International Conference on
+  Computing Frontiers}, CF '11, pages 6:1--6:10, New York, NY, USA. ACM.
+
+\bibitem[Wang et~al., 2011b]{wave}
+Wang, L., Jia, W., Chi, X., Wu, Y., Gao, W., and Wang, L.-W. (2011b).
+\newblock Large scale plane wave pseudopotential density functional theory
+  calculations on gpu clusters.
+\newblock In {\em High Performance Computing, Networking, Storage and Analysis
+  (SC), 2011 International Conference for}, pages 1--10.
+
+\end{thebibliography}
