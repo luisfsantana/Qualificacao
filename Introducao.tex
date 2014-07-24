@@ -1,0 +1,83 @@
+\pagestyle{empty}
+\cleardoublepage
+\pagestyle{fancy}
+\chapter{Introdução}\label{cap1}
+
+\section{Introdução}\label{cap1:intro}
+
+A computação paralela vem sendo amplamente utilizada para atender necessidades de aplicações que exigem muito poder computacional. A cada dia surgem propostas de novas máquinas e modelos de arquiteturas paralelas, com diferentes quantidades de processadores, topologias e redes de interconexão. O universo de arquiteturas existentes é grande e elas são normalmente agrupadas como: SIMD e MIMD. Máquinas SIMD possuem um único fluxo de instrução aplicados a múltiplos dados e normalmente são específicas para um tipo de aplicação. As MIMD possuem multiplos fluxos de instrução sendo executados em paralelo. Atualmente as máquinas MIMD são as mais utilizadas e podem ser divididas como: Multi Processadores Simétricos (SMP), Vetoriais, Massivamente paralelas (MPP), agregados de computadores \emph{(Clusters)} e Grades computacionais \emph{(Grids)|. As máquinas SMP, Vetoriais e MPP normalmente fornecem ambientes para programação e uso eficiente, porém são arquiteturas proprietárias e com alto custo de montagem e manutenção. Já os clusters e os grids consistem basicamente de diversas unidades de processamento, que podem ser independentes, interconectadas por uma rede de comunicação. As principais vantagens nesse modelo são custos baixos e alta escalabilidade, isto  é, a possibilidade de facilmente alterar, ao longo do tempo, a quantidade de unidades de processamento da arquitetura. No entanto, a computação é baseada em memória distribuída e necessita programação da troca de informações entre os processadores, o que pode ser uma tarefa muito complexa.
+
+As GPUs vêm se mostrando uma excelente alternativa na área de computação de
+alto-desempenho para aplicações que exigem um alto grau de
+paralelismo~\cite{gpu}. GPUs modernas podem possuir milhares de núcleos, cada um
+deles bastante simples, mas que utilizados em paralelo geram um alto poder
+computacional~\cite{cuda}.
+
+Muitas aplicações já utilizam o poder de processamento das GPUs, como mecânica
+dos fluidos~\cite{fluido}, visualização científica~\cite{visualizacao},
+aprendizado de máquina~\cite{Aprendizado}, bioinformática~\cite{rozante} e redes
+neurais~\cite{siang}. Devido ao relativo baixo custo de placas gráficas contendo
+GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a
+instituições com poucos recursos financeiros e com grande necessidade de
+recursos computacionais.
+
+Em diversos caso, o uso de GPUs ocasionam ganhos superiores a 100 vezes, quando
+comparado às CPUs tradicionais. No entanto, para muitos problemas, o uso de uma
+única GPU ainda limita o tamanho e complexidade do problema que pode ser
+resolvido. Neste caso, é possível utilizar múltiplas GPUs localizados em
+diferentes computadores, como em \textit{clusters} de GPUs \cite{raphael,
+  cluster}.
+
+Os \textit{clusters} de GPUs são normalmente homogêneos, no qual todas as
+máquinas apresentam a mesma configuração de hardware. O desenvolvimento de um
+aplicativo para executar em um \textit{cluster} de GPU é um desafio, porque o
+programador tem de empregar uma biblioteca de programação paralela, como MPI,
+além de usar a plataforma CUDA. Existem alguns esforços para oferecer alguns
+modelos de programação~\cite{appCientificas, wave} e bibliotecas~\cite{snucl,
+  Flat} para o desenvolvimento de aplicações para \textit{clusters} de GPUs. No
+entanto, a forma mais utilizada para programação para \textit{clusters} de GPUs
+é combinando CUDA e MPI.
+
+Já no caso de \textit{clusters} heterogêneos é necessário distribuir a carga
+computacional entre as GPUs. Desenvolver um mecanismo que funcione de modo
+eficiente para qualquer aplicação é difícil, mas pode-se restringir o mecanismo
+para alguns tipos específicos de aplicações. Por exemplo, podemos considerar
+aplicações que possuem um conjunto de dados que podem ser particionados entre as
+GPUs, utilizando o método de decomposição de domínio. Neste caso, cada GPU fica
+responsável por uma parte dos dados da aplicação. Muitas aplicações científicas
+se encaixam neste grupo, incluindo bioinformática~\cite{rozante}, redes
+neurais~\cite{siang}, química, física e ciência dos materiais. 
+
+Para este tipo de aplicação, a distribuição da carga em \textit{clusters}
+homogêneos de GPUs é frequentemente obtida com uma divisão simples dos dados de
+entre as GPUs. No entanto, com grupos heterogêneos de GPUs, esta situação é mais
+difícil. Existem atualmente várias arquiteturas existentes, como a Tesla, Fermi
+e Kepler. Essas arquiteturas apresentam diferentes organizações de núcleos e
+multiprocessadores, quantidades de memória compartilhada por núcleo e
+velocidades de memória. Devido a essas diferenças, uma divisão da carga com base
+em simples heurísticas, tal como o número de núcleos na GPU não é eficaz. Na
+verdade, isso pode levar a um maior tempo de execução~\cite{raphael} comparado a
+simples ideia de dividir a carga igualmente entre as GPUs heterogêneas. Em um
+cenário mais geral, uma aplicação pode ter vários \textit{kernels}, cada um com
+dependências não-lineares entre o tempo de execução e o tamanho de entrada.
+
+Apesar da importância do tema, poucos trabalhos apresentam algoritmos de
+balanceamento de carga em sistemas heterogêneos baseados em GPUs. Os existentes
+são \textit{frameworks} que requerem a reescrita da aplicação para que seja
+possível a execução nestes \textit{clusters}.
+
+
+\subsection{Objetivos e Contribuições}
+
+O presente trabalho tem o objetivo desenvolver um algoritmo de balanceamento de carga para aglomerados de GPUs heterogêneas em uma biblioteca amplamente utilizada denominada StarPu e comparar com algoritmos de balanceamento atuais.  
+
+\subsection{Organização da Dissertação}
+
+Esta dissertação se divide em seis capítulos. O Capítulo 2 apresenta a fundamentação utilizada neste trabalho. Neste capítulo, são discutidos os conceitos, classes e técnicas de escalonamento. O Capítulo 3 descreve os trabalhos relacionados ao que tange o escalonamento de tarefas e mais especificadamente ao balanceamento de carga em aglomerados heterogêneos.
+O Capítulo 4, mostra os detalhes referentes ao ambiente experimental e implementação.
+O Capítulo 5 apresenta os resultados e conclusões desta dissertação, assim como sugestões de trabalhos futuros.
+Por fim o capítulo 6 apresenta o plano de trabalho, das atividades já desenvolvidas e as próximas atividades a serem desenvolvidas.
+
+
+
+
