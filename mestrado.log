@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.24)  24 JUL 2014 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.24)  7 AUG 2014 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,16 +869,44 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseTextstyle=\skip64
 \L@UnitsRaiseScriptstyle=\skip65
 ))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count142
+\float@exts=\toks25
+\float@box=\box59
+\@float@everytoks=\toks26
+\@floatcapt=\box60
+)
+\@float@every@algorithm=\toks27
+\c@algorithm=\count143
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count144
+\c@ALC@line=\count145
+\c@ALC@rem=\count146
+\c@ALC@depth=\count147
+\ALC@tlm=\skip66
+\algorithmicindent=\skip67
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count148
+)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip66
-\f@ncyO@elh=\skip67
-\f@ncyO@erh=\skip68
-\f@ncyO@olh=\skip69
-\f@ncyO@orh=\skip70
-\f@ncyO@elf=\skip71
-\f@ncyO@erf=\skip72
-\f@ncyO@olf=\skip73
-\f@ncyO@orf=\skip74
+\fancy@headwidth=\skip68
+\f@ncyO@elh=\skip69
+\f@ncyO@erh=\skip70
+\f@ncyO@olh=\skip71
+\f@ncyO@orh=\skip72
+\f@ncyO@elf=\skip73
+\f@ncyO@erf=\skip74
+\f@ncyO@olf=\skip75
+\f@ncyO@orf=\skip76
 ))
 (./mestrado.aux (./pre.aux) (./Introducao.aux) (./Escalonamento.aux)
 (./TrabalhosRelacionados.aux
@@ -952,17 +980,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
+\scratchcounter=\count149
 \scratchdimen=\dimen163
-\scratchbox=\box59
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count145
+\scratchbox=\box61
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count152
 \MPscratchDim=\dimen164
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -980,6 +1008,7 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -987,7 +1016,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box60
+\AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring ON on input line 31.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -996,7 +1025,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count148
+\c@section@level=\count155
 )
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
@@ -1495,23 +1524,81 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 7.
+Package epstopdf Info: Source file: <./Figuras/CPUVersusGPU.eps>
+(epstopdf)                    date: 2014-06-21 10:40:31
+(epstopdf)                    size: 6174 bytes
+(epstopdf)             Output file: <./Figuras/CPUVersusGPU-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2014-08-07 09:57:39
+(epstopdf)                    size: 9394 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figuras/CPUVersusGPU-eps
+-converted-to.pdf ./Figuras/CPUVersusGPU.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+<./Figuras/CPUVersusGPU-eps-converted-to.pdf, id=446, 561.09625pt x 513.92pt>
+File: ./Figuras/CPUVersusGPU-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./Figuras/CPUVersusGPU-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figuras/CPUVersusGPU-eps-converted-to.pdf used on in
+put line 21.
+(pdftex.def)             Requested size: 168.33017pt x 154.17719pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 14.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 29.
  [19
 
 
 
 
 ]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 41.
+
+Overfull \hbox (7.4148pt too wide) in paragraph at lines 61--62
+\OT1/ptm/m/n/12 ma-nhos dos blo-cos atribu[]^^Pdos a cada pro-ces-sa-dor e []e 
+ini-ci-a-li-zada com $\OML/cmm/m/it/12 initialBlocoSize$\OT1/ptm/m/n/12 ,
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 62.
+[20 <./Figuras/CPUVersusGPU-eps-converted-to.pdf>]
+Overfull \hbox (0.71036pt too wide) in paragraph at lines 92--93
+[]\OT1/ptm/m/n/12 O sis-tema de equa[][]oes []e re-sol-vido apli-cando in-te-ri
+or \OT1/ptm/m/it/12 point line se-arch fil-ter method\OT1/ptm/m/n/12 .
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 95.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 95.
+[21] <./Figuras/DiagramaArtigo.png, id=485, 1056.748pt x 256.157pt>
+File: ./Figuras/DiagramaArtigo.png Graphic file (type png)
+
+<use ./Figuras/DiagramaArtigo.png>
+Package pdftex.def Info: ./Figuras/DiagramaArtigo.png used on input line 98.
+(pdftex.def)             Requested size: 253.6247pt x 61.47893pt.
+
+Overfull \hbox (6.82277pt too wide) in paragraph at lines 134--135
+\OT1/ptm/m/n/12 alcan[]ado, o al-go-rimto ajusta um novo mo-delo de cur-vas e r
+e-solve o sis-tema de equa[][]oes
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+[22 <./Figuras/DiagramaArtigo.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 139.
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 37.
+ [23]
 \openout2 = `Implementacao.aux'.
 
  (./Implementacao.tex
@@ -1519,7 +1606,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
- [20
+ [24
 
 
 
@@ -1534,7 +1621,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 38.
- [21
+ [25
 
 ]
 \openout2 = `Resultados.aux'.
@@ -1544,7 +1631,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
- [22
+ [26
 
 
 
@@ -1561,7 +1648,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
- [23
+ [27
 
 ]
 \openout2 = `PlanoTrabalho.aux'.
@@ -1571,7 +1658,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
- [24
+ [28
 
 
 
@@ -1586,7 +1673,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 40.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 40.
- [25
+ [29
 
 ] (./mestrado.bbl
 Package babel Info: Redefining portuges shorthand "|
@@ -1595,7 +1682,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
- [26
+ [30
 
 
 ]
@@ -1603,7 +1690,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 129.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 129.
- [27])
+ [31])
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 48.
 See the caption package documentation for explanation.
@@ -1614,7 +1701,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
-[28]
+[32]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
@@ -1624,35 +1711,49 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
 (./Resultados.aux) (./PlanoTrabalho.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
-Package rerunfilecheck Info: File `mestrado.out' has not changed.
-(rerunfilecheck)             Checksum: 454F3929B82A026C19B5456C78CFCE1C;2278.
 
+
+Package rerunfilecheck Warning: File `mestrado.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mestrado.out':
+(rerunfilecheck)             Before: 7059F6CFBD77B601A113BF47719345FB;2284
+(rerunfilecheck)             After:  CB9198B46DE984AAA0E3802ADC647709;2162.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 10389 strings out of 493117
- 151451 string characters out of 6135433
- 260925 words of memory out of 5000000
- 13423 multiletter control sequences out of 15000+600000
+ 10861 strings out of 493117
+ 157573 string characters out of 6135433
+ 357751 words of memory out of 5000000
+ 13844 multiletter control sequences out of 15000+600000
  26944 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,16n,51p,1684b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on mestrado.pdf (42 pages, 184357 bytes).
+ 48i,16n,51p,1684b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section.4.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on mestrado.pdf (46 pages, 249679 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 548 compressed objects within 6 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
