@@ -11,9 +11,11 @@ A level-1 auxiliary file: Resultados.aux
 A level-1 auxiliary file: PlanoTrabalho.aux
 The style file: apalike.bst
 Database file #1: bibQualificacacao.bib
+Warning--I didn't find a database entry for "HDSS"
+Warning--I didn't find a database entry for "point"
 You've used 26 entries,
             1935 wiz_defined-function locations,
-            648 strings with 9682 characters,
+            651 strings with 9695 characters,
 and the built_in function-call counts, 13042 in all, are:
 = -- 1289
 > -- 580
@@ -52,3 +54,4 @@ warning$ -- 0
 while$ -- 105
 width$ -- 0
 write$ -- 364
+(There were 2 warnings)

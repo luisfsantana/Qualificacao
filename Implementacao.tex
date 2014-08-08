@@ -25,7 +25,7 @@ arquiteturas (por exemplo, CUDA e x86). As aplicações foram implementadas
 dividindo o conjunto de dados em tarefas. As tarefas são 
 independentes, com cada tarefa a receber uma parte do conjunto de entrada. 
 
-Para avaliar o nosso algoritmo de balanceamento de carga, nós modificamos o algoritmo de escalonamento padrão do StarPU. A modificação do algoritmo de balanceamento de carga é feita alterando a variável STARPU\ _SCHED. O \emph{framework} STARPU tem uma API que permite modificar as políticas de escalonamento. Existem estruturas de dados e funções que aceleram o processo de desenvolvimento. Por exemplo, a função "double starpu\_timing\_now (void)" que retorna a data atual em micro segundos, o que torna mais fácil para a determinação de medidas de tempo de execução. 
+Para avaliar o nosso algoritmo de balanceamento de carga, nós modificamos o algoritmo de escalonamento padrão do StarPU. A modificação do algoritmo de balanceamento de carga é feita alterando a variável STARPU\_SCHED. O \emph{framework} STARPU tem uma API que permite modificar as políticas de escalonamento. Existem estruturas de dados e funções que aceleram o processo de desenvolvimento. Por exemplo, a função "double starpu\_timing\_now (void)" que retorna a data atual em micro segundos, o que torna mais fácil para a determinação de medidas de tempo de execução. 
 
 Três outros algoritmos foram implementados para comparação: o guloso, o estático e 
 HDSS. O guloso consistiu em dividir o conjunto de entrada em pedaços e atribuir 
