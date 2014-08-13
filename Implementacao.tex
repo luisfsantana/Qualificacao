@@ -8,8 +8,7 @@
 
 A aplicação foi feita na linguagem C, com o \emph{framework} StarPU. ~\cite{starpu}. StarPU  é uma ferramenta para programação paralela que suporta 
 arquiteturas híbridas como CPUs multicore e aceleradores.  StarPU propõe 
-uma abordagem de tarefas independentes baseada na arquitetura. Codelets são definidos como uma 
-abstração de uma tarefa que pode ser realizada em um núcleo de uma CPU multicore ou 
+uma abordagem de tarefas independentes baseada na arquitetura. Codelets são definidos como uma  abstração de uma tarefa que pode ser realizada em um núcleo de uma CPU multicore ou 
 submetido a um acelerador. Cada codelet pode ter várias implementações, um 
 para cada arquitetura em que codelet pode ser realizada utilizando linguagens específicas 
 e bibliotecas para a arquitetura alvo. Uma aplicação StarPU é descrita como  
@@ -36,4 +35,6 @@ foi implementado utilizando a estimativa dos mínimos quadrados para estimar os 
 dividido em duas fases: fase de adaptação e fase de conclusão. 
 
 A biblioteca utilizada para resolver o sistema de equações é a IPOPT \cite{point}. IPOPT (Interior Ponto Otimizar) é um pacote de software de código aberto para otimização não-linear em grande escala. Ele pode ser utilizado para resolver problemas de programação lineares gerais.
+
+
 
