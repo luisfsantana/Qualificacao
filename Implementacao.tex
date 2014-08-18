@@ -4,7 +4,7 @@
 
 \chapter{Implementação}\label{cap5}
 
-\section{Introdução}\label{cap5:intro}
+%\section{Introdução}\label{cap5:intro}
 
 A aplicação foi feita na linguagem C, com o \emph{framework} StarPU. ~\cite{starpu}. StarPU  é uma ferramenta para programação paralela que suporta 
 arquiteturas híbridas como CPUs multicore e aceleradores.  StarPU propõe 
@@ -19,22 +19,29 @@ escolher de acordo com as características da aplicação. A principal delas é 
 uso do algoritmo de escalonamento estático HEFT (Heteregeneous Earliest Finish Time) para 
 agendar tarefas com base em modelos de custo de execução da tarefa. 
 
-Para cada dispositivo, como GPU ou CPU, foi programado um codelet. Um codelet é uma estrutura que representa um núcleo computacional. Tal codelet pode conter uma implementação do mesmo kernel em diferentes 
-arquiteturas (por exemplo, CUDA e x86). As aplicações foram implementadas  
-dividindo o conjunto de dados em tarefas. As tarefas são 
-independentes, com cada tarefa a receber uma parte do conjunto de entrada. 
+Para cada dispositivo, como GPU ou CPU, foi programado um codelet. Um codelet é uma estrutura que representa um núcleo computacional. Tal codelet pode conter uma implementação do mesmo kernel em diferentes  arquiteturas (por exemplo, CUDA e x86). As aplicações foram implementadas  dividindo o conjunto de dados em tarefas. As tarefas são  independentes, com cada tarefa a receber uma parte do conjunto de entrada. 
 
 Para avaliar o nosso algoritmo de balanceamento de carga, nós modificamos o algoritmo de escalonamento padrão do StarPU. A modificação do algoritmo de balanceamento de carga é feita alterando a variável STARPU\_SCHED. O \emph{framework} STARPU tem uma API que permite modificar as políticas de escalonamento. Existem estruturas de dados e funções que aceleram o processo de desenvolvimento. Por exemplo, a função "double starpu\_timing\_now (void)" que retorna a data atual em micro segundos, o que torna mais fácil para a determinação de medidas de tempo de execução. 
 
 Três outros algoritmos foram implementados para comparação: o guloso, o estático e 
 HDSS. O guloso consistiu em dividir o conjunto de entrada em pedaços e atribuir 
-cada pedaço da entrada a qualquer processador ocioso, sem qualquer atribuição de prioridade. O estático~\cite{raphael}, mede as velocidades de processamento antes da execução e  atribui um conjunto 
-de blocos estático para cada processador, no início da execução, com os
-tamanhos do bloco proporcional à velocidade do processador. Por fim, o HDSS ~\cite{HDSS}  
+cada pedaço da entrada a qualquer processador ocioso, sem qualquer atribuição de prioridade. O estático~\cite{raphael}, mede as velocidades de processamento antes da execução e  atribui um conjunto  de blocos estático para cada processador, no início da execução, com os
+tamanhos do bloco proporcional à velocidade do processador. Por fim, o HDSS~\cite{hdss}  
 foi implementado utilizando a estimativa dos mínimos quadrados para estimar os pesos e 
 dividido em duas fases: fase de adaptação e fase de conclusão. 
 
-A biblioteca utilizada para resolver o sistema de equações é a IPOPT \cite{point}. IPOPT (Interior Ponto Otimizar) é um pacote de software de código aberto para otimização não-linear em grande escala. Ele pode ser utilizado para resolver problemas de programação lineares gerais.
+A biblioteca utilizada para resolver o sistema de equações é a IPOPT~\cite{point}. IPOPT (Interior Ponto Otimizar) é um pacote de software de código aberto para otimização não-linear em grande escala. Ele pode ser utilizado para resolver problemas de programação lineares gerais, da forma:
 
+\begin{eqnarray}
+\displaystyle \min_{x\in\mathbb{R}^n} 
+	\displaystyle f(x) \\
+	s.a.\displaystyle \;  \nonumber 
+	 	\displaystyle g^L \leq g(x) \leq g^U  \nonumber \\	
+ 	 	\displaystyle x^L \leq x \leq x^U, \nonumber 
+\end{eqnarray}
+
+onde $x$ $\in$ a $\Re ^ n$ são as variáveis de otimização, $f : R^n$ em $R$ é a função objetivo, e $g: R^n$ em $R^M$ são as restrições não lineares. A função $f(x)$ e $g(x)$ podem ser linear ou não linear.  
+
+Para resolver um problema de otimização precisa-se criar um IpoptProblem com a função CreateIpoptProblem, que posteriormente precisa ser passado para a função IpoptSolve. O IpoptProblem criado por CreateIpoptProblem contem as dimensões do problema, as variáveis e os limites das restrições. A execução da resolução torna-se apenas um processo de correta montagem do problema a ser tratado. O algoritmo leva certo tempo para resolver o problema que é na ordem dos milissegundos. 
 
 

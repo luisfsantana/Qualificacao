@@ -10,7 +10,7 @@
 
 \section{Escalonamento}\label{cap2:escalonamento}
 
-Escalonamento é um processo de tomada de decisão que é usado como base em muitas insdústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos.
+Escalonamento é um processo de tomada de decisão que é usado como base em muitas indústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos.
 
 Encontrar um escalonamento significa encontrar, para cada tarefa, uma alocação de um ou mais intervalos de tempo, em uma ou mais máquinas. O problema de escalonamento correspondente é encontrar um escalonamento que satisfaça um determinado conjunto de restrições.
 
@@ -86,7 +86,7 @@ $pmtn$ representa interrupção. O processamento de uma tarefa pode ser interrom
 
 $s_{ik}$ é o tempo de preparação da máquina (setup). Uma máquina que executou uma tarefa $t_i$ precisa de $s_{ik}$ unidades de tempo para ser preparada antes de executar uma outra tarefa $t_k$
 
-$prec$ relações de precedência. Uma relação de precedênca entre duas tarefas indica
+$prec$ relações de precedência. Uma relação de precedência entre duas tarefas indica
 que uma tarefa não pode ser iniciada antes do término da execução da outra. Representadas por um grafo de precedências, onde um vértice representa uma tarefa e um arco entre $t_i$ e $t_k$ indica que $t_k$ só pode ser executada após o termino de $t_i$.
 
 $c_{ik}$ tempo de comunicação entre máquinas. A tarefa $t_k$ depende do resultado da execução de $t_i$ . Se $t_k$ não for escalonada na mesma máquina que $t_i$, então deverá esperar mais $c_{ik}$ unidades de tempo antes de poder ser executada.
@@ -110,7 +110,7 @@ $c_{ik}$ tempo de comunicação entre máquinas. A tarefa $t_k$ depende do resul
 \subsection{Classificação dos problemas de escalonamento}
 Os problemas de programação de operações em máquinas vêm sendo caracterizados por diversos autores em diferentes formas, dentre eles Baker, 1974; Blazewicz et al., 1996; Conway et al., 1967; French, 1982; Graves, 1981 e Pinedo, 2008.
 
-Em situações de escalonar tarefas nas máquinas disponíveis surgem problemas complexos. Pois, as restriçõs tecnológicas e a medida de desempenho do escalonador devem ser especificadas. As restriçõs tecnológicas são determinadas principalmente pelo fluxo das tarefas nas máquinas.
+Em situações de escalonar tarefas nas máquinas disponíveis surgem problemas complexos. Pois, as restrições tecnológicas e a medida de desempenho do escalonador devem ser especificadas. As restrições tecnológicas são determinadas principalmente pelo fluxo das tarefas nas máquinas.
 
 Neste contexto, Maccarthy e Liu (1993) classificam os problemas de programação de operações da seguinte forma:
  
@@ -201,7 +201,7 @@ Se fez um algoritmo de tempo polinomial que se aproxima da solução ótima. Usa
 
 Resumo 
 
-$1||Soma w_jC_j$	Regra WSPT, funciona para chains tambem
+$1||Soma w_jC_j$	Regra WSPT, funciona para chains também
 $1||Soma wj(1-e-rC_j)$	Regra WDSP, para cadeias também
 $1||L_{max}$	Regra EDD (Primeiro tarefa que termina primeiro)
 $1|prec| h_{max}$	Algorithm 3.2.1.
@@ -230,7 +230,7 @@ Modelos de máquina paralela, primeiro determinamos/alocamos os recursos em cada
 
 A preempção tem um papel mais importante que nos modelos de única máquina, mesmo quando as tarefas são realizadas no mesmo tempo. 
 
-\textbf{Escalonamento Offline} – todos os dados (tempo processamento, prazos, periodo de submissão da tarefa) são conhecidos em detalhes e podem ser considerados no processo de otimização.
+\textbf{Escalonamento Offline} – todos os dados (tempo processamento, prazos, período de submissão da tarefa) são conhecidos em detalhes e podem ser considerados no processo de otimização.
 
 \textbf{Escalonamento On-line} – Os dados não são conhecidos a priori, o tempo de processamento é conhecido apenas depois que a tarefa termina, e a hora que a tarefa foi submetida apenas quando a tarefa é efetivamente submetida. \\
 
@@ -273,6 +273,18 @@ Job Shop é um Flow Shop, no qual as tarefas tem rotas diferenciadas, mas pré-d
 No Open-Shop, a rota das tarefas são abertas, não é pré-determinada. Open Shop: O ambiente de máquinas típico de open shop caracteriza-se pelo fato de não existir uma sequência pré-definida a ser seguida por cada tarefa $j$. Posto de outra forma, é fornecido ao escalonador liberdade de escolha da sequência a ser seguida por cada tarefa $j$ ao longo do sistema.
 
 
+\section{Balancemento de Carga}\label{intro:carga}
+
+O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fase~\cite{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
+
+\begin{itemize}
+\item Estático A regra de balanceamento é definida uma única vez, baseada em informações estáticas do sistema ou aplicações.
+
+\item Dinâmico A regra de balanceamento é modificada em resposta ao estado atual do sistema ou das aplicações. O estado do sistema será constantemente atualizado e as decisões tomadas são baseadas nas informações atuais e possivelmente, dos estados anteriores do sistema.
+\end{itemize}
+
+Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. Conforme~\cite{virtual}, o problema de balanceamento de carga  é similar a problemas de alta complexidade computacional, que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
+
 \section{GPUs}\label{intro:historico}
 
 As GPUs vêm se mostrando uma excelente alternativa na área de computação de alto-desempenho para aplicações que exigem um alto grau de paralelismo~\cite{gpu}. GPUs modernas possuem dezenas de núcleos, cada um deles bastante simples, mas que utilizados em paralelo geram um alto poder computacional~\cite{cuda}.
@@ -286,7 +298,7 @@ Diversas ferramentas de programação suportam paralelismo de tarefas em CPUs mu
 
 \subsection{StarPU}
  
-O StarPU é uma ferramenta para programação paralela que oferece suporte para arquiteturas híbridas, como CPUs multicore e aceleradores. O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados (AUGONNET; NAMYST, 2009).
+O StarPU~\cite{starpu} é uma ferramenta para programação paralela que oferece suporte para arquiteturas híbridas, como CPUs multicore e aceleradores. O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados.
 
 A ferramenta possui um conjunto de políticas de escalonamento implementadas que o programador pode escolher de acordo com as características da aplicação. A principal delas faz uso do algoritmo de escalonamento estático HEFT (Heterogeneous Earliest Finish Time) para escalonar as tarefas com base em modelos de custo de execução das tarefas.
 
@@ -294,25 +306,25 @@ A ferramenta possui um conjunto de políticas de escalonamento implementadas que
 
 \subsection{Charm++}
 
-No Charm++ as tarefas são representadas pelos chares, que são objetos paralelos e representam unidades locais de trabalho. Cada chare possui dados locais, métodos para tratamento de mensagens e possibilidade de criar novos chares, assim como processos MPI-2. Existe ainda um tipo especial de chare, chamado branch-office, que possui uma ramificação em cada processador e um único nome global. Branch- office chares oferecem métodos sequenciais que podem ser acessados por chares de forma transparente em qualquer processador.
+No Charm++~\cite{kunzman2006charm++} as tarefas são representadas pelos chares, que são objetos paralelos e representam unidades locais de trabalho. Cada chare possui dados locais, métodos para tratamento de mensagens e possibilidade de criar novos chares, assim como processos MPI-2. Existe ainda um tipo especial de chare, chamado branch-office, que possui uma ramificação em cada processador e um único nome global. Branch-office chares oferecem métodos sequenciais que podem ser acessados por chares de forma transparente em qualquer processador.
 
 No Charm++ a sincronização pode ser feita através de Futures, objetos de comunicação, replicados ou compartilhados. O future  é uma estrutura que serve para armazenar um valor que pode ser acessado no futuro por outro chare. O acesso a essa estrutura  é bloqueante e pode ser comparado a um acesso ao resultado de um método spawned precedido de uma chamada sync. A utilização de objetos de comunicação permite que um chare se comunique por troca de mensagens, tornando a comunicação semelhante à realizada com MPI. Os demais objetos introduzem conceitos para comunicação não encontrados nos outros ambientes.
 
-O Charm (KALE et al., 1995) foi uma das primeiras implementaçõses do conceito de Atores, que são objetos concorrentes que se comunicam apenas por troca de mensagens. Charm++ (KALE; KRISHNAN, 1996) é baseado no Charm e suporta diferentes modos de compartilhamento de informações. Ele reúne recursos propostos em outros ambientes, como objetos sequenciais e paralelos, comunicação por troca de mensagens e futures. O Cilk (BLUMOFE et al., 1995)  é um ambiente de programacção paralelo focado em arquiteturas SMP. Ele  é baseado na linguagem C. O Cilk oferece também um escalonador de processos que é provado ser eficiente (VEE; HSU, 1999). Baseando-se no Cilk, foi desenvolvido um ambiente para execução de programas em arquiteturas com memória distribuída e aproveitamento de recursos ociosos, chamado Cilk-NOW (BLUMOFE; LISIECKI, 1997).
+O Charm foi uma das primeiras implementações do conceito de Atores, que são objetos concorrentes que se comunicam apenas por troca de mensagens. Charm++ é baseado no Charm e suporta diferentes modos de compartilhamento de informações. Ele reúne recursos propostos em outros ambientes, como objetos sequenciais e paralelos, comunicação por troca de mensagens e futures. O Cilk é um ambiente de programacção paralelo focado em arquiteturas SMP. Ele  é baseado na linguagem C. O Cilk oferece também um escalonador de processos que é provado ser eficiente. Baseando-se no Cilk, foi desenvolvido um ambiente para execução de programas em arquiteturas com memória distribuída e aproveitamento de recursos ociosos, chamado Cilk-NOW~\cite{Blumofe:1997:ARP:1268680.1268690}.
 
 \subsection{Kaapi}
 
-O XKaapi (INRIA; MOAIS; LIG, 2011) é uma reimplementação do KAAPI com suporte a paralelismo de tarefas "de grão fino". O KAAPI (GAUTIER; BESSERON; PIGEON, 2007) (Kernel for Adaptative, Asynchronous Parallel and Interactive programming) é uma ferramenta para computação paralela em CPUs multicore e clusters. A implementação atual do XKaapi oferece suporte a arquiteturas multicore e extensões para suporte eficiente a GPUs foram propostas em (HERMANN et al., 2010; LIMA et al., 2012). O XKaapi é composto por um conjunto de APIs (Application Programming Interfaces) e pelo kernel, um ambiente de execução para as APIs que oferece escalonamento baseado em roubo de tarefas. A Kaapi++ é a interface do XKaapi baseada em um DFG (Data Flow Graph) para C++ e é dividida em três componentes: a assinatura da tarefa (task signature) onde são definidos o número e as características dos parâmetros da tarefa; a implementação da tarefa (task implementation) que especifica a implementação da tarefa para uma arquitetura e a criação da tarefa (task creation) que submete a tarefa para a pilha de execução.
+O XKaapi~\cite{gautier:hal-00799904} é uma reimplementação do KAAPI com suporte a paralelismo de tarefas "de grão fino". O KAAPI (Kernel for Adaptative, Asynchronous Parallel and Interactive programming) é uma ferramenta para computação paralela em CPUs multicore e clusters. A implementação atual do XKaapi oferece suporte a arquiteturas multicore e extensões para suporte eficiente a GPUs foram propostas em (HERMANN et al., 2010; LIMA et al., 2012). O XKaapi é composto por um conjunto de APIs (Application Programming Interfaces) e pelo kernel, um ambiente de execução para as APIs que oferece escalonamento baseado em roubo de tarefas. A Kaapi++ é a interface do XKaapi baseada em um DFG (Data Flow Graph) para C++ e é dividida em três componentes: a assinatura da tarefa (task signature) onde são definidos o número e as características dos parâmetros da tarefa; a implementação da tarefa (task implementation) que especifica a implementação da tarefa para uma arquitetura e a criação da tarefa (task creation) que submete a tarefa para a pilha de execução.
 
 \subsection{Cilk}
 
-A ferramenta para programação paralela Cilk (BLUMOFE et al., 1995; FRIGO; LEISERSON; RANDALL, 1998; GROUP, 2012) é uma extensão da linguagem C para permitir a submissão, execução e sincronização de tarefas paralelas. A implementação de Cilk é baseada no algoritmo de escalonamento dinâmico por meio de roubo de tarefas apresentado em (BLUMOFE; LEISERSON, 1994). Cilk define tarefas como funções individuais que podem submeter novas tarefas dinamicamente. A sincronização é feita permitindo que as tarefas esperem pelas tarefas filhas, ou seja, tarefas que foram submetidas pela tarefa original.
+A ferramenta para programação paralela Cilk~\cite{Blumofe:1995:CEM:209936.209958, Blumofe:1997:ARP:1268680.1268690} é uma extensão da linguagem C para permitir a submissão, execução e sincronização de tarefas paralelas. A implementação de Cilk é baseada no algoritmo de escalonamento dinâmico por meio de roubo de tarefas. Cilk define tarefas como funções individuais que podem submeter novas tarefas dinamicamente. A sincronização é feita permitindo que as tarefas esperem pelas tarefas filhas, ou seja, tarefas que foram submetidas pela tarefa original.
 
 
 \subsection{Intel TBB}
 
-O Intel TBB (Threading Building Blocks) (REINDERS, 2010; CORPORATION, 2012) é uma biblioteca baseada em templates para programação paralela em C++ que faz uso de threads. Essa biblioteca permite expressar o paralelismo em diversos paradigmas de programação paralela como o paralelismo de dados, de laços ou de tarefas. As unidades de trabalho paralelas resultantes são escalonadas em threads por meio de um algoritmo de roubo de tarefas inspirado no ambiente Cilk.
+O Intel TBB (Threading Building Blocks)~\cite{Kim:2011:MDP:1920042.1920078} é uma biblioteca baseada em templates para programação paralela em C++ que faz uso de threads. Essa biblioteca permite expressar o paralelismo em diversos paradigmas de programação paralela como o paralelismo de dados, de laços ou de tarefas. As unidades de trabalho paralelas resultantes são escalonadas em threads por meio de um algoritmo de roubo de tarefas inspirado no ambiente Cilk.
 
 \subsection{OpenMP}
 
-OpenMP (Open Multi-Processing) (CHAPMAN; JOST; PAS, 2007) é uma ferramenta para programação paralela baseada na adição de diretivas de compilação em códigos C, C++ e Fortran. As diretivas OpenMP são utilizadas para indicar a paralelização de laços ou trechos de código. A partir da versão 3.0 (OpenMP ARB, 2008) foi inserido o conceito de tarefas, o que permite a utilização do paralelismo de tarefas através do uso de diretivas para delimitação de trechos de código como unidades de trabalho paralelas (AYGUADE et al., 2009). A especificação OpenMP (OpenMP ARB, 2008) não define uma política para o escalonamento das tarefas, ficando essa escolha a cargo de cada implementação.
+OpenMP (Open Multi-Processing)~\cite{Quinn:2003:PPC:1211440} é uma ferramenta para programação paralela baseada na adição de diretivas de compilação em códigos C, C++ e Fortran. As diretivas OpenMP são utilizadas para indicar a paralelização de laços ou trechos de código. A partir da versão 3.0 (OpenMP ARB, 2008) foi inserido o conceito de tarefas, o que permite a utilização do paralelismo de tarefas através do uso de diretivas para delimitação de trechos de código como unidades de trabalho paralelas. A especificação OpenMP não define uma política para o escalonamento das tarefas, ficando essa escolha a cargo de cada implementação.

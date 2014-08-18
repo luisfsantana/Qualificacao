@@ -6,7 +6,7 @@
 
 \section{Resultados dos experimentos}\label{cap6:intro}
 
-Foram usasdotrês diferentes máquinas para testar o algoritmo, apresentado na tabela \ref{}. Maquina A tem uma CPU i7 a20, com 4 cores com velocidade de clock de 2,67 GHz, 8192 MB de cache, 8 GB de RAM and 2 nVidia GTX 295, cada GTX 295 tem 280 cores por GPU, clock da memória de 999 MHz e tamanho da banda de memória de 223,8 GB/segundos com 2 GPUs em cada. Maquina B  tem um i7 4930K CPU, com 6 cores, clock de 3,4 GHz, memoria cache de 12288 KB, 32 GB de RAM e 2 nVidia GTX 680, GTX 680 tem 1546 cores, 6 Gbps clock de memória e tamanho da banda de memória de 192,2 MHz. Máquina C tem um CPU i7 3939K, com 6 cores, velocidade de clock de 3,2 GHz, memória cache de 12288KB, 32 GB de RAM e 1 nVidia GTX Titan, GTX Titan tem 2688 cores, velocidade da memória de 6Gbps e tamanho da banda de memória de 223,8 GB/segundo. Foram considerados os cenários com apenas a máquina A, com a máquina A, e com a três máquinas (A, B e C). Os computadores estão conectados por uma rede Gigabit Ethernet. Foi usado o sistema operacional Ubuntu 12.04 e CUDA 5.5.
+Foram usadas três diferentes máquinas para testar o algoritmo, apresentado na tabela \ref{}. Maquina A tem uma CPU i7 a20, com 4 cores com velocidade de clock de 2,67 GHz, 8192 MB de cache, 8 GB de RAM and 2 nVidia GTX 295, cada GTX 295 tem 280 cores por GPU, clock da memória de 999 MHz e tamanho da banda de memória de 223,8 GB/segundos com 2 GPUs em cada. Maquina B  tem um i7 4930K CPU, com 6 cores, clock de 3,4 GHz, memoria cache de 12288 KB, 32 GB de RAM e 2 nVidia GTX 680, GTX 680 tem 1546 cores, 6 Gbps clock de memória e tamanho da banda de memória de 192,2 MHz. Máquina C tem um CPU i7 3939K, com 6 cores, velocidade de clock de 3,2 GHz, memória cache de 12288KB, 32 GB de RAM e 1 nVidia GTX Titan, GTX Titan tem 2688 cores, velocidade da memória de 6 Gbps e tamanho da banda de memória de 223,8 GB/segundo. Foram considerados os cenários com apenas a máquina A, com a máquina A, e com a três máquinas (A, B e C). Os computadores estão conectados por uma rede Gigabit Ethernet. Foi usado o sistema operacional Ubuntu 12.04 e CUDA 5.5.
 
 
 \begin{table}[!t]
@@ -25,13 +25,13 @@ C                             & Intel i7 3930K & 2 x GK110     & 6GB            
 \end{table}
 
 
-Para usar todos os n multiprocessadores da GPU, é necessário criar ao menos n blocks. Mais que isso, cada multiprocessador simultaneamente executa grupos (chamados de warps) de m threads de um unico bloco. e muitos warps estão presentes em cada GPU para o uso eficiente dos processadores.
+Para usar todos os n multiprocessadores da GPU, é necessário criar ao menos n blocos. Mais que isso, cada multiprocessador simultaneamente executa grupos (chamados de warps) de m threads de um único bloco. e muitos warps estão presentes em cada GPU para o uso eficiente dos processadores.
 
 Em todos os testes, usa-se todos os multiprocessadores das GPUs lançando kernels com $k$ blocos com 1024 threads por bloco, onde $k$ é o numero de processadores na GPU. Para as GPUs usadas, $k$ é 14, 8 e 30 na GTX Titan, GTX 680 e GTX 295 respectivamente. Para as CPUs, foram usados todos os cores das CPUs, lançando uma tarefa pro core.
 
  \section{Multiplicação de Matrizes}
 
-O algoritmo foi testatdo para a multiplicação de matrizes usando uma, duas e três máquinas e quatro diferentes algoritmos de escalonamento: (1) algoritmo proposto, (2) estatico, (3) HDSS, e (4) StarPU (greedy).
+O algoritmo foi testatdo para a multiplicação de matrizes usando uma, duas e três máquinas e quatro diferentes algoritmos de escalonamento: (1) algoritmo proposto, (2) estático, (3) HDSS, e (4) StarPU (guloso).
 
 \begin{figure}[htb]
 	\begin{center}
@@ -44,7 +44,7 @@ O algoritmo foi testatdo para a multiplicação de matrizes usando uma, duas e t
 
 A figure \ref{fig:todosJuntos} apresenta os resultados para matrizes com tamanhos 10.000 x 10.000 a 50.000 x 50.000. Em todos os cenários, o algoritmo de escalonamento proposto obteve melhores resultados, com o HDSS em segundo. O estático e o StarPU foram claramente inferiores.
 
-Com uma máquina a diferença foi pequena porque há poucos tipos de dispositivos para o escalonador selecionar. Com duas máquinas nosso algoritmo começa a ter melhor desempenho, especialemente para casos de matrizes grandes, que é explicado pelo fato de que o tempo de execução da maultiplicação de matrizes aumenta rapidamente como aumenta-se o tamanho da matriz. Com três máquinas obteve-se o ambiente mais heterogêneo e o ganho de desempenho usando o algoritmo proposto é o maior. Como nos outros cenários, aumentando-se o tamanho da matriz também aumenta-se o ganho de desempenho como o algoritmo proposto. Para matrizes 10.000 x 10.000, o algoritmo proposto gastou 20 segundos wnquanto o HDSS gastou 36, que resulta em 22,2\% mais rápido. E para matrizes 50.000 x 50.000, o algoritmo proposto gastou 433 segundos enquanto o HDSS 473, que resulta em 8,49\% mais rápido, o resumos está na tabela \ref{able: comparativo}
+Com uma máquina a diferença foi pequena porque há poucos tipos de dispositivos para o escalonador selecionar. Com duas máquinas nosso algoritmo começa a ter melhor desempenho, especialemente para casos de matrizes grandes, que é explicado pelo fato de que o tempo de execução da maultiplicação de matrizes aumenta rapidamente como aumenta-se o tamanho da matriz. Com três máquinas obteve-se o ambiente mais heterogêneo e o ganho de desempenho usando o algoritmo proposto é o maior. Como nos outros cenários, aumentando-se o tamanho da matriz também aumenta-se o ganho de desempenho como o algoritmo proposto. Para matrizes 10.000 x 10.000, o algoritmo proposto gastou 20 segundos enquanto o HDSS gastou 36, que resulta em 22,2\% mais rápido. E para matrizes 50.000 x 50.000, o algoritmo proposto gastou 433 segundos enquanto o HDSS 473, que resulta em 8,49\% mais rápido, o resumos está na tabela \ref{able: comparativo}
 
 \begin{table}[h]
 \centering
@@ -98,7 +98,7 @@ distribuição.
 	\end{center}
 \end{figure}
 
-Foram realizados testes de tempo de execução para a aplicação chamada blackscholes usando diferentes configuraçõs de máquinas. A figura~\ref{fig:black} apresenta os tempo de execução, onde variou-se o número de opõs em cada execução e obteve-se o tempo de execução. Similarmente aos experimentos de multiplicação de matrizes, o melhor desempenho foi alcançado nos problemas maiores, com maior números de opções e em ambientes mais heterogêneos. Os resultados podem ser explicados com os mesmos argumentos. Blackscholes tem complexidade linear com o número de opções, mostrando que o algoritmo proposto é também últil para esta classe de problemas. A tabela  \ref{table: black} mostra os valores extremos com 1000 e 20000 opções, o melhor resultado foi com três máquinas, e com o maior número de opções.
+Foram realizados testes de tempo de execução para a aplicação chamada blackscholes usando diferentes configuraçõs de máquinas. A figura~\ref{fig:black} apresenta os tempo de execução, onde variou-se o número de opõs em cada execução e obteve-se o tempo de execução. Similarmente aos experimentos de multiplicação de matrizes, o melhor desempenho foi alcançado nos problemas maiores, com maior números de opções e em ambientes mais heterogêneos. Os resultados podem ser explicados com os mesmos argumentos. Blackscholes tem complexidade linear com o número de opções, mostrando que o algoritmo proposto é também útil para esta classe de problemas. A tabela  \ref{table: black} mostra os valores extremos com 1000 e 20000 opções, o melhor resultado foi com três máquinas, e com o maior número de opções.
 
 \begin{table}{h}
 \centering
@@ -116,13 +116,13 @@ Foram realizados testes de tempo de execução para a aplicação chamada blacks
 \label{table: black}
 \end{table}
 
-Também, considerou-se que a aplicação termina em menos que 4 segundos, para o cenário com 3 máquinas, é possível notar que o overhead imposto pelo solucionador do sistema de equações para determinar a melhor distribuição é pequeno e o ganho obtido ultrapassa o custo dos cálculos. Para as aplicações testadas, em poucas iteracões, foi possivel obter a solução do sistema de equações, o que resultou em poucos milisegundos, na ordem de 10 ms.
+Também, considerou-se que a aplicação termina em menos que 4 segundos, para o cenário com 3 máquinas, é possível notar que o \emph{overhead} imposto pelo solucionador do sistema de equações para determinar a melhor distribuição é pequeno e o ganho obtido ultrapassa o custo dos cálculos. Para as aplicações testadas, em poucas iterações, foi possível obter a solução do sistema de equações, o que resultou em poucos milissegundos, na ordem de 10 ms.
 
 \begin{figure}[htb]
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.4]{MaximaDiferencaBlack.eps}
-	\caption{Time differences between the earliest and latest finishing threads}
+	\caption{Diferença de tempo entre a primeira e a última thread a terminarem o trabalho}
 	\label{fig:diferencaThreadsBlack}
 	\end{center}
 \end{figure}
@@ -132,9 +132,9 @@ A figura~\ref{fig:diferencaThreadsBlack} confirma o resultado de que a diferenç
 
 \section{Conclusões e Trabalhos Futuros}\label{cap6:conclusao}
 
-Foi proposto um algoritmo de escalonamento de tarefas para problemas de decomposição de domínio que executam em clusters de CPUs e GPUs hetererogêneas. O algoritmo proposto supera outros algoritmos similares devido a estimativa online da curva de desempenho para cada  processador e a seleção da melhor distribuição para os dispositivos. foi apresentado para duas applicações que o algoritmo proposto fornece maiores ganhos para problemas grandes e em ambientes mais heterogêneos.
+Foi proposto um algoritmo de escalonamento de tarefas para problemas de decomposição de domínio que executam em \emph{clusters} de CPUs e GPUs hetererogêneas. O algoritmo proposto supera outros algoritmos similares devido a estimativa online da curva de desempenho para cada  processador e a seleção da melhor distribuição para os dispositivos. foi apresentado para duas aplicações que o algoritmo proposto fornece maiores ganhos para problemas grandes e em ambientes mais heterogêneos.
 
-Embora usou-se clusters dedicados, pode-se também considerar o uso em núvem públicas, onde o usuário pode requisitar um numero de recursos alocados me máquinas virtuais de máquinas compartilhadas. Neste caso, a qualidade do serviço pode alterar durante a execução, e a adição de um limiar permite ajustar a distribuição de dados. Pode-se também considerar o ceneario com a adição de tolerância a falhas, onde máquinas podem ser tornar indisponíveis durante a execução. Neste cenário, uma simples redistribuição dos dados entre os dispositivos restantes permitiria que a aplicação ser readapte a este cenário.
+Embora usou-se clusters dedicados, pode-se também considerar o uso em nuvem públicas, onde o usuário pode requisitar um numero de recursos alocados me máquinas virtuais de máquinas compartilhadas. Neste caso, a qualidade do serviço pode alterar durante a execução, e a adição de um limiar permite ajustar a distribuição de dados. Pode-se também considerar o ceneario com a adição de tolerância a falhas, onde máquinas podem ser tornar indisponíveis durante a execução. Neste cenário, uma simples redistribuição dos dados entre os dispositivos restantes permitiria que a aplicação ser readapte a este cenário.
 
 Como trabalho futuro, espera-se incluir o custo da comunicação no algoritmo de escalonamento, que é essencial para aplicações onde o tempo gasto com a troca de informação entre tarefas não pode ser ignorada.
 

@@ -11,47 +11,44 @@ A level-1 auxiliary file: Resultados.aux
 A level-1 auxiliary file: PlanoTrabalho.aux
 The style file: apalike.bst
 Database file #1: bibQualificacacao.bib
-Warning--I didn't find a database entry for "HDSS"
-Warning--I didn't find a database entry for "point"
-You've used 26 entries,
+You've used 36 entries,
             1935 wiz_defined-function locations,
-            651 strings with 9695 characters,
-and the built_in function-call counts, 13042 in all, are:
-= -- 1289
-> -- 580
-< -- 27
-+ -- 210
-- -- 201
-* -- 1065
-:= -- 2134
-add.period$ -- 86
-call.type$ -- 26
-change.case$ -- 229
-chr.to.int$ -- 25
-cite$ -- 26
-duplicate$ -- 546
-empty$ -- 910
-format.name$ -- 233
-if$ -- 2714
+            720 strings with 12087 characters,
+and the built_in function-call counts, 17753 in all, are:
+= -- 1759
+> -- 774
+< -- 34
++ -- 278
+- -- 267
+* -- 1462
+:= -- 2909
+add.period$ -- 118
+call.type$ -- 36
+change.case$ -- 311
+chr.to.int$ -- 35
+cite$ -- 36
+duplicate$ -- 734
+empty$ -- 1247
+format.name$ -- 315
+if$ -- 3678
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 132
-num.names$ -- 81
-pop$ -- 242
+missing$ -- 35
+newline$ -- 182
+num.names$ -- 110
+pop$ -- 324
 preamble$ -- 1
-purify$ -- 229
+purify$ -- 312
 quote$ -- 0
-skip$ -- 403
+skip$ -- 542
 stack$ -- 0
-substring$ -- 841
-swap$ -- 144
-text.length$ -- 19
+substring$ -- 1188
+swap$ -- 184
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
+type$ -- 214
 warning$ -- 0
-while$ -- 105
+while$ -- 143
 width$ -- 0
-write$ -- 364
-(There were 2 warnings)
+write$ -- 500

@@ -29,26 +29,23 @@
 \contentsline {subsubsection}{The Makespan with Preemptions}{9}{section*.18}
 \contentsline {subsubsection}{The Total Completion Time without Preemptions}{9}{section*.19}
 \contentsline {subsubsection}{The Total Completion Time with Preemptions}{9}{section*.20}
-\contentsline {section}{\numberline {2.2}GPUs}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Suporte ao Paralelismo de Tarefas}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}StarPU}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Charm++}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Kaapi}{12}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Cilk}{12}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Intel TBB}{13}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}OpenMP}{13}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.2}Balancemento de Carga}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}GPUs}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Suporte ao Paralelismo de Tarefas}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}StarPU}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Charm++}{12}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Kaapi}{13}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Cilk}{13}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Intel TBB}{13}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}OpenMP}{13}{subsection.2.4.6}
 \contentsline {chapter}{\numberline {3}Trabalhos Relacionados}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{15}{section.3.1}
 \contentsline {chapter}{\numberline {4}Algoritmo Proposto}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}IPOPT}{23}{section.4.2}
 \contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introdu\IeC {\c c}\IeC {\~a}o}{25}{section.5.1}
 \contentsline {chapter}{\numberline {6}Resultados}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Resultados dos experimentos}{27}{section.6.1}
 \contentsline {section}{\numberline {6.2}Multiplica\IeC {\c c}\IeC {\~a}o de Matrizes}{28}{section.6.2}
 \contentsline {section}{\numberline {6.3}Blackscholes}{30}{section.6.3}
 \contentsline {section}{\numberline {6.4}Conclus\IeC {\~o}es e Trabalhos Futuros}{32}{section.6.4}
 \contentsline {chapter}{\numberline {7}Plano de Trabalho}{33}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{33}{section.7.1}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{34}{chapter*.31}

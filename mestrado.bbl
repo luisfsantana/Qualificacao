@@ -26,6 +26,27 @@ Ayguade, E., Badia, R., Cabrera, D., Duran, A., Gonzalez, M., Igual, F.,
   Lecture Notes in Computer Science}, pages 154--167. Springer Berlin
   Heidelberg.
 
+\bibitem[Belviranli et~al., 2013]{hdss}
+Belviranli, M.~E., Bhuyan, L.~N., and Gupta, R. (2013).
+\newblock A dynamic self-scheduling scheme for heterogeneous multiprocessor
+  architectures.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 9(4):57:1--57:20.
+
+\bibitem[Blumofe et~al., 1995]{Blumofe:1995:CEM:209936.209958}
+Blumofe, R.~D., Joerg, C.~F., Kuszmaul, B.~C., Leiserson, C.~E., Randall,
+  K.~H., and Zhou, Y. (1995).
+\newblock Cilk: An efficient multithreaded runtime system.
+\newblock In {\em Proceedings of the Fifth ACM SIGPLAN Symposium on Principles
+  and Practice of Parallel Programming}, PPOPP '95, pages 207--216, New York,
+  NY, USA. ACM.
+
+\bibitem[Blumofe and Lisiecki, 1997]{Blumofe:1997:ARP:1268680.1268690}
+Blumofe, R.~D. and Lisiecki, P.~A. (1997).
+\newblock Adaptive and reliable parallel computing on networks of workstations.
+\newblock In {\em Proceedings of the Annual Conference on USENIX Annual
+  Technical Conference}, ATEC '97, pages 10--10, Berkeley, CA, USA. USENIX
+  Association.
+
 \bibitem[Borelli et~al., 2012]{rozante}
 Borelli, F., Camargo, R., Martins, D., Stransky, B., and Rozante, L. (2012).
 \newblock Accelerating gene regulatory networks inference through gpu/cuda
@@ -53,6 +74,14 @@ Chen, L., Villa, O., Krishnamoorthy, S., and Gao, G. (2010).
 \newblock In {\em Parallel Distributed Processing (IPDPS), 2010 IEEE
   International Symposium on}, pages 1--12.
 
+\bibitem[Clarke et~al., 2012]{Clarke:2012:HPA:2402420.2402479}
+Clarke, D., Ilic, A., Lastovetsky, A., and Sousa, L. (2012).
+\newblock Hierarchical partitioning algorithm for scientific computing on
+  highly heterogeneous cpu \&\#43; gpu clusters.
+\newblock In {\em Proceedings of the 18th International Conference on Parallel
+  Processing}, Euro-Par'12, pages 489--501, Berlin, Heidelberg.
+  Springer-Verlag.
+
 \bibitem[{CUDA Development Core Team}, 2012]{cuda}
 {CUDA Development Core Team} (2012).
 \newblock {CUDA 4.1 Programming Guide}.
@@ -70,6 +99,12 @@ de~Camargo, R. (2012).
   gpu clusters.
 \newblock In {\em Applications for Multi-Core Architectures (WAMCA), 2012 Third
   Workshop on}, pages 1--6.
+
+\bibitem[Devarakonda and Iyer, 1989]{carga}
+Devarakonda, M. and Iyer, R. (1989).
+\newblock Predictability of process resource usage: a measurement-based study
+  on unix.
+\newblock {\em Software Engineering, IEEE Transactions on}, 15(12):1579--1586.
 
 \bibitem[Diamos and Yalamanchili, 2008]{harmony}
 Diamos, G.~F. and Yalamanchili, S. (2008).
@@ -92,6 +127,13 @@ Foley, T. and Sugerman, J. (2005).
 \newblock In {\em Proceedings of the ACM SIGGRAPH/EUROGRAPHICS conference on
   Graphics hardware}, pages 15--22, New York, NY, USA. ACM.
 
+\bibitem[Gautier et~al., 2013]{gautier:hal-00799904}
+Gautier, T., Ferreira~Lima, J.~V., Maillard, N., and Raffin, B. (2013).
+\newblock {XKaapi: A Runtime System for Data-Flow Task Programming on
+  Heterogeneous Architectures}.
+\newblock In {\em {27th IEEE International Parallel \& Distributed Processing
+  Symposium (IPDPS)}}, Boston, Massachusetts, {\'E}tats-Unis.
+
 \bibitem[Graham, 1966]{graham66}
 Graham, R.~L. (1966).
 \newblock Bounds for certain multiprocessing anomalies.
@@ -109,12 +151,15 @@ Kim, J., Seo, S., Lee, J., Nah, J., Jo, G., and Lee, J. (2012).
 \newblock In {\em Proceedings of the 26th ACM international conference on
   Supercomputing}, ICS '12, pages 341--352, New York, NY, USA. ACM.
 
-\bibitem[Leung, 2004]{handbook-sched}
-Leung, J. Y.~T., editor (2004).
-\newblock {\em Handbook of Scheduling: Algorithms, Models, and Performance
-  Analysis}.
-\newblock Computer and Information Science Series. Chapman \& Hall/CRC Press,
-  Boca Raton, FL, USA, 1 edition.
+\bibitem[Kim and Voss, 2011]{Kim:2011:MDP:1920042.1920078}
+Kim, W. and Voss, M. (2011).
+\newblock Multicore desktop programming with intel threading building blocks.
+\newblock {\em IEEE Softw.}, 28(1):23--31.
+
+\bibitem[Kunzman et~al., 2006]{kunzman2006charm++}
+Kunzman, D., Zhang, G., Bohm, E., and Kale, L.~V. (2006).
+\newblock Charm++, offload api, and the cell processor.
+\newblock {\em Urbana}, 51:61801.
 
 \bibitem[Li et~al., 2011]{Aprendizado}
 Li, Q., Salman, R., Test, E., Strack, R., and Kecman, V. (2011).
@@ -140,17 +185,34 @@ Miyoshi, T., Irie, H., Shima, K., Honda, H., Kondo, M., and Yoshinaga, T.
   Processing with Graphics Processing Units}, GPGPU-5, pages 20--29, New York,
   NY, USA. ACM.
 
+\bibitem[Nocedal et~al., 2009]{point}
+Nocedal, J., W{\"a}chter, A., and Waltz, R. (2009).
+\newblock Adaptive barrier update strategies for nonlinear interior methods.
+\newblock {\em SIAM Journal on Optimization}, 19(4):1674--1693.
+
 \bibitem[Owens et~al., 2008]{gpu}
 Owens, D., Houston, M., Luebke, D., Green, S., Stone, J.~E., and Phillips,
   J.~C. (2008).
 \newblock {GPU} computing.
 \newblock {\em Proceedings of the IEEE}, 96(1):879--899.
 
+\bibitem[Quinn, 2003]{Quinn:2003:PPC:1211440}
+Quinn, M.~J. (2003).
+\newblock {\em Parallel Programming in C with MPI and OpenMP}.
+\newblock McGraw-Hill Education Group.
+
 \bibitem[Riegel et~al., 2009]{fluido}
 Riegel, E., Indinger, T., and Adams, N.~A. (2009).
 \newblock Implementation of a lattice--boltzmann method for numerical fluid
   mechanics using the nvidia cuda technology.
 \newblock {\em Computer Science - Research and Development}, 23(3-4):241--247.
+
+\bibitem[Singh et~al., 2008]{virtual}
+Singh, A., Korupolu, M., and Mohapatra, D. (2008).
+\newblock Server-storage virtualization: Integration and load balancing in data
+  centers.
+\newblock In {\em High Performance Computing, Networking, Storage and Analysis,
+  2008. SC 2008. International Conference for}, pages 1--12.
 
 \bibitem[Teodoro et~al., 2009]{Anthill}
 Teodoro, G., Sachetto, R., Sertel, O., Gurcan, M., Meira, W., Catalyurek, U.,
