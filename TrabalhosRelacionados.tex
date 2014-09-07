@@ -10,7 +10,7 @@ A crescente demanda de processamento de informação levantou especial interesse
 
 O problema de balanceamento de carga é estudado por pesquisadores da
 área de Teoria de Escalonamento há mais de 50 anos. Já em 1966,
-\cite{graham66} estudou o que chamou de "anomalias'' na execução de
+\citep{graham66} estudou o que chamou de "anomalias'' na execução de
 tarefas em processadores de velocidades diferentes. Ele mostrou, por
 exemplo, que a adição de novos processadores ou a troca de alguns
 processadores por outros de maior velocidade podem propiciar o
@@ -23,19 +23,19 @@ estão instigando pesquisadores a rever o problema do balanceamento de
 carga neste novo contexto.
 Apesar do balanceamento de carga ser
 crítico para o desempenho de aplicações paralelas, como no caso de
-aplicações gráficas~\cite{kdtree, ray}, ainda não há na literatura muitos
+aplicações gráficas~\citep{kdtree, ray}, ainda não há na literatura muitos
 estudos sobre balanceamento de carga em GPUs.
 
-\cite{graphics} analisaram várias estratégias de balanceamento de carga estática
+\citep{graphics} analisaram várias estratégias de balanceamento de carga estática
 e dinâmica para um problema de partição de octree em GPUs. O balanceamento de
 carga é realizado internamente em uma única GPU, sem interação com a CPU. Em
-outro estudo~\cite{tasks}, os autores propõem a obtenção das cargas de trabalho
+outro estudo~\citep{tasks}, os autores propõem a obtenção das cargas de trabalho
 de tarefas em múltiplos núcleos e sua fusão em um \textit{super-kernel}. No
 entanto, esta fusão precisa ser realizada estaticamente, e assim o equilíbrio
 dinâmico de carga não pode ser sempre garantido.
 
 O problema de distribuição de carga em GPUs heterogêneas começou a ser estudado
-recentemente. \cite{acosta} propôs um algoritmo de balanceamento de carga
+recentemente. \citep{acosta} propôs um algoritmo de balanceamento de carga
 dinâmico, que busca, interativamente, uma boa distribuição de trabalho entre as
 GPUs durante a execução da aplicação. Os autores avaliaram os problemas de
 multiplicação de matrizes e alocação de recursos. O método iterativo pode
@@ -44,7 +44,7 @@ da aplicação. Além disso, não é possível utilizar informações relativas 
 de execução anteriores para gerar um perfil de execução para as futuras
 execuções da aplicação.
 
-Em outro trabalho, \cite{raphael} propõe um algoritmo que determina a
+Em outro trabalho, \citep{raphael} propõe um algoritmo que determina a
 distribuição, antes do início da execução da aplicação, usando perfis estáticos
 obtidos em execuções anteriores. O algoritmo foi avaliado para uma aplicação de
 redes neurais de grande escala. O algoritmo encontra a distribuição de dados que
@@ -53,21 +53,21 @@ mesma quantia de tempo realizando o processamento de \emph{kernels}. Esta
 abordagem, entretanto, não permite alterações dinâmicas na distribuição dos
 dados.
 
-Em~\cite{Clarke:2012:HPA:2402420.2402479}  os autores fizeram um balancemento de carga dinâmico heterogêneo baseado na partição de matrizes, ou seja, apenas serve para problemas que envolvem matrizes. Há uma divisão da matriz entre as unidades, que se subdivide entre as subunidades e assim por diante. 
+Em~\citep{Clarke:2012:HPA:2402420.2402479}  os autores fizeram um balancemento de carga dinâmico heterogêneo baseado na partição de matrizes, ou seja, apenas serve para problemas que envolvem matrizes. Há uma divisão da matriz entre as unidades, que se subdivide entre as subunidades e assim por diante. 
 
 
 Algoritmos de distribuição de carga são frequentemente baseados no conceito de
 tarefas. Neste caso, as tarefas das aplicações podem ser dinamicamente
 distribuídas entre os SMs (\textit{Streaming Multiprocessor}) das GPUs
-\cite{dynamicLoad}, ou entre diferentes GPUs \cite{starpu} para realizar a
+\citep{dynamicLoad}, ou entre diferentes GPUs \citep{starpu} para realizar a
 distribuição da carga. Neste contexto surge o modelo de programação de uso geral
-para sistemas multi-core heterogêneos chamado \textit{Merge}~\cite{merge}. O
+para sistemas multi-core heterogêneos chamado \textit{Merge}~\citep{merge}. O
 objetivo do \textit{framework} é substituir as atuais abordagens \textit{ad hoc}
 para programação paralela em plataformas heterogêneas, com uma metodologia
 baseada em uma biblioteca que pode distribuir automaticamente o cálculo através
 de núcleos heterogêneos.
 
-StarPU~\cite{starpu} é um \textit{framework} para o escalonamento de tarefas em
+StarPU~\citep{starpu} é um \textit{framework} para o escalonamento de tarefas em
 plataformas heterogêneas, onde informações sobre o modelo de desempenho das
 tarefas podem ser passadas para orientar as políticas de escalonamento. Os dois
 princípios básicos da StarPU são (i) as tarefas podem ter várias implementações,
@@ -82,13 +82,13 @@ Na estratégia w-rand, cada unidade de processamento está associada com uma rel
 
 A tarefa de distribuir uniformemente sobre as unidades de processamento baseado na velocidade não significa necessariamente fazer sentido para as tarefas que não são igualmente custosas, ou quando existem dependências entre eles. Assim, os programadores podem especificar um modelo de custo para cada tarefa. Este modelo pode por exemplo representar a quantidade de trabalho e ser usado em conjunto com a velocidade relativa de cada um das unidades de processamento. É também possível modelar diretamente o tempo de execução de cada uma das arquiteturas. Usando esses modelos, implementa-se a estratégia heft-tm. Dada a sua duração esperada nas várias arquiteturas, é atribuída uma tarefa para as unidades de processamento que minimiza o tempo de término, no que diz respeito à quantidade de trabalho já atribuída a esta unidade de processamento.
 
-Charme++\cite{kunzman2006charm++} é uma biblioteca em C++ que fornece sofisticados mecanismos de balanceamento de carga e otimização de mecanismos de comunicação. Sua implementação do sistema em tempo de execução suporta GPUs e processadores "Cell" . 
+Charme++\citep{kunzman2006charm++} é uma biblioteca em C++ que fornece sofisticados mecanismos de balanceamento de carga e otimização de mecanismos de comunicação. Sua implementação do sistema em tempo de execução suporta GPUs e processadores "Cell" . 
 
-\cite{harmony} apresentar um conjunto de técnicas para o sistema de execução "Harmony" que pretende implementar em um sistema completo. Algumas dessas técnicas são semelhantes às aplicadas no StarPU . Por exemplo , eles consideram o problema de escalonamento de tarefas com o apoio de modelos de desempenho . No entanto, "Harmony" não aceita as estratégias de programação fornecidas pelo usuário . Além do modelo baseado em regressão também proposto por Harmony, a forte integração da biblioteca de gerenciamento de dados do StarPU juntamente com o programador é mais simples e mais preciso que modelos de desempenho baseadas no histórico. 
+\citep{harmony} apresentar um conjunto de técnicas para o sistema de execução "Harmony" que pretende implementar em um sistema completo. Algumas dessas técnicas são semelhantes às aplicadas no StarPU . Por exemplo , eles consideram o problema de escalonamento de tarefas com o apoio de modelos de desempenho . No entanto, "Harmony" não aceita as estratégias de programação fornecidas pelo usuário . Além do modelo baseado em regressão também proposto por Harmony, a forte integração da biblioteca de gerenciamento de dados do StarPU juntamente com o programador é mais simples e mais preciso que modelos de desempenho baseadas no histórico. 
 
-StarSs \cite{StarSs} introduz  as anotações "\#pragma". Eles contam com um compilador "source-to-source" para gerar tarefas. Contrariamente ao StarPU , a implementação do modelo StarSs é feito por meio de um sistema de execução separado para cada plataforma. Alguns esforços são feitos para combinar esses diferentes sistemas de tempo de execução: Planas et al. permite que os programadores incluíam tarefas dentro tarefas SMPSs, mas este continua a ser responsabilidade do programador decidir quais tarefas devem ser inseridas. Em contraste, StarPU considera as tarefas que podem ser executadas com indiferença em múltiplos alvos, leva em consideração a heterogeneidade do sistema.
+StarSs \citep{StarSs} introduz  as anotações "\#pragma". Eles contam com um compilador "source-to-source" para gerar tarefas. Contrariamente ao StarPU , a implementação do modelo StarSs é feito por meio de um sistema de execução separado para cada plataforma. Alguns esforços são feitos para combinar esses diferentes sistemas de tempo de execução: Planas et al. permite que os programadores incluíam tarefas dentro tarefas SMPSs, mas este continua a ser responsabilidade do programador decidir quais tarefas devem ser inseridas. Em contraste, StarPU considera as tarefas que podem ser executadas com indiferença em múltiplos alvos, leva em consideração a heterogeneidade do sistema.
 
-A abordagem do sistema de execução Anthill é muito semelhante ao StarPU . \cite{Anthill} experimentaram o impacto da programação de tarefas para clusters de máquinas equipadas com processadores com uma única GPU e com múltiplos processadores. Eles implementaram duas políticas de escalonamento que são equivalentes às estratégias gulosas simples. Anthill considera apenas speedups relativos para selecionar a unidade de processamento mais adequada.
+A abordagem do sistema de execução Anthill é muito semelhante ao StarPU . \citep{Anthill} experimentaram o impacto da programação de tarefas para clusters de máquinas equipadas com processadores com uma única GPU e com múltiplos processadores. Eles implementaram duas políticas de escalonamento que são equivalentes às estratégias gulosas simples. Anthill considera apenas speedups relativos para selecionar a unidade de processamento mais adequada.
 
 
 

@@ -6,11 +6,14 @@
 % Números das páginas em arábicos
 \pagenumbering{arabic}
 
+%espaco entre linhas
+\onehalfspacing
+
 \chapter{Conceitos Computacionais}\label{cap2}
 
 \section{Escalonamento}\label{cap2:escalonamento}
 
-Escalonamento é um processo de tomada de decisão que é usado como base em muitas indústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos~\cite{pinedo2012scheduling}.
+Escalonamento é um processo de tomada de decisão que é usado como base em muitas indústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos~\citep{pinedo2012scheduling}.
 
 Encontrar um escalonamento significa encontrar, para cada tarefa, uma alocação de um ou mais intervalos de tempo, em uma ou mais máquinas. O problema de escalonamento correspondente é encontrar um escalonamento que satisfaça um determinado conjunto de restrições.
 
@@ -33,9 +36,9 @@ empresa e a alocação de recursos baseados em seus níveis de estoque, previsõ
 de demanda e necessidades de recursos. As decisões tomadas neste nível mais alto 
 de planejamento podem impactar o processo de escalonamento diretamente. 
 
-Um exemplo de escalonamento é na indústria de semicondutores  no qual o objetivo é maximizar o tempo de utilização dos equipamentos e minimizar o tempo ocioso e de configuração dos mesmos~\cite{pinedo2012scheduling}.
+Um exemplo de escalonamento é na indústria de semicondutores  no qual o objetivo é maximizar o tempo de utilização dos equipamentos e minimizar o tempo ocioso e de configuração dos mesmos~\citep{pinedo2012scheduling}.
 
-Na computação o escalonamento está associado a utilização dos recursos da máquina como por exemplo a CPU. Existem vários algortimos de escalonamento entre eles~\cite{tanenbaum2006sistemas}:
+Na computação o escalonamento está associado a utilização dos recursos da máquina como por exemplo a CPU. Existem vários algortimos de escalonamento entre eles~\citep{tanenbaum2006sistemas}:
 \begin{itemize}
 	\item FIFO \textit{(First In, First Out)}. A primeira tarefa a chegar será a primeira a ser executada.
 	\item SJF \textit{(Shortest Job First)}. A tarefa mais curta tem ganhará o recurso, e uma fila em ordem de tamanhos da menor para a maior é feita atrás da menor.
@@ -167,7 +170,7 @@ conclusão ($C_1, . . ., C_n$), ou seja, ao tempo de conclusão do último traba
 
 \section{Balancemento de Carga}\label{intro:carga}
 
-O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fases~\cite{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
+O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fases~\citep{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
 
 \begin{itemize}
 \item Estático A regra de balanceamento é definida uma única vez, baseada em informações estáticas do sistema ou aplicações.
@@ -175,7 +178,7 @@ O balanceamento de carga é uma técnica aplicada para distribuir a carga de tra
 \item Dinâmico A regra de balanceamento é modificada em resposta ao estado atual do sistema ou das aplicações. O estado do sistema será constantemente atualizado e as decisões tomadas são baseadas nas informações atuais e possivelmente, dos estados anteriores do sistema.
 \end{itemize}
 
-Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. O problema de balanceamento de carga  é similar a problemas de alta complexidade computacional~\cite{virtual}, NP-Completo que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
+Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. O problema de balanceamento de carga  é similar a problemas de alta complexidade computacional~\citep{virtual}, NP-Completo que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
 
 
 Distribuição de carga estática, também conhecida como planejamento determinístico, atribui um determinado trabalho a processador fixado. Toda vez que o sistema for reiniciado, a mesma tarefa no processador de ligação (atribuição de uma tarefa ao mesmo processador) é usada sem considerar as mudanças que podem ocorrer durante a vida útil do sistema. Além disso, a distribuição de carga estática pode também caracterizar a estratégia utilizada durante a execução, no sentido de que ele pode não resultar na mesma atribuição de tarefas no processador, mas atribui os postos de trabalho recém-chegados de uma forma sequencial ou fixa. Por exemplo, utilizando uma estratégia estática simples, os trabalhos podem ser atribuídos aos nós de uma maneira round-robin de modo que cada processador execute aproximadamente o mesmo número de tarefas. 
@@ -200,21 +203,21 @@ Confusões podem surgir entre a distinção entre escalonamento dinâmico e esca
 
 \section{GPUs}\label{intro:historico}
 
-As GPUs vêm se mostrando uma excelente alternativa na área de computação de alto-desempenho para aplicações que exigem um alto grau de paralelismo~\cite{gpu}. GPUs modernas possuem dezenas de núcleos, cada um deles bastante simples, mas que utilizados em paralelo geram um alto poder computacional~\cite{cuda}.
+As GPUs vêm se mostrando uma excelente alternativa na área de computação de alto-desempenho para aplicações que exigem um alto grau de paralelismo~\citep{gpu}. GPUs modernas possuem dezenas de núcleos, cada um deles bastante simples, mas que utilizados em paralelo geram um alto poder computacional~\citep{cuda}.
 
-Muitas aplicações já utilizam o poder de processamento das GPUs, exemplos são mecânica dos fluidos \cite{fluido}, visualização científica \cite{visualizacao},  aprendizado de máquina \cite{Aprendizado}, entre outras. Devido ao relativo baixo custo de placas gráficas contendo GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a instituições com poucos recursos financeiros e com grande necessidade de recursos computacionais.
+Muitas aplicações já utilizam o poder de processamento das GPUs, exemplos são mecânica dos fluidos~\citep{fluido}, visualização científica~\citep{visualizacao},  aprendizado de máquina~\citep{Aprendizado}, entre outras. Devido ao relativo baixo custo de placas gráficas contendo GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a instituições com poucos recursos financeiros e com grande necessidade de recursos computacionais.
 
 
 \section{CUDA}\label{intro:contexto}
 
-\textit{Compute Unified Device Architecture} (CUDA)~\cite{cuda} é uma arquitetura de computação paralela desenvolvida pela Nvidia para processamento gráfico.
-Com esta tecnologia é possível desenvolver não só aplicações convencionais de processamento gráfico, mas é possivel fazer programas de propósito geral, esta abordagem de se desenvolver programas de propósito geral em GPU é denominado GPGPU (\textit{General-Purpose Computing on Graphics Processor Units})~\cite{GPGPU}.
+\textit{Compute Unified Device Architecture} (CUDA)~\citep{cuda} é uma arquitetura de computação paralela desenvolvida pela Nvidia para processamento gráfico.
+Com esta tecnologia é possível desenvolver não só aplicações convencionais de processamento gráfico, mas é possivel fazer programas de propósito geral, esta abordagem de se desenvolver programas de propósito geral em GPU é denominado GPGPU (\textit{General-Purpose Computing on Graphics Processor Units})~\citep{GPGPU}.
 
 Através de linguagens de programação amplamente utilizadas na indústria é possível desenvolver variadas aplicações que se beneficiam do alto poder de processamento das placas gráficas. A principal linguagem utilizada para o desenvolvimento em CUDA é a linguagem de
 programação C, que mundialmente é a mais amplamente utilizada. O principal mérito do CUDA é a facilidade que se tem para acessar todos recursos da placa gráfica.
 
 %%%%%%%%%%%%%%%%%%%%Revisar
-CUDA foi lançado pela NVIDIA em novembro de 2006~\cite{cuda}. Sua proposta foi criar uma arquitetura de computação paralela de propósito geral. A justificativa para isso foi aproveitar a plataforma de computação paralela das placas gráficas para resolver diversos algoritmos
+CUDA foi lançado pela NVIDIA em novembro de 2006~\citep{cuda}. Sua proposta foi criar uma arquitetura de computação paralela de propósito geral. A justificativa para isso foi aproveitar a plataforma de computação paralela das placas gráficas para resolver diversos algoritmos
 computacionais eficientemente. O aplicativo produzido sobre a API CUDA pode ser um algoritmo em linguagem C, OpenCL, Fortran, C++ e DX11, não havendo limitações para o suporte de novas linguagens. 
 
 \begin{figure}[htb]
@@ -222,11 +225,11 @@ computacionais eficientemente. O aplicativo produzido sobre a API CUDA pode ser 
 	\centering
 			\includegraphics[scale=0.6]{LingSuportadas.png}
 	\label{fig: lingSuportadas}
-	\caption{Linguagens Suportadas(adaptado de \cite{cuda})}
+	\caption{Linguagens Suportadas(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
-A arquitetura NVIDIA CUDA se baseia tanto em componentes de hardware como de software~\cite{cuda}. A parte que entendemos por software é a executada na CPU, formada por um algoritmo seqüencial escrito comumente na linguagem C ou alguma outra que é suportada por CUDA. A parte do hardware é formada pelo código compilado por CUDA para torná-lo um kernel. \textit{Kernel} são blocos que especificam parte do algoritmo em que se deseja a
+A arquitetura NVIDIA CUDA se baseia tanto em componentes de hardware como de software~\citep{cuda}. A parte que entendemos por software é a executada na CPU, formada por um algoritmo seqüencial escrito comumente na linguagem C ou alguma outra que é suportada por CUDA. A parte do hardware é formada pelo código compilado por CUDA para torná-lo um kernel. \textit{Kernel} são blocos que especificam parte do algoritmo em que se deseja a
 paralelização. Ele também pode ser tratado como um código que pode ser utilizado pela GPU para chamar outros kernels nela ou em outra GPU.
 
 A GPU contém milhares de threads. CUDA faz a formatação do código de uma maneira que threads sejam alocadas paralelamente e o usuário usufrua dessa característica, podendo fazer chamadas de kernel que serão independentes entre si, o que permite a GPU rodar vários algoritmos.
@@ -238,7 +241,7 @@ Podemos ver na Figura 1.2 a diferença de potencial que uma GPU, com seu paralel
 	\centering
 			\includegraphics[scale=0.8]{ImageSub.png}
 	\label{fig: graficosCuda1}
-	\caption{Operações de Ponto Flutuante por segundo para CPU e GPU(adaptado de \cite{cuda})}
+	\caption{Operações de Ponto Flutuante por segundo para CPU e GPU(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -249,7 +252,7 @@ Na figura \ref{fig: graficosCuda1} gráfico temos informações sobre o pico de 
 	\centering
 			\includegraphics[scale=0.8]{ImageSub2.png}
 	\label{fig: graficosCuda2}
-	\caption{Tamanho de banda de memória para CPU e GPU(adaptado de \cite{cuda})}
+	\caption{Tamanho de banda de memória para CPU e GPU(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -261,7 +264,7 @@ observamos a Figura 1.3.
 	\centering
 			\includegraphics[scale=0.6]{transistores.png}
 	\label{fig: transistores}
-	\caption{Quantidade de transistores para processamento de dados(adaptado de \cite{cuda})}
+	\caption{Quantidade de transistores para processamento de dados(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -277,15 +280,15 @@ Com relação à hierarquia de compilação para o CUDA, a Figura 1.4 ilustra a 
 	\centering
 			\includegraphics[scale=0.6]{pilhaSoftware.png}
 	\label{fig: pilhaSoftware}
-	\caption{Pilha de Software(adaptado de \cite{cuda})}
+	\caption{Pilha de Software(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
 Essa pilha de software mostra a hierarquia de execução de CUDA. A API de CUDA fornece suporte a diversas funções matemáticas, bibliotecas, suporte ao runtime e ao driver.
 
-O CUDA \textit{runtime} ~\cite{cuda} é a camada de alto nível de programação, enquanto a camada do driver é a camada baixa para manipulação de dados. O CUDA driver gerencia e otimiza os recursos relacionados diretamente à GPU. CUDA é baseada em programação paralela, permitindo milhares de threads executando uma mesma tarefa. Neste caso, a GPU funciona como um co-processador da CPU, a qual chamamos de \textit{HOST} e a GPU de \textit{DEVICE}.
+O CUDA \textit{runtime} ~\citep{cuda} é a camada de alto nível de programação, enquanto a camada do driver é a camada baixa para manipulação de dados. O CUDA driver gerencia e otimiza os recursos relacionados diretamente à GPU. CUDA é baseada em programação paralela, permitindo milhares de threads executando uma mesma tarefa. Neste caso, a GPU funciona como um co-processador da CPU, a qual chamamos de \textit{HOST} e a GPU de \textit{DEVICE}.
 
-CUDA usa como base a linguagem C~\cite{cuda}, que permite uma curva rápida de aprendizado. Nela deve-se criar funções desejadas que CUDA otimiza e paraleliza na GPU. Essas funções são chamadas de kernel. A seguir, observamos um exemplo de um código simples, em seguida, uma explanação sobre cada aspecto inerente ao entendimento seqüencial desse código.
+CUDA usa como base a linguagem C~\citep{cuda}, que permite uma curva rápida de aprendizado. Nela deve-se criar funções desejadas que CUDA otimiza e paraleliza na GPU. Essas funções são chamadas de kernel. A seguir, observamos um exemplo de um código simples, em seguida, uma explanação sobre cada aspecto inerente ao entendimento seqüencial desse código.
 
 
 \begin{verbatim}
@@ -324,7 +327,7 @@ Cada bloco é identificado por um block ID, e tem sua ID única em relação ao 
 	\centering
 			\includegraphics[scale=0.6]{ThreadBatching.png}
 	\label{fig: ThreadBatching}
-	\caption{Batching de Threads(adaptado de \cite{cuda})}
+	\caption{Batching de Threads(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -341,7 +344,7 @@ A arquitetura SIMD(\textit{Single Instruction Multiple Data}) é implementada co
 	\centering
 			\includegraphics[scale=0.6]{SIMT.png}
 	\label{fig: SIMT}
-	\caption{Conjunto de Multiprocessadores e Organização das Memórias(adaptado de \cite{cuda})}
+	\caption{Conjunto de Multiprocessadores e Organização das Memórias(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -353,7 +356,7 @@ Um ponto forte de CUDA é que há uma separação na memória DRAM entre o HOST 
 	\centering
 			\includegraphics[scale=0.6]{HierarquiaMemoriasCuda.png}
 	\label{fig: HierarquiaMemoriasCuda}
-	\caption{Hierarquia de memórias da GPU(adaptado de \cite{cuda})}
+	\caption{Hierarquia de memórias da GPU(adaptado de~\citep{cuda})}
 	\end{center}
 \end{figure}
 
@@ -366,7 +369,7 @@ Diversas ferramentas de programação suportam paralelismo de tarefas em CPUs mu
 
 \subsection{StarPU}
  
-O StarPU~\cite{starpu} é uma ferramenta para programação paralela que oferece suporte para arquiteturas híbridas, como CPUs multicore e aceleradores. O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados.
+O StarPU~\citep{starpu} é uma ferramenta para programação paralela que oferece suporte para arquiteturas híbridas, como CPUs multicore e aceleradores. O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados.
 
 A ferramenta possui um conjunto de políticas de escalonamento implementadas que o programador pode escolher de acordo com as características da aplicação. A principal delas faz uso do algoritmo de escalonamento estático HEFT (Heterogeneous Earliest Finish Time) para escalonar as tarefas com base em modelos de custo de execução das tarefas.
 
@@ -388,7 +391,7 @@ A API do StarPU apresenta uma certa terminologia bem definida, descrita a seguir
 
 \subsubsection{Escalonador de tarefas}
 
-O \textit{framework} StarPU emprega um modelo de programação baseado em tarefas. Kernels computacionais devem ser encapsuladas dentro de uma tarefa. StarPU vai lidar com a decisão de onde e quando a tarefa deve ser executada, com base em uma política de escalonamento de tarefas, e as implementações disponíveis para cada tarefa. Uma tarefa pode ser implementada de várias formas, tais como a CPU ou CUDA. Várias implementações para o mesmo tipo de dispositivo podem também ser utilizadas. Isso permite que StarPU automaticamente selecione a implementação apropriada, mesmo entre diferentes arquiteturas de CPU. Ao enviar uma tarefa, StarPU vai usar o escalonador escolhido para selecionar qual das implementações disponíveis serão utilizadas. A decisão varia de escalonador para escalonador, mas pode levar em conta informações como a atual disponibilidade de cada recurso, o modelo de desempenho já obtido para essa tarefa, e as estimativas sobre as transferências de dados necessários para resolver as dependências. 
+O \textit{framework} StarPU emprega um modelo de programação baseado em tarefas. Kernels computacionais devem ser encapsuladas dentro de uma tarefa. StarPU vai lidar com a decisão de onde e quando a tarefa deve ser executada, com base em uma política de escalonamento de tarefas, e as implementações disponíveis para cada tarefa. Uma tarefa pode ser implementada de várias formas, tais como a CPU ou CUDA. Várias implementações para o mesmo tipo de dispositivo podem também ser utilizadas. Isso permite que StarPU automaticamente selecione a implementação apropriada, mesmo entre diferentes arquiteturas de CPU. Ao enviar uma tarefa, StarPU vai usar o escalonador escolhido para selecionar qual das implementações disponíveis serão utilizadas. A decisão varia de escalonador para escalonador, mas pode levar em conta informações como a atual disponibilidade de cada recurso, o modelo de desempenho já obtido para essa tarefa, e as estimativas sobre as transferências de dados necessários para resolver as dependências. A vantagem do uso de StarPU perante as outras ferramentas é a capcacidade e facildade de alteração do escalonador. A API do StarPU apresenta uma grande variedade de funções que permitem agilizar a implementação de um novo escalonador.
 
 Os dados manipulados por uma tarefa são transferidos automaticamente quando necessário entre os vários dispositivos, assegurando a consistência de memória e liberando o programador de lidar com questões de escalonamento, transferência de dados e outros requisitos associados.
 
@@ -416,28 +419,45 @@ O objetivo é gerenciar automaticamente as alocações de memória e transferên
 
 \subsection{Charm++}
 
-No Charm++~\cite{kunzman2006charm++} as tarefas são representadas pelos chares, que são objetos paralelos e representam unidades locais de trabalho. Cada chare possui dados locais, métodos para tratamento de mensagens e possibilidade de criar novos chares, assim como processos MPI-2. Existe ainda um tipo especial de chare, chamado branch-office, que possui uma ramificação em cada processador e um único nome global. Branch-office chares oferecem métodos sequenciais que podem ser acessados por chares de forma transparente em qualquer processador.
+Charme++ é uma linguagem de programação paralela orientada a objetos baseada em C++ e desenvolvida no Laboratório de Programação Paralela na Universidade de Illinois. Charme++ foi concebido com o objetivo de aumentar a produtividade do programador, fornecendo uma abstração de alto nível de um programa paralelo e ao mesmo tempo um bom desempenho em uma ampla variedade de plataformas de hardware. Programas escritos em Charme++ são decompostos em uma série de objetos controlados por mensagem chamados Chares. Quando um programador invoca um método em um objeto, o sistema de execução do Charme++ envia uma mensagem para o objeto chamado, que pode estar em um processador local ou em um processador remoto. A mensagem inicia a execução de código dentro do chare que aguarda a  mensagem de forma assíncrona. 
 
-No Charm++ a sincronização pode ser feita através de Futures, objetos de comunicação, replicados ou compartilhados. O future  é uma estrutura que serve para armazenar um valor que pode ser acessado no futuro por outro chare. O acesso a essa estrutura  é bloqueante e pode ser comparado a um acesso ao resultado de um método spawned precedido de uma chamada sync. A utilização de objetos de comunicação permite que um chare se comunique por troca de mensagens, tornando a comunicação semelhante à realizada com MPI. Os demais objetos introduzem conceitos para comunicação não encontrados nos outros ambientes.
+Chares podem ser organizados em matrizes indexadas chamadas \emph{Chare arrays} e mensagens podem ser enviadas para Chares individuais dentro de uma matriz chare ou para toda a matriz chare simultaneamente. 
+
+Os Chares em um programa são mapeados para processadores físicos por um sistema de execução adaptativo. O mapeamento de Chares para os processadores é transparente para o programador, e essa transparência permite que o sistema de execução altere dinamicamente a atribuição de Chares para processadores durante a execução do programa para conseguir atender algumas características, tais como balanceamento de carga baseada na medição, tolerância a falhas, pontos de verificação automática, e a capacidade de reduzir e expandir o conjunto de processadores utilizados por um programa paralelo.
+
+No Charm++~\citep{kunzman2006charm++} as tarefas são representadas pelos chares, que são objetos paralelos e representam unidades locais de trabalho. Cada chare possui dados locais, métodos para tratamento de mensagens e possibilidade de criar novos chares, assim como processos MPI-2. Existe ainda um tipo especial de chare, chamado branch-office, que possui uma ramificação em cada processador e um único nome global. 
+
+No Charm++ a sincronização pode ser feita através de \emph{futures}, objetos de comunicação, replicados ou compartilhados. O \emph{future}  é uma estrutura que serve para armazenar um valor que pode ser acessado no futuro por outro Chare. A utilização de objetos de comunicação permite que um Chare se comunique por troca de mensagens, tornando a comunicação semelhante à realizada com MPI.
 
 O Charm foi uma das primeiras implementações do conceito de Atores, que são objetos concorrentes que se comunicam apenas por troca de mensagens. Charm++ é baseado no Charm e suporta diferentes modos de compartilhamento de informações. Ele reúne recursos propostos em outros ambientes, como objetos sequenciais e paralelos, comunicação por troca de mensagens e futures. 
 
+O balanceamento de carga é feito através da migração de objetos em tempo de execução, através de medidas de tempo de processamento e comunicação. Os objetos encapsulam os dados e a função a ser executada sobre os dados, e através de troca de mensagens é possivel conhecer o estado de cada processador. Se um dados processador está demorando para executar uma dada função, o objeto migra para um outro processador, mais rapido ou que esteja ocioso. 
+
 \subsection{Kaapi}
 
-O XKaapi~\cite{gautier:hal-00799904} é uma reimplementação do KAAPI com suporte a paralelismo de tarefas "de grão fino". O KAAPI (Kernel for Adaptative, Asynchronous Parallel and Interactive programming) é uma ferramenta para computação paralela em CPUs multicore e clusters. A implementação atual do XKaapi oferece suporte a arquiteturas multicore e extensões para suporte eficiente a GPUs foram propostas em (HERMANN et al., 2010; LIMA et al., 2012). O XKaapi é composto por um conjunto de APIs (Application Programming Interfaces) e pelo kernel, um ambiente de execução para as APIs que oferece escalonamento baseado em roubo de tarefas. A Kaapi++ é a interface do XKaapi baseada em um DFG (Data Flow Graph) para C++ e é dividida em três componentes: a assinatura da tarefa (task signature) onde são definidos o número e as características dos parâmetros da tarefa; a implementação da tarefa (task implementation) que especifica a implementação da tarefa para uma arquitetura e a criação da tarefa (task creation) que submete a tarefa para a pilha de execução.
+O KAAPI (Kernel for Adaptative, Asynchronous Parallel and Interactive programming) é uma ferramenta para computação paralela em CPUs multicore e clusters. A ferramenta é baseada no algoritmo de roubo de tarefas, ou seja, cada processador recebe uma fila de tarefas a serem processdas, se um processador processa mais rápido do que se esperava a princípio, o processador começa a roubar tarefas da fila de outros processadores mais sobrecarregados.
+
+O XKaapi~\citep{gautier:hal-00799904} é uma reimplementação do KAAPI com suporte a paralelismo de tarefas. . A implementação atual do XKaapi oferece suporte a arquiteturas multicore e extensões para suporte eficiente a GPUs que foram propostas em~\citep{hermann:inria-00502448, lima2012exploiting}. O XKaapi é composto por um conjunto de APIs (Application Programming Interfaces) e pelo kernel, um ambiente de execução para as APIs oferece escalonamento baseado em roubo de tarefas. O Kaapi++ é a interface do XKaapi baseada em um grafo de fluxo de dados para C++ e é dividida em três componentes: a assinatura da tarefa (task signature) onde são definidos o número e as características dos parâmetros da tarefa; a implementação da tarefa (task implementation) que especifica a implementação da tarefa para uma arquitetura e a criação da tarefa (task creation) que submete a tarefa para a pilha de execução.
 
 \subsection{Cilk}
 
-O Cilk é um ambiente de programacção paralelo focado em arquiteturas SMP. Ele  é baseado na linguagem C. O Cilk oferece também um escalonador de processos que é provado ser eficiente. Baseando-se no Cilk, foi desenvolvido um ambiente para execução de programas em arquiteturas com memória distribuída e aproveitamento de recursos ociosos, chamado Cilk-NOW~\cite{Blumofe:1997:ARP:1268680.1268690}.
+Cilk é uma linguagem de programação de propósito geral projetada para computação parelela, é baseado na linguagem C, então é compatível com os compiladores gcc e Microsoft C++.
 
-
-A ferramenta para programação paralela Cilk~\cite{Blumofe:1995:CEM:209936.209958, Blumofe:1997:ARP:1268680.1268690} é uma extensão da linguagem C para permitir a submissão, execução e sincronização de tarefas paralelas. A implementação de Cilk é baseada no algoritmo de escalonamento dinâmico por meio de roubo de tarefas. Cilk define tarefas como funções individuais que podem submeter novas tarefas dinamicamente. A sincronização é feita permitindo que as tarefas esperem pelas tarefas filhas, ou seja, tarefas que foram submetidas pela tarefa original.
+A ferramenta para programação paralela Cilk~\citep{Blumofe:1995:CEM:209936.209958, Blumofe:1997:ARP:1268680.1268690} permite a submissão, execução e sincronização de tarefas paralelas. A implementação de Cilk é baseada no algoritmo de escalonamento dinâmico por meio de roubo de tarefas, como o KAAPI. Cilk define tarefas como funções individuais que podem submeter novas tarefas dinamicamente. A sincronização é feita permitindo que as tarefas esperem pelas tarefas filhas, ou seja, tarefas que foram submetidas pela tarefa original.
 
 
 \subsection{Intel TBB}
 
-O Intel TBB (Threading Building Blocks)~\cite{Kim:2011:MDP:1920042.1920078} é uma biblioteca baseada em templates para programação paralela em C++ que faz uso de threads. Essa biblioteca permite expressar o paralelismo em diversos paradigmas de programação paralela como o paralelismo de dados, de laços ou de tarefas. As unidades de trabalho paralelas resultantes são escalonadas em threads por meio de um algoritmo de roubo de tarefas inspirado no ambiente Cilk.
+O Intel TBB (Threading Building Blocks)~\citep{Kim:2011:MDP:1920042.1920078} é uma biblioteca baseada em \emph{templates} para programação paralela em C++ que faz uso de threads. Essa biblioteca permite expressar o paralelismo em diversos paradigmas de programação paralela como o paralelismo de dados, de laços ou de tarefas. As unidades de trabalho paralelas resultantes são escalonadas em threads por meio de um algoritmo de roubo de tarefas inspirado no ambiente Cilk.
 
 \subsection{OpenMP}
 
-OpenMP (Open Multi-Processing)~\cite{Quinn:2003:PPC:1211440} é uma ferramenta para programação paralela baseada na adição de diretivas de compilação em códigos C, C++ e Fortran. As diretivas OpenMP são utilizadas para indicar a paralelização de laços ou trechos de código. A partir da versão 3.0 (OpenMP ARB, 2008) foi inserido o conceito de tarefas, o que permite a utilização do paralelismo de tarefas através do uso de diretivas para delimitação de trechos de código como unidades de trabalho paralelas. A especificação OpenMP não define uma política para o escalonamento das tarefas, ficando essa escolha a cargo de cada implementação.
+OpenMP (Open Multi-Processing)~\citep{Quinn:2003:PPC:1211440} é uma ferramenta para programação paralela baseada na adição de diretivas de compilação em códigos C, C++ e Fortran. As diretivas OpenMP são utilizadas para indicar a paralelização de laços ou trechos de código. A partir da versão 3.0 (OpenMP ARB, 2008) foi inserido o conceito de tarefas, o que permite a utilização do paralelismo de tarefas através do uso de diretivas para delimitação de trechos de código como unidades de trabalho paralelas. A especificação OpenMP não define uma política para o escalonamento das tarefas, ficando essa escolha a cargo de cada implementação.
+
+
+
+
+
+
+
+

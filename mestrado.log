@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.24)  5 SEP 2014 03:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.24)  7 SEP 2014 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -963,12 +963,12 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \topmargin=-7.86334pt
 * \headheight=13.6pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
 * \marginparwidth=90.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1045,9 +1045,9 @@ Package lastpage Info: Please have a look at the pageslts package at
 \openout2 = `pre.aux'.
 
  (./pre.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 17.
@@ -1075,7 +1075,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (3.30269pt too wide) in paragraph at lines 36--38
+Overfull \hbox (2.67787pt too wide) in paragraph at lines 36--38
 []| $[]$ 
  []
 
@@ -1084,37 +1084,22 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 50.
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[] \OT1/ptm/m/n/12 Disserta[][]ao de Mes-trado - Cen-tro de Ma-tem[]atica,
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 69--69
-\OT1/ptm/m/n/12 I. Uni-ver-si-dade Fe-de-ral do ABC. Cen-tro de Ma-tem[]atica,
- []
-
-
-Overfull \hbox (39.65115pt too wide) in paragraph at lines 53--70
+Overfull \hbox (29.02661pt too wide) in paragraph at lines 53--70
 [] [] 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 73.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 [2]
-Overfull \hbox (6.9056pt too wide) in paragraph at lines 159--172
-\OT1/ptm/m/n/12 mais di-fun-dido, com aplica[][]oes em []areas como f[]^^Psica,
- qu[]^^Pmica e bi-oin-form[]atica. Mesmo
- []
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 178.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 178.
-[3]
+ [3]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 209.
 Package babel Info: Redefining portuges shorthand "|
@@ -1123,9 +1108,15 @@ Package babel Info: Redefining portuges shorthand "|
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 209.
  (./mestrado.lof
-Overfull \hbox (6.27112pt too wide) in paragraph at lines 12--12
- [][] [][][]\OT1/ptm/m/n/12 Conjunto de Mul-ti-pro-ces-sa-do-res e Organiza[][]
-ao das Mem[]orias(adaptado 
+Overfull \hbox (4.07587pt too wide) in paragraph at lines 13--13
+ [][] [][][]\OT1/ptm/m/n/10.95 Hierarquia de mem[]orias da GPU(adaptado de [[][
+]CUDA De-ve-lop-ment Core Team[][], 
+ []
+
+
+Overfull \hbox (10.61266pt too wide) in paragraph at lines 20--20
+ [][] [][][]\OT1/ptm/m/n/10.95 Diferen[]a de execu[][]ao com di-fe-ren-tes ta-m
+a-nhos de ma-tri-zes, para a multiplica[][]ao 
  []
 
 )
@@ -1152,9 +1143,9 @@ Package babel Info: Redefining portuges shorthand "|
 
 ] (./mestrado.toc
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 41.
  [7
 
 ])
@@ -1172,127 +1163,40 @@ Package babel Info: Redefining portuges shorthand "|
  (./Introducao.tex
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
-
-Overfull \hbox (26.76204pt too wide) in paragraph at lines 15--16
-[]\OT1/ptm/m/n/12 As m[]aquinas SMP, Ve-to-ri-ais e MPP nor-mal-mente for-ne-ce
-m am-bi-en-tes para programa[][]ao
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.24 M
-      uitas aplicações já utilizam o poder de processamento das GPUs, com...
-[1
-
-
-
-
-]
-Overfull \hbox (19.61298pt too wide) in paragraph at lines 24--31
-\OT1/ptm/m/n/12 GPUs, sua utiliza[][]ao []e uma []otima al-ter-na-tiva para pes
--qui-sa-do-res per-ten-cen-tes a institui[][]oes
- []
-
-
-Underfull \vbox (badness 2205) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (13.6pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 71.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.71 
-      [2]
-Overfull \hbox (0.74771pt too wide) in paragraph at lines 77--78
-[][][]\OT1/ptm/m/n/12 Acosta et al.[][] ([][]2012[][]) pro-pu-se-ram um al-go-r
-itmo de ba-lan-ce-a-mento de carga din[]amico
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 87.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 87.
- [3]
-Overfull \hbox (12.20952pt too wide) in paragraph at lines 88--89
-\OT1/ptm/m/n/12 vol-tado para aglo-me-ra-dos. A es-tru-tura do arcabou[]o fa-ci
--li-tou e ace-le-rou a implementa[][]ao
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 93.
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 34.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 34.
- [4]
-\openout2 = `Escalonamento.aux'.
-
- (./Escalonamento.tex
-Cap\'{\i }tulo 2.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 11.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 13.
+
+Overfull \hbox (6.14348pt too wide) in paragraph at lines 16--17
+\OT1/ptm/m/n/10.95 A computa[][]ao pa-ra-lela vem sendo am-pla-mente uti-li-zad
+a para aten-der ne-ces-si-da-des de aplica[][]oes
+ []
+
+
+Overfull \hbox (0.9103pt too wide) in paragraph at lines 18--19
+\OT1/ptm/m/n/10.95 uso efi-ci-ente, por[]em s[]ao ar-qui-te-tu-ras pro-priet[]a
+rias e com alto custo de mon-ta-gem e manuten[][]ao.
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 26.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 26.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
+l.26 
       [1
 
 
 
 
 ]
-Overfull \hbox (7.347pt too wide) in paragraph at lines 38--39
-[]\OT1/ptm/m/n/12 Na computa[][]ao o es-ca-lo-na-mento est[]a as-so-ci-ado a ut
-iliza[][]ao dos re-cur-sos da m[]aquina
- []
-
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 40.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 47.
-
-Overfull \hbox (6.7572pt too wide) in paragraph at lines 52--53
-[]\OT1/ptm/m/n/12 Tempo de execu[][]ao ($\OML/cmm/m/it/12 p[]$\OT1/ptm/m/n/12 )
- tempo ne-cess[]ario para a execu[][]ao da ta-refa $\OML/cmm/m/it/12 t[]$ \OT1/
-ptm/m/n/12 na m[]aquina
- []
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining portuges shorthand "|
@@ -1301,18 +1205,94 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \end{itemize}
-                   [2]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 85.
+l.74 
+      [2]
+Overfull \hbox (7.23857pt too wide) in paragraph at lines 80--81
+\OT1/ptm/m/n/10.95 los, com base em um es-quema ite-ra-tivo. []E um es-quema de
+s-cen-tra-li-zado em que as sincroniza[][]oes
+ []
 
-Overfull \hbox (47.52303pt too wide) in paragraph at lines 97--98
-[]\OT1/ptm/m/n/12 Um es-ca-lo-na-mento []e ativo se n[]ao for poss[]^^Pvel, ape
--nas tro-cando a or-dem das tarefas/opera[][]oes
+
+Overfull \hbox (1.70433pt too wide) in paragraph at lines 82--83
+[]\OT1/ptm/m/n/10.95 Um al-go-ritmo est[]atico que de-ter-mina a distribui[][]a
+o an-tes de ini-ciar a execu[][]ao da aplica[][]ao,
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 87.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 90.
+ [3]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 96.
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 34.
+
+[4]
+\openout2 = `Escalonamento.aux'.
+
+ (./Escalonamento.tex
+Cap\'{\i }tulo 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 14.
+
+Overfull \hbox (4.95102pt too wide) in paragraph at lines 16--17
+\OT1/ptm/m/n/10.95 Escalonamento []e um pro-cesso de to-mada de de-cis[]ao que 
+[]e usado como base em mui-tas ind[]ustrias
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 
+      [1
+
+
+
+
+]
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 43.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 76.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 76.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.76 \item $
+            P \infty$ ou $\overline{P}$ é o número ilimitado de máquinas ...
+[2]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+
+Overfull \hbox (8.29659pt too wide) in paragraph at lines 100--101
+[]\OT1/ptm/m/n/10.95 Um es-ca-lo-na-mento []e ativo se n[]ao for poss[]^^Pvel, 
+ape-nas tro-cando a or-dem das tarefas/opera[][]oes
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 106.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 108.
 Package babel Info: Redefining portuges shorthand "|
@@ -1321,254 +1301,234 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 N
-       este contexto, Maccarthy e Liu (1993) classificam os problemas de pro...
-[3]
+l.108 
+       [3]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 130.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 130.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 
+l.130 
        [4]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 137.
+
+Overfull \hbox (10.30556pt too wide) in paragraph at lines 139--140
+\OT1/ptm/m/n/10.95 Ao li-dar com os atri-bu-tos para o mo-delo de uma []unica m
+[]aquina, []e []util dis-tin-guir en-tre informa[][]oes
+ []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 148.
+LaTeX Warning: Command \textendash invalid in math mode on input line 151.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 156.
 [5]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 160.
+LaTeX Warning: Command \textendash invalid in math mode on input line 163.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 168.
-
-Overfull \hbox (22.8047pt too wide) in paragraph at lines 173--174
-[]\OT1/ptm/m/n/12 Est[]atico A re-gra de ba-lan-ce-a-mento []e de-fi-nida uma [
-]unica vez, ba-se-ada em informa[][]oes
- []
-
-
-Overfull \hbox (10.15453pt too wide) in paragraph at lines 181--182
-[]\OT1/ptm/m/n/12 Distribui[][]ao de carga est[]atica, tamb[]em co-nhe-cida com
-o pla-ne-ja-mento de-ter-min[]^^Pstico,
- []
-
+(babel)             in language  on input line 171.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 182.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 182.
 [6]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 193.
  [7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 201.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 208.
+(babel)             in language  on input line 204.
 
-Overfull \hbox (0.97873pt too wide) in paragraph at lines 210--212
-\OT1/ptm/m/it/12 Compute Uni-fied De-vice Ar-chi-tec-ture \OT1/ptm/m/n/12 (CUDA
-) [][]CUDA De-ve-lop-ment Core Team[][] ([][]2012[][])
+Overfull \hbox (10.9954pt too wide) in paragraph at lines 206--207
+\OT1/ptm/m/n/10.95 As GPUs v[]em se mos-trando uma ex-ce-lente al-ter-na-tiva n
+a []area de computa[][]ao de alto-desempenho
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 212.
+(babel)             in language  on input line 209.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 212.
+(babel)             in language  on input line 209.
 [8]
-Overfull \hbox (6.00298pt too wide) in paragraph at lines 213--215
-[]\OT1/ptm/m/n/12 Atrav[]es de lin-gua-gens de programa[][]ao am-pla-mente uti-
-li-za-das na ind[]ustria []e poss[]^^Pvel
- []
-
-<./Figuras/LingSuportadas.png, id=435, 528.47438pt x 265.74281pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 211.
+ <./Figuras/LingSuportadas.png, id=427, 528.47438pt x 265.74281pt>
 File: ./Figuras/LingSuportadas.png Graphic file (type png)
 
 <use ./Figuras/LingSuportadas.png>
-Package pdftex.def Info: ./Figuras/LingSuportadas.png used on input line 223.
+Package pdftex.def Info: ./Figuras/LingSuportadas.png used on input line 226.
 (pdftex.def)             Requested size: 317.08707pt x 159.44691pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 238.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
- [9 <./Figuras/LingSuportadas.png (PNG copy)>] <./Figuras/ImageSub.png, id=450,
- 372.64218pt x 293.59688pt>
+(babel)             in language  on input line 238.
+ [9]
+<./Figuras/ImageSub.png, id=439, 372.64218pt x 293.59688pt>
 File: ./Figuras/ImageSub.png Graphic file (type png)
 
 <use ./Figuras/ImageSub.png>
-Package pdftex.def Info: ./Figuras/ImageSub.png used on input line 239.
+Package pdftex.def Info: ./Figuras/ImageSub.png used on input line 242.
 (pdftex.def)             Requested size: 298.11414pt x 234.8778pt.
 
 
-Package caption Warning: \label without proper \caption on input line 240.
+Package caption Warning: \label without proper \caption on input line 243.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig: graficosCuda1' on page 10 undefined on input lin
-e 245.
+e 248.
 
-<./Figuras/ImageSub2.png, id=456, 329.73187pt x 271.0125pt>
+<./Figuras/ImageSub2.png, id=445, 329.73187pt x 271.0125pt>
 File: ./Figuras/ImageSub2.png Graphic file (type png)
 
 <use ./Figuras/ImageSub2.png>
-Package pdftex.def Info: ./Figuras/ImageSub2.png used on input line 250.
+Package pdftex.def Info: ./Figuras/ImageSub2.png used on input line 253.
 (pdftex.def)             Requested size: 263.78584pt x 216.81029pt.
-
-<./Figuras/transistores.png, id=461, 595.47469pt x 214.55156pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 257.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 257.
+ [10 <./Figuras/LingSuportadas.png (PNG copy)> <./Figuras/ImageSub.png>]
+<./Figuras/transistores.png, id=456, 595.47469pt x 214.55156pt>
 File: ./Figuras/transistores.png Graphic file (type png)
 
 <use ./Figuras/transistores.png>
-Package pdftex.def Info: ./Figuras/transistores.png used on input line 262.
+Package pdftex.def Info: ./Figuras/transistores.png used on input line 265.
 (pdftex.def)             Requested size: 357.28755pt x 128.73192pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 270.
+(babel)             in language  on input line 273.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 270.
- [10 <./Figuras/ImageSub.png>]
-Underfull \vbox (badness 2065) has occurred while \output is active []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 271.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 271.
+(babel)             in language  on input line 273.
  [11 <./Figuras/ImageSub2.png> <./Figuras/transistores.png (PNG copy)>]
-<./Figuras/pilhaSoftware.png, id=476, 389.20406pt x 341.77687pt>
+<./Figuras/pilhaSoftware.png, id=468, 389.20406pt x 341.77687pt>
 File: ./Figuras/pilhaSoftware.png Graphic file (type png)
 
 <use ./Figuras/pilhaSoftware.png>
-Package pdftex.def Info: ./Figuras/pilhaSoftware.png used on input line 278.
+Package pdftex.def Info: ./Figuras/pilhaSoftware.png used on input line 281.
 (pdftex.def)             Requested size: 233.52423pt x 205.0677pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 291.
-
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 290.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 290.
+ [12 <./Figuras/pilhaSoftware.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 294.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )<<ot1tt.cmap>>
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 308.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 308.
-
-[12 <./Figuras/pilhaSoftware.png (PNG copy)>]
-Overfull \hbox (25.54182pt too wide) in paragraph at lines 312--313
-\OT1/ptm/m/n/12 mem[]oria com-par-ti-lhada que se de-seja uti-li-zar no al-go-r
-itmo (Ns). Isso gera uma configura[][]ao
+Overfull \hbox (4.96822pt too wide) in paragraph at lines 313--314
+[]\OT1/ptm/m/n/10.95 Nesse c[]odigo te-mos uma fun[][]ao ma-tAdd que apre-senta
+ uma tag [][]\OT1/ptm/m/it/10.95 global[][] \OT1/ptm/m/n/10.95 an-tes da defini
+[][]ao
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 316.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 318.
-[13] <./Figuras/ThreadBatching.png, id=495, 481.8pt x 627.84563pt>
+(babel)             in language  on input line 316.
+[13] <./Figuras/ThreadBatching.png, id=487, 481.8pt x 627.84563pt>
 File: ./Figuras/ThreadBatching.png Graphic file (type png)
 
 <use ./Figuras/ThreadBatching.png>
-Package pdftex.def Info: ./Figuras/ThreadBatching.png used on input line 325.
+Package pdftex.def Info: ./Figuras/ThreadBatching.png used on input line 328.
 (pdftex.def)             Requested size: 289.08221pt x 376.71028pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 332.
+(babel)             in language  on input line 341.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 332.
- [14 <./Figuras/ThreadBatching.png (PNG copy)>]
-Overfull \hbox (4.83043pt too wide) in paragraph at lines 337--338
-\OT1/ptm/m/n/12 con-junto de m[]ultiplos pro-ces-sa-do-res que tem a ca-pa-ci-d
-ade de, com uma []unica instru[][]ao,
- []
-
-<./Figuras/SIMT.png, id=504, 493.845pt x 621.07031pt>
+(babel)             in language  on input line 341.
+ [14]
+<./Figuras/SIMT.png, id=496, 493.845pt x 621.07031pt>
 File: ./Figuras/SIMT.png Graphic file (type png)
  <use ./Figuras/SIMT.png>
-Package pdftex.def Info: ./Figuras/SIMT.png used on input line 342.
+Package pdftex.def Info: ./Figuras/SIMT.png used on input line 345.
 (pdftex.def)             Requested size: 296.30928pt x 372.64505pt.
 
-<./Figuras/HierarquiaMemoriasCuda.png, id=509, 481.8pt x 550.30594pt>
+<./Figuras/HierarquiaMemoriasCuda.png, id=501, 481.8pt x 550.30594pt>
 File: ./Figuras/HierarquiaMemoriasCuda.png Graphic file (type png)
 
 <use ./Figuras/HierarquiaMemoriasCuda.png>
 Package pdftex.def Info: ./Figuras/HierarquiaMemoriasCuda.png used on input lin
-e 354.
+e 357.
 (pdftex.def)             Requested size: 289.08221pt x 330.18611pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 361.
+(babel)             in language  on input line 364.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 366.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 366.
+ [15 <./Figuras/ThreadBatching.png (PNG copy)>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 370.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 370.
- [15]
+(babel)             in language  on input line 373.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 375.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 375.
+(babel)             in language  on input line 373.
  [16 <./Figuras/SIMT.png (PNG copy)>]
+Underfull \vbox (badness 6608) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 378.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 378.
  [17 <./Figuras/HierarquiaMemoriasCuda.png (PNG copy)>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
+(babel)             in language  on input line 395.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
+(babel)             in language  on input line 395.
  [18]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 417.
-
-Underfull \vbox (badness 2875) has occurred while \output is active []
-
+(babel)             in language  on input line 414.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
+(babel)             in language  on input line 414.
  [19]
-Overfull \hbox (21.06311pt too wide) in paragraph at lines 421--422
-[]\OT1/ptm/m/n/12 No Charm++ a sincroniza[][]ao pode ser feita atrav[]es de Fu-
-tu-res, ob-je-tos de comunica[][]ao,
- []
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 420.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 427.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 427.
+ [20]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 436.
+
+
+Package natbib Warning: Citation `hermann:inria-00502448' on page 21 undefined 
+on input line 440.
+
+
+Package natbib Warning: Citation `lima2012exploiting' on page 21 undefined on i
+nput line 440.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 425.
+(babel)             in language  on input line 441.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 428.
+(babel)             in language  on input line 441.
+[21]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 428.
-[20]
+(babel)             in language  on input line 442.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 429.
+(babel)             in language  on input line 449.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 434.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 453.
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
- [21]
+ [22]
 \openout2 = `TrabalhosRelacionados.aux'.
 
  (./TrabalhosRelacionados.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
- [22
-
-
-
-]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
@@ -1580,22 +1540,15 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 36.
 [23
 
-]
-Underfull \vbox (badness 2205) has occurred while \output is active []
 
+
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 78.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 78.
  [24]
-Overfull \hbox (16.43413pt too wide) in paragraph at lines 85--86
-\OT1/ptm/m/n/12 dos me-ca-nis-mos de ba-lan-ce-a-mento de carga e otimiza[][]ao
- de me-ca-nis-mos de comunica[][]ao.
- []
-
-
-Underfull \vbox (badness 2205) has occurred while \output is active []
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining portuges shorthand "|
@@ -1605,8 +1558,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 36.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 36.
-
-[26]
+ [26]
 \openout2 = `Algoritmo.aux'.
 
  (./Algoritmo.tex
@@ -1625,7 +1577,7 @@ ar2-eps-converted-to.pdf ./Figuras/CPUVersusGPULinear2.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf, id=639, 561.09625pt x 513.
+<./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf, id=629, 561.09625pt x 513.
 92pt>
 File: ./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1634,9 +1586,9 @@ Package pdftex.def Info: ./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf use
 d on input line 21.
 (pdftex.def)             Requested size: 168.33017pt x 154.17719pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 29.
  [27
 
 
@@ -1645,48 +1597,33 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 41.
-
-Overfull \hbox (7.4148pt too wide) in paragraph at lines 61--62
-\OT1/ptm/m/n/12 ma-nhos dos blo-cos atribu[]^^Pdos a cada pro-ces-sa-dor e []e 
-ini-ci-a-li-zada com $\OML/cmm/m/it/12 initialBlocoSize$\OT1/ptm/m/n/12 ,
- []
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-[28 <./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf>]
-Overfull \hbox (0.71036pt too wide) in paragraph at lines 92--93
-[]\OT1/ptm/m/n/12 O sis-tema de equa[][]oes []e re-sol-vido apli-cando in-te-ri
-or \OT1/ptm/m/it/12 point line se-arch fil-ter method\OT1/ptm/m/n/12 .
- []
-
+(babel)             in language  on input line 62.
+ [28 <./Figuras/CPUVersusGPULinear2-eps-converted-to.pdf>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 95.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 95.
-[29] <./Figuras/DiagramaArtigo.png, id=679, 1056.748pt x 256.157pt>
+ [29]
+<./Figuras/DiagramaArtigo.png, id=669, 1056.748pt x 256.157pt>
 File: ./Figuras/DiagramaArtigo.png Graphic file (type png)
 
 <use ./Figuras/DiagramaArtigo.png>
 Package pdftex.def Info: ./Figuras/DiagramaArtigo.png used on input line 98.
 (pdftex.def)             Requested size: 253.6247pt x 61.47893pt.
-
-Overfull \hbox (6.82277pt too wide) in paragraph at lines 134--135
-\OT1/ptm/m/n/12 alcan[]ado, o al-go-ritmo ajusta um novo mo-delo de cur-vas e r
-e-solve o sis-tema de equa[][]oes
- []
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 135.
-[30 <./Figuras/DiagramaArtigo.png>])
+ [30 <./Figuras/DiagramaArtigo.png>])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 37.
- [31]
+
+[31]
 \openout2 = `Implementacao.aux'.
 
  (./Implementacao.tex
@@ -1703,9 +1640,15 @@ Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
 
-Overfull \hbox (0.24304pt too wide) in paragraph at lines 26--32
-[]\OT1/ptm/m/n/12 Tr[]es ou-tros al-go-rit-mos fo-ram im-ple-men-ta-dos para co
-mpara[][]ao: o gu-loso, o est[]atico
+Overfull \hbox (1.99457pt too wide) in paragraph at lines 22--23
+\OT1/ptm/m/n/10.95 es-tru-tura que re-pre-senta um n[]ucleo com-pu-ta-ci-o-nal.
+ Tal co-de-let pode con-ter uma implementa[][]ao
+ []
+
+
+Overfull \hbox (13.56813pt too wide) in paragraph at lines 26--32
+\OT1/ptm/m/n/10.95 da en-trada a qual-quer pro-ces-sa-dor oci-oso, sem qual-que
+r atribui[][]ao de pri-o-ri-dade. O est[]atico [][]de Ca-
  []
 
 Package babel Info: Redefining portuges shorthand "|
@@ -1728,9 +1671,6 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 7.
-
-LaTeX Warning: Reference `' on page 35 undefined on input line 9.
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
@@ -1755,7 +1695,7 @@ converted-to.pdf ./Figuras/EmbaixoNovo.eps>
 (epstopdf)             \includegraphics on input line 39.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figuras/EmbaixoNovo-eps-converted-to.pdf, id=735, 561.09625pt x 513.92pt>
+<./Figuras/EmbaixoNovo-eps-converted-to.pdf, id=727, 561.09625pt x 513.92pt>
 File: ./Figuras/EmbaixoNovo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figuras/EmbaixoNovo-eps-converted-to.pdf>
@@ -1784,7 +1724,7 @@ eps-converted-to.pdf ./Figuras/MaximaDiferenca.eps>
 (epstopdf)             \includegraphics on input line 70.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figuras/MaximaDiferenca-eps-converted-to.pdf, id=750, 561.09625pt x 513.92pt
+<./Figuras/MaximaDiferenca-eps-converted-to.pdf, id=742, 561.09625pt x 513.92pt
 >
 File: ./Figuras/MaximaDiferenca-eps-converted-to.pdf Graphic file (type pdf)
  <use ./Figuras/MaximaDiferenca-eps-converted-to.pdf>
@@ -1792,9 +1732,9 @@ Package pdftex.def Info: ./Figuras/MaximaDiferenca-eps-converted-to.pdf used on
  input line 70.
 (pdftex.def)             Requested size: 224.43452pt x 205.56435pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 79.
  [37 <./Figuras/MaximaDiferenca-eps-converted-to.pdf>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 90.
@@ -1810,7 +1750,7 @@ f>
 (epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figuras/MaquinaBlack-eps-converted-to.pdf, id=764, 561.09625pt x 513.92pt>
+<./Figuras/MaquinaBlack-eps-converted-to.pdf, id=756, 561.09625pt x 513.92pt>
 File: ./Figuras/MaquinaBlack-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figuras/MaquinaBlack-eps-converted-to.pdf>
@@ -1834,7 +1774,7 @@ lack-eps-converted-to.pdf ./Figuras/MaximaDiferencaBlack.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Figuras/MaximaDiferencaBlack-eps-converted-to.pdf, id=779, 561.09625pt x 513
+<./Figuras/MaximaDiferencaBlack-eps-converted-to.pdf, id=771, 561.09625pt x 513
 .92pt>
 File: ./Figuras/MaximaDiferencaBlack-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1845,13 +1785,7 @@ ed on input line 124.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 
-Overfull \hbox (10.11047pt too wide) in paragraph at lines 135--136
-\OT1/ptm/m/n/12 Foi pro-posto um al-go-ritmo de es-ca-lo-na-mento de ta-re-fas 
-para pro-ble-mas de decomposi[][]ao
- []
-
-
-Underfull \vbox (badness 1881) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 136.
@@ -1870,7 +1804,7 @@ Cap\'{\i }tulo 7.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
 
-Overfull \hbox (38.37646pt too wide) in paragraph at lines 19--36
+Overfull \hbox (8.56429pt too wide) in paragraph at lines 19--36
  [][] 
  []
 
@@ -1896,19 +1830,19 @@ Package babel Info: Redefining portuges shorthand "|
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 127.
  [43]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 192.
  [44]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 279.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 279.
+(babel)             in language  on input line 267.
  [45])
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 48.
@@ -1923,15 +1857,19 @@ Package babel Info: Redefining portuges shorthand "|
 [46]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
+
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
- (./mestrado.aux (./pre.aux) (./Introducao.aux) (./Escalonamento.aux)
+(./mestrado.aux (./pre.aux) (./Introducao.aux) (./Escalonamento.aux)
 (./TrabalhosRelacionados.aux) (./Algoritmo.aux) (./Implementacao.aux)
 (./Resultados.aux) (./PlanoTrabalho.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `mestrado.out' has not changed.
-(rerunfilecheck)             Checksum: 3A93AFC298C84D9826C1884C256437BB;2102.
+(rerunfilecheck)             Checksum: D2366C6A0B32BA7B2E1B221260FBB5C4;2082.
 
 
 LaTeX Warning: There were undefined references.
@@ -1942,19 +1880,19 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 11093 strings out of 493117
- 162882 string characters out of 6135433
- 364554 words of memory out of 5000000
- 14006 multiletter control sequences out of 15000+600000
- 32822 words of font info for 71 fonts, out of 8000000 for 9000
+ 11100 strings out of 493117
+ 163038 string characters out of 6135433
+ 363537 words of memory out of 5000000
+ 14008 multiletter control sequences out of 15000+600000
+ 34464 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,15n,53p,1186b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,50p,1376b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/te
@@ -1963,10 +1901,10 @@ xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on mestrado.pdf (60 pages, 541368 bytes).
+Output written on mestrado.pdf (60 pages, 542721 bytes).
 PDF statistics:
- 911 PDF objects out of 1000 (max. 8388607)
- 782 compressed objects within 8 object streams
+ 903 PDF objects out of 1000 (max. 8388607)
+ 774 compressed objects within 8 object streams
  188 named destinations out of 1000 (max. 500000)
  339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

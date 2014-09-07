@@ -5,6 +5,9 @@
 % Números das páginas em arábicos
 \pagenumbering{arabic}
 
+%espaco entre linhas
+\onehalfspacing
+
 \chapter{Introdução}\label{intro}
 
 \section{Introdução ao balanceamento de carga}\label{cap1:intro}
@@ -17,23 +20,23 @@ As máquinas SMP, Vetoriais e MPP normalmente fornecem ambientes para programaç
 %gpus
 As GPUs vêm se mostrando uma excelente alternativa na área de computação de
 alto-desempenho para aplicações que exigem um alto grau de
-paralelismo~\cite{gpu}. GPUs modernas podem possuir milhares de núcleos, cada um
+paralelismo~\citep{gpu}. GPUs modernas podem possuir milhares de núcleos, cada um
 deles bastante simples, mas que utilizados em paralelo geram um alto poder
-computacional~\cite{cuda}.
+computacional~\citep{cuda}.
 
 Muitas aplicações já utilizam o poder de processamento das GPUs, como mecânica
-dos fluidos~\cite{fluido}, visualização científica~\cite{visualizacao},
-aprendizado de máquina~\cite{Aprendizado}, bioinformática~\cite{rozante} e redes
-neurais~\cite{siang}. Devido ao relativo baixo custo de placas gráficas contendo
+dos fluidos~\citep{fluido}, visualização científica~\citep{visualizacao},
+aprendizado de máquina~\citep{Aprendizado}, bioinformática~\citep{rozante} e redes
+neurais~\citep{siang}. Devido ao relativo baixo custo de placas gráficas contendo
 GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a
 instituições com poucos recursos financeiros e com grande necessidade de
 recursos computacionais.
 
 Em diversos caso, o uso de GPUs ocasionam ganhos superiores a 100 vezes, quando
-comparado às CPUs tradicionais\cite{Vouzis15012011}. No entanto, para muitos problemas, o uso de uma
+comparado às CPUs tradicionais~\citep{Vouzis15012011}. No entanto, para muitos problemas, o uso de uma
 única GPU ainda limita o tamanho e complexidade do problema que pode ser
 resolvido. Neste caso, é possível utilizar múltiplas GPUs localizados em
-diferentes computadores, como em \emph{clusters} de GPUs \cite{raphael,
+diferentes computadores, como em \emph{clusters} de GPUs~\citep{raphael,
   cluster}.
 
 Os \emph{clusters} de GPUs são normalmente homogêneos, no qual todas as
@@ -41,7 +44,7 @@ máquinas apresentam a mesma configuração de hardware. O desenvolvimento de um
 aplicativo para executar em um \emph{cluster} de GPU é um desafio, porque o
 programador tem de empregar uma biblioteca de programação paralela, como MPI,
 além de usar a plataforma CUDA. Existem alguns esforços para oferecer alguns
-modelos de programação~\cite{appCientificas, wave} e bibliotecas~\cite{snucl,
+modelos de programação~\citep{appCientificas, wave} e bibliotecas~\citep{snucl,
   Flat} para o desenvolvimento de aplicações para \emph{clusters} de GPUs. No
 entanto, a forma mais utilizada para programação para \emph{clusters} de GPUs
 é combinando CUDA e MPI.
@@ -51,10 +54,10 @@ computacional entre as GPUs. Desenvolver um mecanismo que funcione de modo
 eficiente para qualquer aplicação é difícil, mas pode-se restringir o mecanismo
 para alguns tipos específicos de aplicações. Por exemplo, podemos considerar
 aplicações que possuem um conjunto de dados que podem ser particionados entre as
-GPUs, utilizando o método de decomposição de domínio\cite{CNM:CNM1640090307}. Neste caso, cada GPU fica
+GPUs, utilizando o método de decomposição de domínio~\citep{CNM:CNM1640090307}. Neste caso, cada GPU fica
 responsável por uma parte dos dados da aplicação. Muitas aplicações científicas
-se encaixam neste grupo, incluindo bioinformática~\cite{rozante}, redes
-neurais~\cite{siang}, química~\cite{anastas2000green}, física~\cite{delpech2009reactor} e ciência dos materiais~\cite{da2007desenvolvimento}. 
+se encaixam neste grupo, incluindo bioinformática~\citep{rozante}, redes
+neurais~\citep{siang}, química~\citep{anastas2000green}, física~\citep{delpech2009reactor} e ciência dos materiais~\citep{da2007desenvolvimento}. 
 
 Para este tipo de aplicação, a distribuição da carga em \emph{clusters}
 homogêneos de GPUs é frequentemente obtida com uma divisão simples dos dados de
@@ -64,7 +67,7 @@ e Kepler. Essas arquiteturas apresentam diferentes organizações de núcleos e
 multiprocessadores, quantidades de memória compartilhada por núcleo e
 velocidades de memória. Devido a essas diferenças, uma divisão da carga com base
 em simples heurísticas, tal como o número de núcleos na GPU não é eficaz. Na
-verdade, isso pode levar a um maior tempo de execução~\cite{raphael} comparado a
+verdade, isso pode levar a um maior tempo de execução~\citep{raphael} comparado a
 simples ideia de dividir a carga igualmente entre as GPUs heterogêneas. Em um
 cenário mais geral, uma aplicação pode ter vários \emph{kernels}, cada um com
 dependências não-lineares entre o tempo de execução e o tamanho de entrada.
@@ -74,11 +77,11 @@ balanceamento de carga em sistemas heterogêneos baseados em GPUs. Os existentes
 são \emph{frameworks} que requerem a reescrita da aplicação para que seja
 possível a execução nestes \emph{clusters}.
 
-\cite{acosta} propuseram um algoritmo de balanceamento de carga dinâmico que interativamente tenta encontrar uma boa distribuição do trabalho entre GPUs durante o exe- cução da aplicação. Uma biblioteca se concentra nas diferenças de tempos de códigos paralelos, com base em um esquema iterativo. É um esquema descentralizado em que as sincronizações são feitas a cada iteração para determinar se há uma necessidade de reequilibrar a carga. Cada processador executa uma redistribuição da carga de trabalho de acordo com o tamanho da tarefa atribuída e as capacidades do processador atribuído. O balanceamento de carga é obtido através da comparação do tempo de execução da tarefa atual para cada processador com a redistribuição da tarefa subseqüente, se o tempo atinge um limite a redistribuição de carga é feito. Nosso algoritmo é diferente porque cria curvas para cada unidade de processamento, e com base nessas curvas realiza o balanceamento de carga. 
+\citep{acosta} propuseram um algoritmo de balanceamento de carga dinâmico que interativamente tenta encontrar uma boa distribuição do trabalho entre GPUs durante o exe- cução da aplicação. Uma biblioteca se concentra nas diferenças de tempos de códigos paralelos, com base em um esquema iterativo. É um esquema descentralizado em que as sincronizações são feitas a cada iteração para determinar se há uma necessidade de reequilibrar a carga. Cada processador executa uma redistribuição da carga de trabalho de acordo com o tamanho da tarefa atribuída e as capacidades do processador atribuído. O balanceamento de carga é obtido através da comparação do tempo de execução da tarefa atual para cada processador com a redistribuição da tarefa subseqüente, se o tempo atinge um limite a redistribuição de carga é feito. Nosso algoritmo é diferente porque cria curvas para cada unidade de processamento, e com base nessas curvas realiza o balanceamento de carga. 
 
-Um algoritmo estático que determina a distribuição antes de iniciar a execução da aplicação, utilizando os perfis estáticos de execuções anteriores, também foi proposta\cite{raphael}. O algoritmo foi avaliado usando uma simulação de rede neural. O algoritmo encontra a distribuição de dados que minimiza o tempo de execução da aplicação, com base em perfis de execuções anteriores, assegurando que todas as GPUs para passar mesma quantidade de tempo que executa o processamento. Mas esta abordagem não permite alterações dinâmicas na distribuição de dados. 
+Um algoritmo estático que determina a distribuição antes de iniciar a execução da aplicação, utilizando os perfis estáticos de execuções anteriores, também foi proposta~\citep{raphael}. O algoritmo foi avaliado usando uma simulação de rede neural. O algoritmo encontra a distribuição de dados que minimiza o tempo de execução da aplicação, com base em perfis de execuções anteriores, assegurando que todas as GPUs para passar mesma quantidade de tempo que executa o processamento. Mas esta abordagem não permite alterações dinâmicas na distribuição de dados. 
 
-O  (HDSS) \cite{HDSS} fornece um algoritmo de balanceamento de carga dinâmico, dividido em duas fases. O primeiro é a fase adaptativo, que determina pesos que refletem a velocidade de cada processador. Esses pesos são determinados com base em ajustes de curvas logarítmicas em gráficos de velocidade de processamento. Estas ponderações são utilizadas durante a fase de acabamento, onde se divide nas iterações restantes entre as GPUs com base nos pesos relativos de cada GPU. As principais diferenças com o nosso algoritmo é que não restringem os modelos de execução de curvas de logaritmos, que são apropriados para GPUs, mas não ou CPUs na faixa de interesse. Além disso, nosso algoritmo pode realizar ajustes até o fim da execução.
+O  (HDSS)~\citep{HDSS} fornece um algoritmo de balanceamento de carga dinâmico, dividido em duas fases. O primeiro é a fase adaptativo, que determina pesos que refletem a velocidade de cada processador. Esses pesos são determinados com base em ajustes de curvas logarítmicas em gráficos de velocidade de processamento. Estas ponderações são utilizadas durante a fase de acabamento, onde se divide nas iterações restantes entre as GPUs com base nos pesos relativos de cada GPU. As principais diferenças com o nosso algoritmo é que não restringem os modelos de execução de curvas de logaritmos, que são apropriados para GPUs, mas não ou CPUs na faixa de interesse. Além disso, nosso algoritmo pode realizar ajustes até o fim da execução.
 
 
 \section{Objetivos e Contribuições}\label{cap1:objetivos}
