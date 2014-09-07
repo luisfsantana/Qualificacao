@@ -3,14 +3,22 @@
 \select@language {brazilian}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Linguagens Suportadas(adaptado de \cite {cuda})\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Opera\IeC {\c c}\IeC {\~o}es de Ponto Flutuante por segundo para CPU e GPU(adaptado de \cite {cuda})\relax }}{10}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tamanho de banda de mem\IeC {\'o}ria para CPU e GPU(adaptado de \cite {cuda})\relax }}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Quantidade de transistores para processamento de dados(adaptado de \cite {cuda})\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Pilha de Software(adaptado de \cite {cuda})\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Batching de Threads(adaptado de \cite {cuda})\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Conjunto de Multiprocessadores e Organiza\IeC {\c c}\IeC {\~a}o das Mem\IeC {\'o}rias(adaptado de \cite {cuda})\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Hierarquia de mem\IeC {\'o}rias da GPU(adaptado de \cite {cuda})\relax }}{17}{figure.caption.15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Curvas para GPU x CPU\relax }}{20}{figure.caption.21}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o das Threads com limiar\relax }}{22}{figure.caption.22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Curvas para GPU x CPU\relax }}{28}{figure.caption.20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o das Threads com limiar\relax }}{30}{figure.caption.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Diferen\IeC {\c c}a de execu\IeC {\c c}\IeC {\~a}o com diferentes tamanhos de matrizes, para a multiplica\IeC {\c c}\IeC {\~a}o de matrizes\relax }}{28}{figure.caption.24}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Diferen\IeC {\c c}a de tempo entre Threads\relax }}{29}{figure.caption.26}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Diferen\IeC {\c c}a no tempo de execu\IeC {\c c}\IeC {\~a}o para diferentes n\IeC {\'u}meros de op\IeC {\c c}\IeC {\~a}o\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Diferen\IeC {\c c}a de tempo entre a primeira e a \IeC {\'u}ltima thread a terminarem o trabalho\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Diferen\IeC {\c c}a de execu\IeC {\c c}\IeC {\~a}o com diferentes tamanhos de matrizes, para a multiplica\IeC {\c c}\IeC {\~a}o de matrizes\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Diferen\IeC {\c c}a de tempo entre Threads\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Diferen\IeC {\c c}a no tempo de execu\IeC {\c c}\IeC {\~a}o para diferentes n\IeC {\'u}meros de op\IeC {\c c}\IeC {\~a}o\relax }}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Diferen\IeC {\c c}a de tempo entre a primeira e a \IeC {\'u}ltima thread a terminarem o trabalho\relax }}{39}{figure.caption.28}
 \addvspace {10\p@ }

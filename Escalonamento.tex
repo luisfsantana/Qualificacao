@@ -6,11 +6,11 @@
 % Números das páginas em arábicos
 \pagenumbering{arabic}
 
-\chapter{Introdução ao escalonamento}\label{cap2}
+\chapter{Conceitos Computacionais}\label{cap2}
 
 \section{Escalonamento}\label{cap2:escalonamento}
 
-Escalonamento é um processo de tomada de decisão que é usado como base em muitas indústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos.
+Escalonamento é um processo de tomada de decisão que é usado como base em muitas indústrias manufatureiras e serviços industriais. Ele lida com a alocação de recursos para tarefas a fim de fornecer períodos de tempo a cada tarefa  e o fim é otimizar um ou mais objetivos~\cite{pinedo2012scheduling}.
 
 Encontrar um escalonamento significa encontrar, para cada tarefa, uma alocação de um ou mais intervalos de tempo, em uma ou mais máquinas. O problema de escalonamento correspondente é encontrar um escalonamento que satisfaça um determinado conjunto de restrições.
 
@@ -33,10 +33,21 @@ empresa e a alocação de recursos baseados em seus níveis de estoque, previsõ
 de demanda e necessidades de recursos. As decisões tomadas neste nível mais alto 
 de planejamento podem impactar o processo de escalonamento diretamente. 
 
-Um exemplo de escalonamento é na indústria de semicondutores  no qual o objetivo é maximizar o tempo de utilização dos equipamentos e minimizar o tempo ocioso e de configuração dos mesmos.
+Um exemplo de escalonamento é na indústria de semicondutores  no qual o objetivo é maximizar o tempo de utilização dos equipamentos e minimizar o tempo ocioso e de configuração dos mesmos~\cite{pinedo2012scheduling}.
+
+Na computação o escalonamento está associado a utilização dos recursos da máquina como por exemplo a CPU. Existem vários algortimos de escalonamento entre eles~\cite{tanenbaum2006sistemas}:
+\begin{itemize}
+	\item FIFO \textit{(First In, First Out)}. A primeira tarefa a chegar será a primeira a ser executada.
+	\item SJF \textit{(Shortest Job First)}. A tarefa mais curta tem ganhará o recurso, e uma fila em ordem de tamanhos da menor para a maior é feita atrás da menor.
+	\item Round Robin. Todas as tarefas recebem um tempo de processamento, esse tempo é chamado de quantum.
+
+\end{itemize}
+
 
 \subsection{Notação dos problemas de escalonamento}
-Associados às tarefas, existem as seguintes informações:
+
+Nesta seção são apresentados uma breve introdução a notação associada aos problemas de escalonamento:
+
 \begin{itemize}
 \item Tempo de execução ($p_{ij}$) tempo necessário para a execução da tarefa $t_i$ na máquina $m_j$. Denotado apenas por $p_i$ se todas as máquinas forem idênticas
 \item Data de disponibilidade ($r_i$) instante em que a tarefa $t_i$ se torna disponível para ser executada
@@ -70,45 +81,27 @@ velocidades iguais (a máquina $m_j$ opera com velocidade $v_j$) $p_{ij} = p_i=v
 \item $p_{ij} = p_i=v_{ij}$, onde $v_{ij}$ é a velocidade da tarefa $t_i$ na máquina $m_j$
 \end{itemize}
 
-Em sistemas de produção as máquinas são consideradas dedicadas, não paralelas. Além disso, uma tarefa $t_i$ é composta por um conjunto de operações denotadas por $O_{i1} | O_{i2} | ... | O_{in}$.
-
-$F_m$ representa o modelo flow-shop, no qual todas as tarefas possuem o mesmo
-número de operações, que devem ser executadas na mesma ordem por todas as máquinas, em série.
-
-$O_m$ representa o modelo open-shop, como um flow-shop, mas não há ordem
-de precedência entre as operações
-
-$J_m$  representa o modelo  job-shop. Neste modelo cada tarefa possui um roteiro pré-determinado se uma tarefa puder executar em uma mesma máquina mais de uma vez, dizemos que existe recirculação (denotado por $recrc$ ) 
-
-$r_i$ é a data de disponibilidade. Se $r_i$ não estiver no campo, tarefas podem ser iniciadas a qualquer momento. Se $r_i$ estiver no campo, então a tarefa $t_i$ não pode ser iniciada antes do tempo $r_i$ 
-
-$pmtn$ representa interrupção. O processamento de uma tarefa pode ser interrompido e retomado do ponto onde parou, em qualquer máquina.
-
-$s_{ik}$ é o tempo de preparação da máquina (setup). Uma máquina que executou uma tarefa $t_i$ precisa de $s_{ik}$ unidades de tempo para ser preparada antes de executar uma outra tarefa $t_k$
-
-$prec$ relações de precedência. Uma relação de precedência entre duas tarefas indica
-que uma tarefa não pode ser iniciada antes do término da execução da outra. Representadas por um grafo de precedências, onde um vértice representa uma tarefa e um arco entre $t_i$ e $t_k$ indica que $t_k$ só pode ser executada após o termino de $t_i$.
-
-$c_{ik}$ tempo de comunicação entre máquinas. A tarefa $t_k$ depende do resultado da execução de $t_i$ . Se $t_k$ não for escalonada na mesma máquina que $t_i$, então deverá esperar mais $c_{ik}$ unidades de tempo antes de poder ser executada.
-
 
 \subsection{Classes de Escalonamento}
 
+Problemas de escalonamento podem ser divididos em classes, tais como escalonamento sem atrasos, escalonamento ativo e escalonamento semi-ativo. Essas classes agrupam os modelos de escalonamento e facilitam a forma de analisar o problema.
+
 \subsubsection{Escalonamento sem atrasos}
 
-\textbf{Definição:} Um escalonamento válido é dito sem atraso, se nenhuma máquina fica inativa, quando existem tarefas disponíveis para serem executadas.
+ Um escalonamento válido é dito sem atraso, se nenhuma máquina fica inativa, ou seja, ociosa, quando existem tarefas disponíveis para serem executadas.
 
 \subsubsection{Escalonamento ativo}
 
-\textbf{Definição:} Um escalonamento realizável e não-preemptivo é dito ativo se não for possível, apenas trocando a ordem das tarefas/operações em uma máquina, construir um outro escalonamento onde ao menos uma tarefa termine mais cedo e nenhuma outra tarefa seja atrasada.
+Os algorirmos de escalonamento podem ser preemptivos e não preemptivos. Preemptivo significa que o algoritmo permite que um processo seja interrompido durante a sua execução, para posteriormente ser retomado.
+
+Um escalonamento é ativo se não for possível, apenas trocando a ordem das tarefas/operações em uma máquina, construir um outro escalonamento onde ao menos uma tarefa termine mais cedo e nenhuma outra tarefa seja atrasada.
 
 \subsubsection{Escalonamento semi-ativo}
 
-\textbf{Definição:} Um escalonamento realizado e não-preemptivo é dito semi-ativo se nenhuma tarefa/operação pode terminar mais cedo sem que a ordem do processamento das tarefas de alguma máquina seja mudada.
-
+Um escalonamento é dito semi-ativo se nenhuma tarefa/operação pode terminar mais cedo sem que a ordem do processamento das tarefas de alguma máquina seja mudada.
 
 \subsection{Classificação dos problemas de escalonamento}
-Os problemas de programação de operações em máquinas vêm sendo caracterizados por diversos autores em diferentes formas, dentre eles Baker, 1974; Blazewicz et al., 1996; Conway et al., 1967; French, 1982; Graves, 1981 e Pinedo, 2008.
+Os problemas de programação de operações em máquinas vêm sendo caracterizados por diversos autores em diferentes formas, dentre eles: Baker, 1974; Blazewicz et al., 1996; Conway et al., 1967; French, 1982; Graves, 1981 e Pinedo, 2008.
 
 Em situações de escalonar tarefas nas máquinas disponíveis surgem problemas complexos. Pois, as restrições tecnológicas e a medida de desempenho do escalonador devem ser especificadas. As restrições tecnológicas são determinadas principalmente pelo fluxo das tarefas nas máquinas.
 
@@ -119,12 +112,11 @@ Neste contexto, Maccarthy e Liu (1993) classificam os problemas de programação
 \item \textbf{Flow shop} - em que todas as tarefas possuem o mesmo fluxo de processamento em todas as máquinas;
  \item \textbf{Job shop} - em que todas as tarefas possuem um roteiro específico de processamento, determinado para cada tarefa;
  \item \textbf{Open shop} - em que não existem roteiros de processamento preestabelecidos para as tarefas;
- \item \textbf{Flow shop permutacional} - flow shop onde a ordem de processamento das tarefas é exatamente a mesma para todas as máquinas;
-\end{itemize}
+ \end{itemize}
 
 %Cap 3
 
-O problema do sequenciamento em uma única máquina é frequentemente  muito simples e quase sempre parte de um problema de programação complexo.  Segundo Pinedo (2008), os problemas do sequenciamento em uma única máquina  muitas vezes têm propriedades que os de em máquinas em paralelo ou em série  não possuem. Os resultados que podem ser obtidos para os problemas do  sequenciamento em uma única máquina não só fornecem o conhecimento para o ambiente de uma única máquina, como também fornecem base para heurísticas  aplicáveis a ambientes mais complexos. 
+O problema do sequenciamento em uma única máquina quase sempre parte de um problema de programação complexo.  Segundo Pinedo (2008), os problemas do sequenciamento em uma única máquina  muitas vezes têm propriedades que os de em máquinas em paralelo ou em série  não possuem. Os resultados que podem ser obtidos para os problemas do  sequenciamento em uma única máquina não só fornecem o conhecimento para o ambiente de uma única máquina, como também fornecem base para heurísticas  aplicáveis a ambientes mais complexos. 
 
 Na prática, os problemas de escalonamento em ambientes mais complicados são frequentemente decompostos em subproblemas de uma única máquina. 
 
@@ -139,143 +131,43 @@ Por exemplo, um ambiente complexo, com um único gargalo, pode dar origem a um m
 
 \end{itemize}
 
-\subsection{Definição de atributos}
+\subsection{Modelo de escalonamento para uma única máquina}
 
-Ao lidar com os atributos para o modelo de uma única máquina, é  útil distinguir entre informações conhecidas previamente e informações que são geradas como resultados de decisões de escalonamento. A informação que é conhecida previamente serve como parâmetro de entrada para função de escalonamento e é usualmente conveniente usar letras minúsculas para denotar esse tipo de informação. As três informações básicas que ajudam a descrever  trabalhos no problema básico determinístico de uma única máquina são: 
-
-\begin{itemize}
-\item Tempo de processamento ($t_j$): tempo de processamento requerido pelo trabalho $j$; 
-\item Data inicial ($r_j$): o ponto no tempo em que a tarefa $j$ está disponível para processamento; e 
-\item Prazo ($d_j$): é o ponto limite no tempo em que o processamento da tarefa $j$ precisa ser concluída. 
-\end{itemize} 
+Ao lidar com os atributos para o modelo de uma única máquina, é  útil distinguir entre informações conhecidas previamente e informações que são geradas como resultados de decisões de escalonamento. A informação que é conhecida previamente serve como parâmetro de entrada para função de escalonamento e é usualmente conveniente usar letras minúsculas para denotar esse tipo de informação, são elas $\alpha | \beta | \gamma$.
 
 Os prazos podem não ser pertinentes em certos problemas, mas estabelecer os prazos (deadlines) é um problema comum na indústria e o problema básico pode auxiliar na determinação do prazo de entrega. É conveniente usar letras maiúsculas para denotar as informações resultantes do escalonamento. 
 
-Tempo de Conclusão ($C_j$). O tempo no qual o processamento do trabalho $j$ é terminado. 
+\begin{itemize}
+
+\item Tempo de Conclusão ($C_j$). O tempo no qual o processamento do trabalho $j$ é terminado. 
 
 Os critérios quantitativos para escolher uma sequência são geralmente funções dos tempos de conclusão. Duas funções importantes são: 
 
-Tempo de Fluxo (Flowtime) – $F_j$ – Tempo total que o trabalho $j$ fica no sistema: 
+\item Tempo de Fluxo (Flowtime) – $F_j$ – Tempo total que o trabalho $j$ fica no sistema: 
 
 $F_j = C_j – r_j$
  
-Defasagem (Lateness) – $L_j$ – Diferença entre a data de conclusão e o prazo do trabalho $j$, podendo assumir valores positivos ou negativos
+\item Defasagem (Lateness) – $L_j$ – Diferença entre a data de conclusão e o prazo do trabalho $j$, podendo assumir valores positivos ou negativos
 
-Esses dois valores refletem dois critérios importantes. O tempo de fluxo que mede a resposta do sistema  e representa o tempo que uma tarefa leva entre sua chegada e sua saída. A defasagem, $L_j$, que mede a conformidade do escalonamento em relação ao prazo. É importante notar que a defasagem terá valor negativo quando uma tarefa é finalizada antecipadamente. Defasagens negativas podem representar serviços melhores do que solicitados, enquanto atrasos positivos representam, quase sempre, serviços piores do que requisitados. Em muitas situações, penalidades distintas e outros custos serão associados para defasagens positivas e para defasagens negativas. Dessa forma, tem-se as definições de Atraso (Tardiness) e Antecipação (Earliness): 
+É importante notar que a defasagem terá valor negativo quando uma tarefa é finalizada antecipadamente. Defasagens negativas podem representar serviços melhores do que solicitados, enquanto atrasos positivos representam, quase sempre, serviços piores do que requisitados. Em muitas situações, penalidades distintas e outros custos serão associados para defasagens positivas e para defasagens negativas. Dessa forma, tem-se as definições de Atraso (Tardiness) e Antecipação (Earliness): 
 
-Atraso (Tardiness) – $T_j$ – é o quanto o trabalho $j$ atrasou em relação ao seu prazo, caso contrário será considerado zero:
+\item Atraso (Tardiness) – $T_j$ – é o quanto o trabalho $j$ atrasou em relação ao seu prazo, caso contrário será considerado zero:
  
 $T_j = max\{0, L_j\}$ 
 
-Antecipação (Earliness) – $E_j$ – é o quanto o trabalho $j$ é antecipado em relação ao prazo, caso contrário será considerado zero: 
+\item Antecipação (Earliness) – $E_j$ – é o quanto o trabalho $j$ é antecipado em relação ao prazo, caso contrário será considerado zero: 
  
 $ E_j = max\{d_j – C_j, 0\} $
  
-Makespan – $C_{max}$ – é definido como o maior dentre as datas de 
+\item Makespan – $C_{max}$ – é definido como o maior dentre as datas de 
 conclusão ($C_1, . . ., C_n$), ou seja, ao tempo de conclusão do último trabalho a sair do sistema ($C[n]$). Minimizar o makespan usualmente implica em uma boa utilização dos recursos. 
 
-The Total Weighted Completion Time (Tempo total de conclusão ponderado) \\ $1||sum(w_jC_j)$
-
-Primeiro tempo de processamento com menor custo. (WSPT)
-Teorema: WSPT é ótima para $1||sum(w_jC_j)$. Neste teorema supomos que temos várias cadeias, e não pode parar de processar uma cadeia que já começou. Nos ajuda decidir qual Cadeia de tarefas precisamos processar primeiro para minimizar o tempo total de processamento.
-
-Supondo agora que o escalonador não precisa terminar todas as tarefas de uma cadeia para começar a processar a outra cadeia. Basicamente este lema nos diz que não faz sentido já que iniciamos a processar uma cadeia interromper para processar outra cadeia. 
-
-\subsubsection{Algorithm 3.1.4 (Total Weighted Completion Time and Chains)}
-
-	Sempre que a máquina é liberado, selecione entre as cadeias restantes aquele com o maior $\rho$-factor. Processar esta cadeia, sem interrupção até e inclusive o trabalho que determina o seu $\rho$-factor.
-
-
-\subsubsection{The Number of Tardy Jobs}
-As tarefas tem datas limites para terminar. A ideia do algoritmo é ordenar as tarefas baseado na data limite de cada tarefa. Deleta-se a tarefa mais longa, caso alguma tarefa tenha a data limite ultrapassada. Se colocarmos pesos, é equivalente ao problema da mochila.
-
-\subsubsection{The Total Tardiness - Dynamic Programming}
-
-Minimizar o número de trabalhos atrasados sum(Tj), NP-Dificil, usa-se a programação dinâmica para resolver (algoritmo pseudo-polinomial). 
-
-\subsubsection{The Total Tardiness - An Approximation Scheme}
-Se fez um algoritmo de tempo polinomial que se aproxima da solução ótima. Usa o Esquema de aproximação em tempo polinomial completo.
-
-\subsubsection{The Total Weighted Tardiness (problema fortemente NP-Difícil)}
-É o mesmo problema anterior agora com ponderação, problema levanta bastante atenção entre os pesquisadores. O problema da 3-Partição (Dividir um conjunto de inteiros em três partes, no qual a soma de cada parte seja a mesma) se reduz a este problema.
-
-Resumo 
-
-$1||Soma w_jC_j$	Regra WSPT, funciona para chains também
-$1||Soma wj(1-e-rC_j)$	Regra WDSP, para cadeias também
-$1||L_{max}$	Regra EDD (Primeiro tarefa que termina primeiro)
-$1|prec| h_{max}$	Algorithm 3.2.1.
-$1|rj|L_{max}$	Branch and bound
-$1||S U_j$	Algorithm 3.3.1.
-$1||S T_j$	Dynamic programming Alg. 3.4.4.
-\\
-%Capitulo 4
-\subsubsection{The Total Earliness and Tardiness}
-Soma total earliness e total tardiness. Depois que uma tarefa se inicia não se pode mais parar o processamento, gera-se o escalonamento ótimo.
-\\
-\subsubsection{Primary and Secondary Objectives}
-Mais realista, pois na pratica temos mais de um objetivo. A ideia é encontrar a melhor solução para um objetivo e a partir dessa solução encontrar uma boa solução na segunda função objetivo. Temos neste caso dois objetivos a serem minimizados. São NP-Hard.
-\\
-\subsubsection{Multiple Objectives: A Parametric Analysis}
-Escalonamento pareto-ótimo – não é possível diminuir o valor de uma função objetivo sem diminuir o valor da outra.
-\\
-\subsubsection{Job Families with Setup Times}
-Tarefas que fazem parte da mesma família podem ser processadas sem a adição de tempo de configuração (podem apresentar tempo de processamento diferentes). Mas se há a troca de uma família $f$ para uma $h$, um tempo $s$ de configuração é necessário. No exemplo com pesos no tempo total de processamento a resolução se deu utilizando programação dinâmica.
-\\
-\subsubsection{Batch Processing}
-Máquina processa um número de tarefas simultaneamente (um batch de tarefas ao mesmo tempo). Comum na industria. 
-
-%cap 5
-Modelos de máquina paralela, primeiro determinamos/alocamos os recursos em cada máquina, depois o escalonamento em cada maquina.
-
-A preempção tem um papel mais importante que nos modelos de única máquina, mesmo quando as tarefas são realizadas no mesmo tempo. 
-
-\textbf{Escalonamento Offline} – todos os dados (tempo processamento, prazos, período de submissão da tarefa) são conhecidos em detalhes e podem ser considerados no processo de otimização.
-
-\textbf{Escalonamento On-line} – Os dados não são conhecidos a priori, o tempo de processamento é conhecido apenas depois que a tarefa termina, e a hora que a tarefa foi submetida apenas quando a tarefa é efetivamente submetida. \\
-
-
-\subsection{Exemplos de modelos de escalonamento}
-\subsubsection{The Makespan without Preemptions  \\($P_m || C_{max}$)}
-	Utiliza o tempo máximo para completar a tarefa. $P_m$ indica máquinas em paralelo. Problema interessante, pois tem o efeito de balanceamento de carga sobre várias maquinas, importante objetivo na pratica.
-
-	É equivalente ao problema de partição, é NP-Dificil. É  NP-Dificil devido as diferentes combinações de escalonamento mas maquinas. Problema resolvido através de heurística. A huerística chama-se Primeiro Tempo de Processamento Mais Longo (LPT).
-
-	CP rule – O nível mais alto primeiro para tempo de processamento igual a 1 e com precedência, é ótimo. LNS é equivalente a CP Rule, não é necessariamente ótima com restrições de precedência arbitrária.
-
-	LFJ - Least Flexible Job  first . Para o caso de restrições de subconjunto de maquinas a serem processadas, seleciona as maquinas disponíveis no menor numero de maquinas. \\
-	
-\subsubsection{The Makespan with Preemptions}
-
-	Mesmo exemplo, mas agora com preempção permitida $P_m|prmp|C_{max}$. Tratado como um problema de programação linear. \\		
-
-\subsubsection{The Total Completion Time without Preemptions}
-$P_m| | Sum(C_j)$ – SPT – A tarefa mais curta primeiro tem escalonamento ótimo.
-$P_m| prec | Sum(C_j)$ – agora temos precedência na ordem das tarefas, é NP-Dificil, restrições de precedência arbitrária\\
-
-\subsubsection{The Total Completion Time with Preemptions} 
-$Q_m |  prepr | Sum(C_j)$ – Qm indica maquinas com diferentes velocidades de processamento. Shortest Remaining Processing Time  on the Fastest Machine  = tarefa mais curta para a maquina mais rapida e assim por diante.
-
-Online Scheduling Escalonamento online, ou seja, ao mesmo tempo que estamos escalonando.
-
-%Cap 6. 
-
-Máquinas em série, ideia da manufatura, que existe uma sequencia de máquinas que a matéria-prima precisa passar para se tornar um produto final. Flexible Shop são máquinas em série com vários estágios, cada estágio tem várias máquinas em paralelo. Objetivo para esse ambiente é o Makespan (tempo total $C_{max}$). 
-
-O escalonamento flow shop é um sistema de trabalho de tarefas em máquinas em série, onde cada tarefa tem que ser processada em cada uma das máquinas. Todas as tarefas devem seguir a mesma rota, ou seja, elas têm que ser processadas, primeiro na máquina 1, depois na máquina 2, e assim por diante. Após a conclusão de uma tarefa em uma máquina, a tarefa se junta à fila da próxima máquina. O problema de escalonamento flow shop é classificado como NP-difícil para a maioria dos problemas clássicos
-
-%cap 7
-O Job-shop Scheduling Problem (JSP) pode ser descrito por: $n$ tarefas, onde cada tarefa é composta por $j$ operações que devem ser processadas em $m$ máquinas. Cada operação $j$ utiliza uma das $m$ máquinas com um tempo de processamento fixo. Cada máquina processa uma operação por vez sendo que não ocorre interrupção. As operações devem ser processadas em ordem através de um roteiro pré-estabelecido. O problema consiste em encontrar um escalonamento que obedeça as precedências de operações nas máquinas tal que minimize o makespan $C_{max}$ dado o processamento da ultima tarefa. 
-
-Job Shop é um Flow Shop, no qual as tarefas tem rotas diferenciadas, mas pré-determinadas.
-
-%cap 8
-No Open-Shop, a rota das tarefas são abertas, não é pré-determinada. Open Shop: O ambiente de máquinas típico de open shop caracteriza-se pelo fato de não existir uma sequência pré-definida a ser seguida por cada tarefa $j$. Posto de outra forma, é fornecido ao escalonador liberdade de escolha da sequência a ser seguida por cada tarefa $j$ ao longo do sistema.
+\end{itemize}
 
 
 \section{Balancemento de Carga}\label{intro:carga}
 
-O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fase~\cite{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
+O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fases~\cite{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
 
 \begin{itemize}
 \item Estático A regra de balanceamento é definida uma única vez, baseada em informações estáticas do sistema ou aplicações.
@@ -283,7 +175,28 @@ O balanceamento de carga é uma técnica aplicada para distribuir a carga de tra
 \item Dinâmico A regra de balanceamento é modificada em resposta ao estado atual do sistema ou das aplicações. O estado do sistema será constantemente atualizado e as decisões tomadas são baseadas nas informações atuais e possivelmente, dos estados anteriores do sistema.
 \end{itemize}
 
-Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. Conforme~\cite{virtual}, o problema de balanceamento de carga  é similar a problemas de alta complexidade computacional, que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
+Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. O problema de balanceamento de carga  é similar a problemas de alta complexidade computacional~\cite{virtual}, NP-Completo que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
+
+
+Distribuição de carga estática, também conhecida como planejamento determinístico, atribui um determinado trabalho a processador fixado. Toda vez que o sistema for reiniciado, a mesma tarefa no processador de ligação (atribuição de uma tarefa ao mesmo processador) é usada sem considerar as mudanças que podem ocorrer durante a vida útil do sistema. Além disso, a distribuição de carga estática pode também caracterizar a estratégia utilizada durante a execução, no sentido de que ele pode não resultar na mesma atribuição de tarefas no processador, mas atribui os postos de trabalho recém-chegados de uma forma sequencial ou fixa. Por exemplo, utilizando uma estratégia estática simples, os trabalhos podem ser atribuídos aos nós de uma maneira round-robin de modo que cada processador execute aproximadamente o mesmo número de tarefas. 
+
+Balanceamento de carga dinâmico leva em conta que os parâmetros do sistema não podem ser conhecidos com antecedência e, por conseguinte, utilizando um esquema fixo ou estático irão eventualmente produzir resultados ruins. A estratégia dinâmica geralmente é executado várias vezes e poderá realocar um trabalho previamente escalonado para um novo nó com base na dinâmica atual do ambiente de sistema.
+
+\subsubsection{Balanceamento de carga Distribuido e Centralizado}
+
+Essa divisão geralmente cai sob o esquema de balanceamento de carga dinâmico, onde uma questão natural surge sobre o local onde a decisão é tomada. Políticas centralizadas armazenam informações globais em um local central e usa essas informações para fazer o escaonamento de decisões tomadas pelos que utilizam os recursos de armazenamento de um ou mais processadores. Este esquema é o mais adequado para sistemas em que as informações de estado de um processador individual podem ser facilmente coletados por uma estação central a baixo custo, e novos postos de trabalho que chegam a este local centralizado serão depois encaminhados para nós subseqüentes. A principal desvantagem deste sistema é que ele tem um ponto único de falha. 
+
+Na programação distribuída, as informações de estado é distribuída entre os nós que são responsáveis na gestão dos seus próprios recursos ou distribuiem as tarefas que residem em suas filas a outros processadores. Em alguns casos, o sistema permite que os processadores ociosos atribuam tarefas a si mesmos em tempo de execução, acessando uma fila global compartilhada. Note-se que as falhas ocorrem em um determinado nó irão permanecer localizado e não pode prejudicar o funcionamento global do sistema. 
+
+Em um escalonamento de balanceamento de carga local, cada processador pesquisa outros processadores em sua vizinhança e usa esta informação local para decidir sobre a transferência de carga. Esta vizinhança é geralmente indicada como o espaço de migração. O principal objetivo é minimizar a comunicação remota, bem como de forma eficiente equilibrar a carga sobre os processadores. No entanto, em um esquema de balanceamento global, informação global ou  parte da informação do sistema é utilizado para iniciar o balanceamento de carga. Este sistema exige uma quantidade considerável de informações a serem trocadas no sistema o que pode afetar sua capacidade de expansão.
+
+No âmbito da escalonamento distribuído global dinâmico, dois mecanismos podem ser distinguidos, envolvendo o nível de cooperação entre as diferentes partes do sistema. No esquema não cooperativo ou autônomos, cada nó tem autonomia sobre o seu próprio escalonamento de recursos. Isto é, as decisões são tomadas independentemente do resto do sistema e, portanto, o nó pode migrar ou afetar funções baseadas no desempenho local. Por outro lado, na programação cooperativa, os processos trabalham em conjunto para um balanço global de todo o sistema. Decisões de escalonamento são feitas após considerar seus efeitos sobre algumas medidas efetivas globais (por exemplo, o tempo global de conclusão).
+
+Esquemas adaptativos e não-adaptativos são parte das políticas de balanceamento de carga dinâmico. Em um esquema adaptativo, as decisões escalonadas levam em consideração o passado e o desempenho atual do sistema e são afetados pelas decisões anteriores ou alterações no ambiente. Se um (ou mais parâmetros) não se correlacionam com o desempenho do programa, que é ponderado menos próxima vez. No regime não-adaptativo, os parâmetros utilizados no escalonamento continuam os mesmos, independente do comportamento passado. 
+	
+Confusões podem surgir entre a distinção entre escalonamento dinâmico e escalonamento adaptativo. Uma solução dinâmica leva em conta informações ambientais na sua decisão, uma solução adaptativa (que também é dinâmica) leva em conta estímulos ambientais em consideração para modificar a própria política de escalonamento.
+
+
 
 \section{GPUs}\label{intro:historico}
 
@@ -292,8 +205,163 @@ As GPUs vêm se mostrando uma excelente alternativa na área de computação de 
 Muitas aplicações já utilizam o poder de processamento das GPUs, exemplos são mecânica dos fluidos \cite{fluido}, visualização científica \cite{visualizacao},  aprendizado de máquina \cite{Aprendizado}, entre outras. Devido ao relativo baixo custo de placas gráficas contendo GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a instituições com poucos recursos financeiros e com grande necessidade de recursos computacionais.
 
 
+\section{CUDA}\label{intro:contexto}
+
+\textit{Compute Unified Device Architecture} (CUDA)~\cite{cuda} é uma arquitetura de computação paralela desenvolvida pela Nvidia para processamento gráfico.
+Com esta tecnologia é possível desenvolver não só aplicações convencionais de processamento gráfico, mas é possivel fazer programas de propósito geral, esta abordagem de se desenvolver programas de propósito geral em GPU é denominado GPGPU (\textit{General-Purpose Computing on Graphics Processor Units})~\cite{GPGPU}.
+
+Através de linguagens de programação amplamente utilizadas na indústria é possível desenvolver variadas aplicações que se beneficiam do alto poder de processamento das placas gráficas. A principal linguagem utilizada para o desenvolvimento em CUDA é a linguagem de
+programação C, que mundialmente é a mais amplamente utilizada. O principal mérito do CUDA é a facilidade que se tem para acessar todos recursos da placa gráfica.
+
+%%%%%%%%%%%%%%%%%%%%Revisar
+CUDA foi lançado pela NVIDIA em novembro de 2006~\cite{cuda}. Sua proposta foi criar uma arquitetura de computação paralela de propósito geral. A justificativa para isso foi aproveitar a plataforma de computação paralela das placas gráficas para resolver diversos algoritmos
+computacionais eficientemente. O aplicativo produzido sobre a API CUDA pode ser um algoritmo em linguagem C, OpenCL, Fortran, C++ e DX11, não havendo limitações para o suporte de novas linguagens. 
+
+\begin{figure}[htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{LingSuportadas.png}
+	\label{fig: lingSuportadas}
+	\caption{Linguagens Suportadas(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+A arquitetura NVIDIA CUDA se baseia tanto em componentes de hardware como de software~\cite{cuda}. A parte que entendemos por software é a executada na CPU, formada por um algoritmo seqüencial escrito comumente na linguagem C ou alguma outra que é suportada por CUDA. A parte do hardware é formada pelo código compilado por CUDA para torná-lo um kernel. \textit{Kernel} são blocos que especificam parte do algoritmo em que se deseja a
+paralelização. Ele também pode ser tratado como um código que pode ser utilizado pela GPU para chamar outros kernels nela ou em outra GPU.
+
+A GPU contém milhares de threads. CUDA faz a formatação do código de uma maneira que threads sejam alocadas paralelamente e o usuário usufrua dessa característica, podendo fazer chamadas de kernel que serão independentes entre si, o que permite a GPU rodar vários algoritmos.
+
+Podemos ver na Figura 1.2 a diferença de potencial que uma GPU, com seu paralelismo, possui em relação a um processador (CPU):
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.8]{ImageSub.png}
+	\label{fig: graficosCuda1}
+	\caption{Operações de Ponto Flutuante por segundo para CPU e GPU(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+Na figura \ref{fig: graficosCuda1} gráfico temos informações sobre o pico de operações por ponto flutuante. A GPU alcança a casa de TFlops/s, e a CPU apresenta um desempenho baixo mesmo comparado a arquiteturas de GPUs anteriores que não são compatíveis com CUDA.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.8]{ImageSub2.png}
+	\label{fig: graficosCuda2}
+	\caption{Tamanho de banda de memória para CPU e GPU(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+A GPU é voltada para computação intensiva, com alta paralelização, que são características do problema de renderização gráfica. Além disso, sua arquitetura é especializada no processamento deste tipo de dados e não no controle de fluxo. Podemos visualizar essa diferença quando
+observamos a Figura 1.3.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{transistores.png}
+	\label{fig: transistores}
+	\caption{Quantidade de transistores para processamento de dados(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+A quantidade de transistores utilizados para fazer processamento (ALU - \textit{Arithmetic Logic Unit}) é bem maior na GPU que na CPU. A arquitetura da CPU ainda está dividida em enormes blocos que contêm um componente de controle de fluxo e um de memória cache. No caso da GPU, o mesmo programa é executado em muitos elementos em paralelo. Dessa maneira, não possui um sofisticado componente de controle de fluxo, porém, oferece uma grande intensidade de computação aritmética. Além disso, a cache se torna pequena na GPU diminuindo a latência para execução de cada grande bloco de ALU's, diferente da CPU que contém uma cache enorme, obtendo uma latência alta para acesso. Possuindo uma unidade de controle, um componente de cache e um conjunto enorme de ALU's, é possível obter a estrutura de vários grupos de
+cores. Podemos assim certificar que a GPU é um manycore, apresentando de 32 até 128 cores dependendo do modelo. Essa subdivisão de cores na GPU é chamada de \textit{Stream Processing}.
+
+Um ponto importante a ser lembrado é que, para a execução na GPU, o algoritmo paralelizado não pode ter muita dependência de dados em cada passo de computação, pois a GPU não faz paralelização de tarefas e sim de processamento de dados. Caso essa otimização não seja feita no algoritmo, a GPU tem seu desempenho bastante afetado.
+
+Com relação à hierarquia de compilação para o CUDA, a Figura 1.4 ilustra a arquitetura da sua pilha de software.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{pilhaSoftware.png}
+	\label{fig: pilhaSoftware}
+	\caption{Pilha de Software(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+Essa pilha de software mostra a hierarquia de execução de CUDA. A API de CUDA fornece suporte a diversas funções matemáticas, bibliotecas, suporte ao runtime e ao driver.
+
+O CUDA \textit{runtime} ~\cite{cuda} é a camada de alto nível de programação, enquanto a camada do driver é a camada baixa para manipulação de dados. O CUDA driver gerencia e otimiza os recursos relacionados diretamente à GPU. CUDA é baseada em programação paralela, permitindo milhares de threads executando uma mesma tarefa. Neste caso, a GPU funciona como um co-processador da CPU, a qual chamamos de \textit{HOST} e a GPU de \textit{DEVICE}.
+
+CUDA usa como base a linguagem C~\cite{cuda}, que permite uma curva rápida de aprendizado. Nela deve-se criar funções desejadas que CUDA otimiza e paraleliza na GPU. Essas funções são chamadas de kernel. A seguir, observamos um exemplo de um código simples, em seguida, uma explanação sobre cada aspecto inerente ao entendimento seqüencial desse código.
+
+
+\begin{verbatim}
+__global__ void matAdd(float A[N][N], float B[N][N],
+float C[N][N])
+{
+    int i = threadIdx.x;
+    int j = threadIdx.y;
+    C[i][j] = A[i][j] + B[i][j];
+}
+
+
+int main()
+{
+    // Kernel invocation
+    dim3 dimBlock(N, N);
+    matAdd<<<1, dimBlock>>>(A, B, C);
+}
+
+\end{verbatim}
+
+Nesse código temos uma função matAdd que apresenta uma tag \textit{\_\_global\_\_} antes da definição da função. Essa tag define ao compilador que esse bloco será paralelizado na GPU.  Esta função recebe três matrizes de tamanho N por N, onde cada thread nos eixos x e y serão responsáveis por somarem as matrizes A e B, sendo atribuido o resultado da soma na matriz C.  Caso fosse desenvolvido um código similar no modo convencional, teria que aninhar dois laços de forma a percorrer todos os indices das matrizes. É claro, a diferença na forma de implementar e tratar o problema.
+
+A função \textit{main} faz a invocação do método. Ele se localiza no HOST e o código é executado na GPU (DEVICE). Em um computador podemos encontrar mais que uma GPU, neste caso elas serão chamadas de DEVICE 0, DEVICE 1, etc. O kernel é acionado colocando uma \textit{tag} de configuração antes da declaração dos parâmetros, "$<<< >>>$". Há três parâmetros possíveis na configuração: a configuração do tamanho das \textit{grids} (A), a configuração do tamanho dos blocos (B) e a quantidade de memória compartilhada que se deseja utilizar no algoritmo (Ns). Isso gera uma configuração genérica "$<<<A,B,Ns >>>$".
+
+No main, antes da invocação, declaramos um tipo de variável definida pelo CUDA chamada "dim3". A variável criada dimBlock terá três dimensões e cada uma dessas dimensões representará a dimensão de um bloco. No exemplo, teremos um bloco com tamanho $N$ para dimensão $x$, tamanho $N$ para dimensão $y$ e a dimensão $z$ que foi omitida tem tamanho 1. Desta forma, seguindo a lógica de desenvolvimento da aplicação é possível construir algoritmos paralelizados na GPU.
+
+
+A arquitetura CUDA é baseada em \textit{arrays} escaláveis de multithreads SMs, ou thread Batching. Ele é um \textit{batch} de threads que o kernel executa e organiza em grids de threads block. Uma thread block é um batch de threads que cooperam entre si para compartilhar eficientemente as informações que serão processadas. Essa eficiência vai desde o compartilhamento (cópia da DRAM GPU para a memória compartilhada e vice-versa) dessa informação através da memória compartilhada, até a sincronização de execução para o acesso a essa memória.
+
+Cada thread é identificada através de ID única, chamada thread ID. Há um número limitado de threads por bloco. Porém, um bloco de mesma dimensão e tamanho pode ser executado por um mesmo kernel fazendo um grid de blocos, aumentando ainda mais a quantidade de threads sendo executados em paralelo. Vale salientar que as threads de blocos diferentes não podem se comunicar.
+Cada bloco é identificado por um block ID, e tem sua ID única em relação ao grid.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{ThreadBatching.png}
+	\label{fig: ThreadBatching}
+	\caption{Batching de Threads(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+Um multiprocessador é um nome formalizado para threads. Ele consiste de oito cores de processadores escalares, duas unidades de funções especiais transcendentais, uma unidade de controle de instruções multithread e uma memória compartilhada on-chip.
+
+O multiprocessador cria, gerencia, e executa threads concorrentes com custo nulo de hardware no âmbito de gerenciamento de processos. Para gerenciar centenas de threads rodando em diferentes programas, o multiprocessador nas últimas versões de CUDA emprega o SIMT. O multiprocessador mapeia cada thread a um core de processador escalar, que executa independentemente suas próprias instruções e tem seu próprio estado de registradores.
+
+Esse multiprocessador SIMT cria, gerencia, escalona e executa grupos de 32 threads paralelas chamadas de warps. Threads individuais que compõem o SIMT \textit{warp} podem começar sua execução juntas no mesmo programa, mas estão livres para ramificarem e executarem de forma autônoma. Contudo, se alguma thread ultrapassar a dependência condicional da ramificação, ela será desabilitada. 
+
+A arquitetura SIMD(\textit{Single Instruction Multiple Data}) é implementada como um conjunto de múltiplos processadores que tem a capacidade de, com uma única instrução, em um mesmo ciclo de clock, processar várias informações.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{SIMT.png}
+	\label{fig: SIMT}
+	\caption{Conjunto de Multiprocessadores e Organização das Memórias(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+Como podemos observar cada multiprocessador possui: um conjunto de registradores de 32-bit, cache paralelo ou memória compartilhada que é partilhada com os outros processos, uma cache constante e outra de textura apenas para leitura. A memória local e global não é "cacheada" e pode ser escrita e lida pelos processos.
+Um ponto forte de CUDA é que há uma separação na memória DRAM entre o HOST e o DEVICE. A API de CUDA fornece uma forma de transmissão de alta performance para transferir os dados entre esses dispositivos usando \textit{High Performance} (DMA), ou DMA de alto desempenho.
+
+\begin{figure}[!htb]
+	\begin{center}
+	\centering
+			\includegraphics[scale=0.6]{HierarquiaMemoriasCuda.png}
+	\label{fig: HierarquiaMemoriasCuda}
+	\caption{Hierarquia de memórias da GPU(adaptado de \cite{cuda})}
+	\end{center}
+\end{figure}
+
+
 \section{Suporte ao Paralelismo de Tarefas}
 Diversas ferramentas de programação suportam paralelismo de tarefas em CPUs multicore. Recentemente, alguns trabalhos em andamento têm buscado oferecer suporte a esse paradigma também em sistemas híbridos compostos por CPUs e GPUs.
+
+
 
 
 \subsection{StarPU}
@@ -302,6 +370,48 @@ O StarPU~\cite{starpu} é uma ferramenta para programação paralela que oferece
 
 A ferramenta possui um conjunto de políticas de escalonamento implementadas que o programador pode escolher de acordo com as características da aplicação. A principal delas faz uso do algoritmo de escalonamento estático HEFT (Heterogeneous Earliest Finish Time) para escalonar as tarefas com base em modelos de custo de execução das tarefas.
 
+StarPU é um sistema de execução unificado que consiste em um software e uma API de tempo de execução que tem como objetivo permitir que os programadores de aplicações com alto custo  computacional explorem mais facilmente o poder de dispositivos disponíveis, com suporte a CPUs e GPUs. Submissões de tarefas são manipuladas pelo escalonador do StarPU, e a consistência dos dados é garantida através de uma biblioteca de gerenciamento de dados. 
+No entanto, uma das principais vantagens perante a outras bibliotecas é que o StarPU tenta reduzir o custo da transferência de dados. Isso é feito usando as informações do histórico de cada tarefa e, de acordo com as decisões do escalonador, que de forma assíncrona prepara as dependências de dados, enquanto o sistema está ocupado realizando a computação de outras tarefas. 
+
+A API do StarPU apresenta uma certa terminologia bem definida, descrita a seguir:
+
+\begin{itemize}
+	\item Manipulador de Dados (Data Handle): Referência a blocos de memória. A alocação do espaço requerido, e a entrega de informações sobre a transferência de dados para cada dispositivo.
+	\item Codelet: Descreve uma função computacional que pode ser implementada em um ou mais arqquiteturas, tais como CPUs, CUDA ou OpenCL. Também armazena informação sobre a quantidade e tipos de dados em buffers que podem ser recebidos.
+	\item Tarefa (Task): É definido como a  associação entre um codelet e um conjutno de data handles.
+	\item Partição (Partition): A subdivisão de um data handle em pequenos pedaços, de acordo com a função de divisão, que pode ser definida pelo usuário.
+	\item Trabalhador (Worker): Um elemento processador, tal como um core CPU, gerenciado pelo StarPU para excutar Tasks;
+	\item Escalonador (Scheduler): A biblioteca responsável pela atribuição das tarefas aos trabalhadores, com base em uma política de escalonamento bem definida.
+
+\end{itemize}
+
+
+\subsubsection{Escalonador de tarefas}
+
+O \textit{framework} StarPU emprega um modelo de programação baseado em tarefas. Kernels computacionais devem ser encapsuladas dentro de uma tarefa. StarPU vai lidar com a decisão de onde e quando a tarefa deve ser executada, com base em uma política de escalonamento de tarefas, e as implementações disponíveis para cada tarefa. Uma tarefa pode ser implementada de várias formas, tais como a CPU ou CUDA. Várias implementações para o mesmo tipo de dispositivo podem também ser utilizadas. Isso permite que StarPU automaticamente selecione a implementação apropriada, mesmo entre diferentes arquiteturas de CPU. Ao enviar uma tarefa, StarPU vai usar o escalonador escolhido para selecionar qual das implementações disponíveis serão utilizadas. A decisão varia de escalonador para escalonador, mas pode levar em conta informações como a atual disponibilidade de cada recurso, o modelo de desempenho já obtido para essa tarefa, e as estimativas sobre as transferências de dados necessários para resolver as dependências. 
+
+Os dados manipulados por uma tarefa são transferidos automaticamente quando necessário entre os vários dispositivos, assegurando a consistência de memória e liberando o programador de lidar com questões de escalonamento, transferência de dados e outros requisitos associados.
+
+\subsubsection{Dependências}
+
+StarPU cria automaticamente um grafo de dependência de todas as tarefas apresentadas, e os mantém em um conjunto de "tarefas congeladas", passando-as para o escalonador uma vez preenchidas todas as dependências. 
+
+Dependências podem ser implicitamente dadas pelos dados manipulados pela tarefa. Cada tarefa recebe um conjunto de buffers, cada uma correspondendo a uma parte dos dados geridos pela  biblioteca de gerenciamento de dados do StarPU, e irá esperar até que todos os buffers estiverem prontos para ler.
+
+Isso inclui as possíveis transferências de dados que são necessárias para atender as dependências, neste caso diferentes tarefas que dependem dos mesmos dados estão programados para rodar em diferentes nós computacionais. StarPU se certificará automaticamente das transferências de dados necessárias entre cada execução da tarefa para garantir a consistência dos dados. 
+
+Além de dependências de dados implícitos, outras dependências pode ser dados explicitamente a fim de forçar explicitamente a ordem de execução de um determinado conjunto de tarefas.
+
+
+\subsubsection{Modo de acesso aos dados}
+
+Cada dependência de dados que é explicitamente definida em uma tarefa, pode ter um modo de acesso diferente. Os dados podem ser usados em somente leitura, somente escrita ou no modo leitura e escrita. Este modelo descreve um tipo de padrão de mútua exclusão, onde um bloco de dados pode ser acessado simultaneamente por qualquer número de leitores, mas deve ser acessado exclusivamente por um escritor. 
+
+StarPU usa esse conceito para otimizar ainda mais os cálculos de dependência de dados. Se várias tarefas escalonadas dependem dos mesmos dados, então apenas com o acesso a leitura de dados, a dependência não deve bloquear as múltiplas tarefas de executar simultaneamente. Cópias temporárias de dados podem ser criadas, possivelmente em diferentes unidades de computação, e depois descartada, uma vez que um buffer de apenas leitura é assumido para permanecer inalterado no final de uma tarefa.
+
+\subsubsection{Memória virtual compartilhada}
+
+O objetivo é gerenciar automaticamente as alocações de memória e transferências em todos os dispositivos. Isto não só libera o programador do trabalho de gerenciamento manual de memória entre as tarefas, mas também tem o potencial de reduzir o custo de tais operações. StarPU gerencia a memória, forçando o usuário a declarar manipulador de dados para os seus dados. Esses manipuladores são usados como argumentos para as tarefas, permitindo que o escalonador aloque e transfira todos os buffers de dados necessários para a unidade de computação correta antes da execução da tarefa.
 
 
 \subsection{Charm++}
@@ -310,13 +420,16 @@ No Charm++~\cite{kunzman2006charm++} as tarefas são representadas pelos chares,
 
 No Charm++ a sincronização pode ser feita através de Futures, objetos de comunicação, replicados ou compartilhados. O future  é uma estrutura que serve para armazenar um valor que pode ser acessado no futuro por outro chare. O acesso a essa estrutura  é bloqueante e pode ser comparado a um acesso ao resultado de um método spawned precedido de uma chamada sync. A utilização de objetos de comunicação permite que um chare se comunique por troca de mensagens, tornando a comunicação semelhante à realizada com MPI. Os demais objetos introduzem conceitos para comunicação não encontrados nos outros ambientes.
 
-O Charm foi uma das primeiras implementações do conceito de Atores, que são objetos concorrentes que se comunicam apenas por troca de mensagens. Charm++ é baseado no Charm e suporta diferentes modos de compartilhamento de informações. Ele reúne recursos propostos em outros ambientes, como objetos sequenciais e paralelos, comunicação por troca de mensagens e futures. O Cilk é um ambiente de programacção paralelo focado em arquiteturas SMP. Ele  é baseado na linguagem C. O Cilk oferece também um escalonador de processos que é provado ser eficiente. Baseando-se no Cilk, foi desenvolvido um ambiente para execução de programas em arquiteturas com memória distribuída e aproveitamento de recursos ociosos, chamado Cilk-NOW~\cite{Blumofe:1997:ARP:1268680.1268690}.
+O Charm foi uma das primeiras implementações do conceito de Atores, que são objetos concorrentes que se comunicam apenas por troca de mensagens. Charm++ é baseado no Charm e suporta diferentes modos de compartilhamento de informações. Ele reúne recursos propostos em outros ambientes, como objetos sequenciais e paralelos, comunicação por troca de mensagens e futures. 
 
 \subsection{Kaapi}
 
 O XKaapi~\cite{gautier:hal-00799904} é uma reimplementação do KAAPI com suporte a paralelismo de tarefas "de grão fino". O KAAPI (Kernel for Adaptative, Asynchronous Parallel and Interactive programming) é uma ferramenta para computação paralela em CPUs multicore e clusters. A implementação atual do XKaapi oferece suporte a arquiteturas multicore e extensões para suporte eficiente a GPUs foram propostas em (HERMANN et al., 2010; LIMA et al., 2012). O XKaapi é composto por um conjunto de APIs (Application Programming Interfaces) e pelo kernel, um ambiente de execução para as APIs que oferece escalonamento baseado em roubo de tarefas. A Kaapi++ é a interface do XKaapi baseada em um DFG (Data Flow Graph) para C++ e é dividida em três componentes: a assinatura da tarefa (task signature) onde são definidos o número e as características dos parâmetros da tarefa; a implementação da tarefa (task implementation) que especifica a implementação da tarefa para uma arquitetura e a criação da tarefa (task creation) que submete a tarefa para a pilha de execução.
 
 \subsection{Cilk}
+
+O Cilk é um ambiente de programacção paralelo focado em arquiteturas SMP. Ele  é baseado na linguagem C. O Cilk oferece também um escalonador de processos que é provado ser eficiente. Baseando-se no Cilk, foi desenvolvido um ambiente para execução de programas em arquiteturas com memória distribuída e aproveitamento de recursos ociosos, chamado Cilk-NOW~\cite{Blumofe:1997:ARP:1268680.1268690}.
+
 
 A ferramenta para programação paralela Cilk~\cite{Blumofe:1995:CEM:209936.209958, Blumofe:1997:ARP:1268680.1268690} é uma extensão da linguagem C para permitir a submissão, execução e sincronização de tarefas paralelas. A implementação de Cilk é baseada no algoritmo de escalonamento dinâmico por meio de roubo de tarefas. Cilk define tarefas como funções individuais que podem submeter novas tarefas dinamicamente. A sincronização é feita permitindo que as tarefas esperem pelas tarefas filhas, ou seja, tarefas que foram submetidas pela tarefa original.
 

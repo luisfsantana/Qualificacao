@@ -7,6 +7,11 @@ Acosta, A., Blanco, V., and Almeida, F. (2012).
 \newblock In {\em Parallel and Distributed Processing with Applications (ISPA),
   2012 IEEE 10th International Symposium on}, pages 646--653.
 
+\bibitem[Anastas and Warner, 2000]{anastas2000green}
+Anastas, P.~T. and Warner, J.~C. (2000).
+\newblock {\em Green chemistry: theory and practice}.
+\newblock Oxford University Press.
+
 \bibitem[Augonnet et~al., 2010]{starpu}
 Augonnet, C., Thibault, S., and Namyst, R. (2010).
 \newblock Starpu: a runtime system for scheduling tasks over accelerator-based
@@ -26,7 +31,7 @@ Ayguade, E., Badia, R., Cabrera, D., Duran, A., Gonzalez, M., Igual, F.,
   Lecture Notes in Computer Science}, pages 154--167. Springer Berlin
   Heidelberg.
 
-\bibitem[Belviranli et~al., 2013]{hdss}
+\bibitem[Belviranli et~al., 2013]{HDSS}
 Belviranli, M.~E., Bhuyan, L.~N., and Gupta, R. (2013).
 \newblock A dynamic self-scheduling scheme for heterogeneous multiprocessor
   architectures.
@@ -86,6 +91,13 @@ Clarke, D., Ilic, A., Lastovetsky, A., and Sousa, L. (2012).
 {CUDA Development Core Team} (2012).
 \newblock {CUDA 4.1 Programming Guide}.
 
+\bibitem[da~Silva et~al., 2007]{da2007desenvolvimento}
+da~Silva, M.~A., Boaventura, J.~S., de~Alencar, M.~G., Cerqueira, C.~P.,
+  de~Energia, G.-G., and dos Materiais, C. (2007).
+\newblock Desenvolvimento de prot{\'o}tipo de c{\'e}lulas a combust{\'\i}vel do
+  tipo {\'o}xido s{\'o}lido com reforma direta.
+\newblock {\em Revista Mat{\'e}ria}, 12(1):99--110.
+
 \bibitem[de~Camargo, 2011]{siang}
 de~Camargo, R. (2011).
 \newblock A multi-gpu algorithm for communication in neuronal network
@@ -99,6 +111,13 @@ de~Camargo, R. (2012).
   gpu clusters.
 \newblock In {\em Applications for Multi-Core Architectures (WAMCA), 2012 Third
   Workshop on}, pages 1--6.
+
+\bibitem[Delpech et~al., 2009]{delpech2009reactor}
+Delpech, S., Merle-Lucotte, E., Heuer, D., Allibert, M., Ghetta, V., Le-Brun,
+  C., Doligez, X., and Picard, G. (2009).
+\newblock Reactor physic and reprocessing scheme for innovative molten salt
+  reactor system.
+\newblock {\em Journal of fluorine chemistry}, 130(1):11--17.
 
 \bibitem[Devarakonda and Iyer, 1989]{carga}
 Devarakonda, M. and Iyer, R. (1989).
@@ -177,6 +196,19 @@ M.~Mller, C., Strengert, M., and Ertl, T. (2007).
   volumes.
 \newblock {\em Parallel Comput.}, 33(6):406--419.
 
+\bibitem[Mandel, 1993]{CNM:CNM1640090307}
+Mandel, J. (1993).
+\newblock Balancing domain decomposition.
+\newblock {\em Communications in Numerical Methods in Engineering},
+  9(3):233--241.
+
+\bibitem[Merrill and Grimshaw, 2010]{GPGPU}
+Merrill, D.~G. and Grimshaw, A.~S. (2010).
+\newblock Revisiting sorting for gpgpu stream architectures.
+\newblock In {\em PACT '10 Proceedings of the 19th international conference on
+  Parallel architectures and compilation techniques}, pages 545--546.
+  University of Virginia, Charlottesville, VA, USA.
+
 \bibitem[Miyoshi et~al., 2012]{Flat}
 Miyoshi, T., Irie, H., Shima, K., Honda, H., Kondo, M., and Yoshinaga, T.
   (2012).
@@ -196,6 +228,11 @@ Owens, D., Houston, M., Luebke, D., Green, S., Stone, J.~E., and Phillips,
 \newblock {GPU} computing.
 \newblock {\em Proceedings of the IEEE}, 96(1):879--899.
 
+\bibitem[Pinedo, 2012]{pinedo2012scheduling}
+Pinedo, M.~L. (2012).
+\newblock {\em Scheduling: theory, algorithms, and systems}.
+\newblock Springer.
+
 \bibitem[Quinn, 2003]{Quinn:2003:PPC:1211440}
 Quinn, M.~J. (2003).
 \newblock {\em Parallel Programming in C with MPI and OpenMP}.
@@ -214,6 +251,11 @@ Singh, A., Korupolu, M., and Mohapatra, D. (2008).
 \newblock In {\em High Performance Computing, Networking, Storage and Analysis,
   2008. SC 2008. International Conference for}, pages 1--12.
 
+\bibitem[Tanenbaum and WOODHULL, 2006]{tanenbaum2006sistemas}
+Tanenbaum, A. and WOODHULL, A. (2006).
+\newblock {\em Sistemas Operacionais: Projetos e Implementa{\c{c}}{\~a}o}.
+\newblock BOOKMAN COMPANHIA ED.
+
 \bibitem[Teodoro et~al., 2009]{Anthill}
 Teodoro, G., Sachetto, R., Sertel, O., Gurcan, M., Meira, W., Catalyurek, U.,
   and Ferreira, R. (2009).
@@ -221,6 +263,12 @@ Teodoro, G., Sachetto, R., Sertel, O., Gurcan, M., Meira, W., Catalyurek, U.,
   compute intensive applications.
 \newblock In {\em Cluster Computing and Workshops, 2009. CLUSTER '09. IEEE
   International Conference on}, pages 1--10.
+
+\bibitem[Vouzis and Sahinidis, 2011]{Vouzis15012011}
+Vouzis, P.~D. and Sahinidis, N.~V. (2011).
+\newblock Gpu-blast: using graphics processors to accelerate protein sequence
+  alignment.
+\newblock {\em Bioinformatics}, 27(2):182--188.
 
 \bibitem[Wang et~al., 2011a]{appCientificas}
 Wang, L., Huang, M., Narayana, V.~K., and El-Ghazawi, T. (2011a).

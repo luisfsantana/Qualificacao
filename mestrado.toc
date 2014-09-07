@@ -3,49 +3,40 @@
 \select@language {brazilian}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introdu\IeC {\c c}\IeC {\~a}o ao balanceamento de carga}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivos e Contribui\IeC {\c c}\IeC {\~o}es}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Organiza\IeC {\c c}\IeC {\~a}o da Disserta\IeC {\c c}\IeC {\~a}o}{3}{section.1.3}
-\contentsline {chapter}{\numberline {2}Introdu\IeC {\c c}\IeC {\~a}o ao escalonamento}{1}{chapter.2}
+\contentsline {section}{\numberline {1.2}Objetivos e Contribui\IeC {\c c}\IeC {\~o}es}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Organiza\IeC {\c c}\IeC {\~a}o da Disserta\IeC {\c c}\IeC {\~a}o}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}Conceitos Computacionais}{1}{chapter.2}
 \contentsline {section}{\numberline {2.1}Escalonamento}{1}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Nota\IeC {\c c}\IeC {\~a}o dos problemas de escalonamento}{2}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Classes de Escalonamento}{3}{subsection.2.1.2}
 \contentsline {subsubsection}{Escalonamento sem atrasos}{3}{section*.4}
 \contentsline {subsubsection}{Escalonamento ativo}{3}{section*.5}
-\contentsline {subsubsection}{Escalonamento semi-ativo}{4}{section*.6}
-\contentsline {subsection}{\numberline {2.1.3}Classifica\IeC {\c c}\IeC {\~a}o dos problemas de escalonamento}{4}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Defini\IeC {\c c}\IeC {\~a}o de atributos}{5}{subsection.2.1.4}
-\contentsline {subsubsection}{Algorithm 3.1.4 (Total Weighted Completion Time and Chains)}{7}{section*.7}
-\contentsline {subsubsection}{The Number of Tardy Jobs}{7}{section*.8}
-\contentsline {subsubsection}{The Total Tardiness - Dynamic Programming}{7}{section*.9}
-\contentsline {subsubsection}{The Total Tardiness - An Approximation Scheme}{7}{section*.10}
-\contentsline {subsubsection}{The Total Weighted Tardiness (problema fortemente NP-Dif\IeC {\'\i }cil)}{7}{section*.11}
-\contentsline {subsubsection}{The Total Earliness and Tardiness}{7}{section*.12}
-\contentsline {subsubsection}{Primary and Secondary Objectives}{8}{section*.13}
-\contentsline {subsubsection}{Multiple Objectives: A Parametric Analysis}{8}{section*.14}
-\contentsline {subsubsection}{Job Families with Setup Times}{8}{section*.15}
-\contentsline {subsubsection}{Batch Processing}{8}{section*.16}
-\contentsline {subsection}{\numberline {2.1.5}Exemplos de modelos de escalonamento}{9}{subsection.2.1.5}
-\contentsline {subsubsection}{The Makespan without Preemptions \\($P_m || C_{max}$)}{9}{section*.17}
-\contentsline {subsubsection}{The Makespan with Preemptions}{9}{section*.18}
-\contentsline {subsubsection}{The Total Completion Time without Preemptions}{9}{section*.19}
-\contentsline {subsubsection}{The Total Completion Time with Preemptions}{9}{section*.20}
-\contentsline {section}{\numberline {2.2}Balancemento de Carga}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}GPUs}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}Suporte ao Paralelismo de Tarefas}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}StarPU}{11}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Charm++}{12}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Kaapi}{13}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Cilk}{13}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Intel TBB}{13}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}OpenMP}{13}{subsection.2.4.6}
-\contentsline {chapter}{\numberline {3}Trabalhos Relacionados}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{15}{section.3.1}
-\contentsline {chapter}{\numberline {4}Algoritmo Proposto}{19}{chapter.4}
-\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}Resultados}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Resultados dos experimentos}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Multiplica\IeC {\c c}\IeC {\~a}o de Matrizes}{28}{section.6.2}
-\contentsline {section}{\numberline {6.3}Blackscholes}{30}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclus\IeC {\~o}es e Trabalhos Futuros}{32}{section.6.4}
-\contentsline {chapter}{\numberline {7}Plano de Trabalho}{33}{chapter.7}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{34}{chapter*.31}
+\contentsline {subsubsection}{Escalonamento semi-ativo}{3}{section*.6}
+\contentsline {subsection}{\numberline {2.1.3}Classifica\IeC {\c c}\IeC {\~a}o dos problemas de escalonamento}{3}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Modelo de escalonamento para uma \IeC {\'u}nica m\IeC {\'a}quina}{5}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Balancemento de Carga}{6}{section.2.2}
+\contentsline {subsubsection}{Balanceamento de carga Distribuido e Centralizado}{7}{section*.7}
+\contentsline {section}{\numberline {2.3}GPUs}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}CUDA}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Suporte ao Paralelismo de Tarefas}{15}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}StarPU}{15}{subsection.2.5.1}
+\contentsline {subsubsection}{Escalonador de tarefas}{18}{section*.16}
+\contentsline {subsubsection}{Depend\IeC {\^e}ncias}{18}{section*.17}
+\contentsline {subsubsection}{Modo de acesso aos dados}{19}{section*.18}
+\contentsline {subsubsection}{Mem\IeC {\'o}ria virtual compartilhada}{19}{section*.19}
+\contentsline {subsection}{\numberline {2.5.2}Charm++}{20}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Kaapi}{20}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Cilk}{21}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Intel TBB}{21}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}OpenMP}{21}{subsection.2.5.6}
+\contentsline {chapter}{\numberline {3}Trabalhos Relacionados}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.3.1}
+\contentsline {chapter}{\numberline {4}Algoritmo Proposto}{27}{chapter.4}
+\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{33}{chapter.5}
+\contentsline {chapter}{\numberline {6}Resultados}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Resultados dos experimentos}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Multiplica\IeC {\c c}\IeC {\~a}o de Matrizes}{36}{section.6.2}
+\contentsline {section}{\numberline {6.3}Blackscholes}{38}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclus\IeC {\~o}es e Trabalhos Futuros}{40}{section.6.4}
+\contentsline {chapter}{\numberline {7}Plano de Trabalho}{41}{chapter.7}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{42}{chapter*.30}
