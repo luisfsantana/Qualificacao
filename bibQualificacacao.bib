@@ -2,12 +2,47 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Luis Sant Ana at 2014-09-07 13:06:12 -0300 
+%% Created for Luis Sant Ana at 2014-09-07 17:28:09 -0300 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@inproceedings{lima2012exploiting,
+	Author = {Lima, Joao VF and Gautier, Thierry and Maillard, Nicolas and Danjean, Vincent},
+	Booktitle = {Computer Architecture and High Performance Computing (SBAC-PAD), 2012 IEEE 24th International Symposium on},
+	Date-Added = {2014-09-07 16:49:38 +0000},
+	Date-Modified = {2014-09-07 16:49:38 +0000},
+	Organization = {IEEE},
+	Pages = {75--82},
+	Title = {Exploiting concurrent GPU operations for efficient work stealing on multi-GPUs},
+	Year = {2012}}
+
+@inproceedings{hermann:inria-00502448,
+	Abstract = {{Today, it is possible to associate multiple CPUs and multiple GPUs in a single shared memory architecture. Using these resources efficiently in a seamless way is a challenging issue. In this paper, we propose a parallelization scheme for dynamically balancing work load between multiple CPUs and GPUs. Most tasks have a CPU and GPU implementation, so they can be executed on any processing unit. We rely on a two level scheduling associating a traditional task graph partitioning and a work stealing guided by processor affinity and heterogeneity. These criteria are intended to limit inefficient task migrations between GPUs, the cost of memory transfers being high, and to favor mapping small tasks on CPUs and large ones on GPUs to take advantage of heterogeneity. This scheme has been implemented to support the SOFA physics simulation engine. Experiments show that we can reach speedups of 22 with 4 GPUs and 29 with 4 CPU cores and 4 GPUs. CPUs unload GPUs from small tasks making these GPUs more efficient, leading to a "cooperative speedup" greater than the sum of the speedups separatly obtained on 4 GPUs and 4 CPUs.}},
+	Address = {Ischia-Naples, Italie},
+	Affiliation = {EVASION - INRIA Grenoble Rh{\^o}ne-Alpes / LJK Laboratoire Jean Kuntzmann , MOAIS - INRIA Grenoble Rh{\^o}ne-Alpes / LIG Laboratoire d'Informatique de Grenoble , ALCOVE - INRIA Lille - Nord Europe},
+	Audience = {internationale},
+	Author = {Hermann, Everton and Raffin, Bruno and Faure, Fran{\c c}ois and Gautier, Thierry and Allard, J{\'e}r{\'e}mie},
+	Booktitle = {{Europar 2010 - 16th International Euro-Par Conference on Parallel Processing}},
+	Date-Added = {2014-09-07 16:48:12 +0000},
+	Date-Modified = {2014-09-07 16:48:12 +0000},
+	Doi = {10.1007/978-3-642-15291-7\_23},
+	Editor = {Pasqua D'Ambra and Mario Rosario Guarracino and Domenico Talia},
+	Hal_Id = {inria-00502448},
+	Language = {Anglais},
+	Month = Sep,
+	Pages = {235-246},
+	Pdf = {http://hal.inria.fr/inria-00502448/PDF/europar10.pdf},
+	Publisher = {Springer},
+	Series = {Lecture Notes in Computer Science},
+	Title = {{Multi-GPU and Multi-CPU Parallelization for Interactive Physics Simulations}},
+	Url = {http://hal.inria.fr/inria-00502448},
+	Volume = {6272},
+	Year = {2010},
+	Bdsk-Url-1 = {http://hal.inria.fr/inria-00502448},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1007/978-3-642-15291-7%5C_23}}
 
 @book{tanenbaum2006sistemas,
 	Author = {Tanenbaum, A.S. and Woodhull, A.S.},

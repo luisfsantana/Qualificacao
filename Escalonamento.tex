@@ -170,6 +170,8 @@ conclusão ($C_1, . . ., C_n$), ou seja, ao tempo de conclusão do último traba
 
 \section{Balancemento de Carga}\label{intro:carga}
 
+O problema de balanceamento de carga é estudado por pesquisadores da área de Teoria de Escalonamento há mais de 50 anos. Em 1966, \citep{graham66} estudou o que chamou de "anomalias'' na execução de tarefas em processadores de velocidades diferentes. Ele mostrou, por exemplo, que a adição de novos processadores ou a troca de alguns processadores por outros de maior velocidade podem propiciar o desbalanceamento de carga e, portanto, não necessariamente implicam em um ganho no desempenho. Logo ficou clara a necessidade de algoritmos mais sofisticados para lidar com esse problema.  
+
 O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fases~\citep{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
 
 \begin{itemize}
@@ -368,10 +370,23 @@ Diversas ferramentas de programação suportam paralelismo de tarefas em CPUs mu
 
 
 \subsection{StarPU}
- 
-O StarPU~\citep{starpu} é uma ferramenta para programação paralela que oferece suporte para arquiteturas híbridas, como CPUs multicore e aceleradores. O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados.
 
-A ferramenta possui um conjunto de políticas de escalonamento implementadas que o programador pode escolher de acordo com as características da aplicação. A principal delas faz uso do algoritmo de escalonamento estático HEFT (Heterogeneous Earliest Finish Time) para escalonar as tarefas com base em modelos de custo de execução das tarefas.
+ StarPU~\citep{starpu} é um \textit{framework} para o escalonamento de tarefas em
+plataformas heterogêneas, onde informações sobre o modelo de desempenho das
+tarefas podem ser passadas para orientar as políticas de escalonamento. Os dois
+princípios básicos da StarPU são (i) as tarefas podem ter várias implementações,
+para alguns ou para cada uma das várias unidades de processamento heterogêneas
+disponíveis na máquina, e (ii) a transferência de dados para estas unidades de
+processamento são tratadas de forma transparente pelo StarPU. Escalona dinamicamente
+tarefas em todos as unidades de processamento. Evita as transferências de dados  desnecessário entre aceleradores. Aceita tarefas que podem ter várias implementações. Fornece uma camada alto nível de gerenciamento de dados. Quando uma tarefa é submetida, pela primeira vez entra em um "pool" de "Tarefas congeladas" até que todas as dependências sejam atendidas. Em seguida, a tarefa é "empurrado" para o escalonador. Algumas politicas de escalonamento foram testadas utilizando a interface Starpu, entre elas greedy, no-prio, ws, w-rand, heft-tm. 
+
+A estratégia greedy, no-prior e ws são estratégias gulosas, no qual  a greedy se diferencia da no-pior pois a greedy tem suporte a prioridades, então pode ponderar pesos de prioridade a tarefas enquanto na no-prior não é possível. E a ws é uma estratégia gulosa baseada no "work-stealing" que é uma estratégia que consiste em as unidades de processamento terem uma pilha de tarefas e se houver o término das tarefas pode haver o "roubo" da tarefa de outras unidades. 
+
+Na estratégia w-rand, cada unidade de processamento está associada com uma relação que pode ser considerada como um fator de aceleração. Cada vez que uma tarefa é submetida, uma das unidades de processamento é selecionada com probabilidade proporcional à sua relação. Essa relação pode, por exemplo, ser definida pelo programador, ou ser medida com benchmarks de referência. A estratégia w-rand é normalmente adequado para tarefas independentes de igual tamanho.
+
+A tarefa de distribuir uniformemente sobre as unidades de processamento baseado na velocidade não significa necessariamente fazer sentido para as tarefas que não são igualmente custosas, ou quando existem dependências entre eles. Assim, os programadores podem especificar um modelo de custo para cada tarefa. Este modelo pode por exemplo representar a quantidade de trabalho e ser usado em conjunto com a velocidade relativa de cada um das unidades de processamento. É também possível modelar diretamente o tempo de execução de cada uma das arquiteturas. Usando esses modelos, implementa-se a estratégia heft-tm. Dada a sua duração esperada nas várias arquiteturas, é atribuída uma tarefa para as unidades de processamento que minimiza o tempo de término, no que diz respeito à quantidade de trabalho já atribuída a esta unidade de processamento.
+
+ O StarPU propõe uma abordagem de tarefas independente da arquitetura base. São definidos codelets como uma abstração de uma tarefa que pode ser executada em um núcleo de uma CPU multicore ou submetido a um acelerador. Cada codelet pode ter múltiplas implementações, uma para cada arquitetura em que o codelet pode ser executado, utilizando as linguagens ou bibliotecas específicas para a arquitetura alvo. Uma aplicação StarPU é descrita como um conjunto de codelets com suas dependências de dados.
 
 StarPU é um sistema de execução unificado que consiste em um software e uma API de tempo de execução que tem como objetivo permitir que os programadores de aplicações com alto custo  computacional explorem mais facilmente o poder de dispositivos disponíveis, com suporte a CPUs e GPUs. Submissões de tarefas são manipuladas pelo escalonador do StarPU, e a consistência dos dados é garantida através de uma biblioteca de gerenciamento de dados. 
 No entanto, uma das principais vantagens perante a outras bibliotecas é que o StarPU tenta reduzir o custo da transferência de dados. Isso é feito usando as informações do histórico de cada tarefa e, de acordo com as decisões do escalonador, que de forma assíncrona prepara as dependências de dados, enquanto o sistema está ocupado realizando a computação de outras tarefas. 
@@ -455,7 +470,9 @@ O Intel TBB (Threading Building Blocks)~\citep{Kim:2011:MDP:1920042.1920078} é 
 OpenMP (Open Multi-Processing)~\citep{Quinn:2003:PPC:1211440} é uma ferramenta para programação paralela baseada na adição de diretivas de compilação em códigos C, C++ e Fortran. As diretivas OpenMP são utilizadas para indicar a paralelização de laços ou trechos de código. A partir da versão 3.0 (OpenMP ARB, 2008) foi inserido o conceito de tarefas, o que permite a utilização do paralelismo de tarefas através do uso de diretivas para delimitação de trechos de código como unidades de trabalho paralelas. A especificação OpenMP não define uma política para o escalonamento das tarefas, ficando essa escolha a cargo de cada implementação.
 
 
+\subsection{Merge}
 
+Algoritmos de distribuição de carga são frequentemente baseados no conceito de tarefas. Neste caso, as tarefas das aplicações podem ser dinamicamente distribuídas entre os SMs (\textit{Streaming Multiprocessor}) das GPUs \citep{dynamicLoad}, ou entre diferentes GPUs \citep{starpu} para realizar a distribuição da carga. Neste contexto surge o modelo de programação de uso geral para sistemas multi-core heterogêneos chamado \textit{Merge}~\citep{merge}. O objetivo do \textit{framework} é substituir as atuais abordagens \textit{ad hoc} para programação paralela em plataformas heterogêneas, com uma metodologia baseada em uma biblioteca que pode distribuir automaticamente o cálculo através de núcleos heterogêneos. O balanceamento de carga e processamento é feita através do conceito de \textit{map-reduce}, que é um modelo de programação dividido em dois procedimentos, o map, que organiza as informações e o reduce que realiza a operação de síntese. 
 
 
 
