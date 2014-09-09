@@ -11,44 +11,44 @@ A level-1 auxiliary file: Resultados.aux
 A level-1 auxiliary file: PlanoTrabalho.aux
 The style file: apalike.bst
 Database file #1: bibQualificacacao.bib
-You've used 44 entries,
+You've used 43 entries,
             1935 wiz_defined-function locations,
-            769 strings with 13625 characters,
-and the built_in function-call counts, 21018 in all, are:
-= -- 2074
-> -- 916
-< -- 41
-+ -- 326
-- -- 315
-* -- 1738
-:= -- 3472
-add.period$ -- 143
-call.type$ -- 44
-change.case$ -- 372
-chr.to.int$ -- 43
-cite$ -- 44
-duplicate$ -- 859
-empty$ -- 1475
-format.name$ -- 379
-if$ -- 4324
+            763 strings with 13271 characters,
+and the built_in function-call counts, 20212 in all, are:
+= -- 2004
+> -- 853
+< -- 39
++ -- 300
+- -- 291
+* -- 1664
+:= -- 3338
+add.period$ -- 140
+call.type$ -- 43
+change.case$ -- 355
+chr.to.int$ -- 42
+cite$ -- 43
+duplicate$ -- 834
+empty$ -- 1433
+format.name$ -- 352
+if$ -- 4162
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 46
-newline$ -- 222
-num.names$ -- 134
-pop$ -- 386
+missing$ -- 45
+newline$ -- 217
+num.names$ -- 131
+pop$ -- 368
 preamble$ -- 1
-purify$ -- 376
+purify$ -- 359
 quote$ -- 0
-skip$ -- 636
+skip$ -- 616
 stack$ -- 0
-substring$ -- 1399
-swap$ -- 201
-text.length$ -- 24
+substring$ -- 1362
+swap$ -- 193
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
+type$ -- 250
 warning$ -- 0
-while$ -- 168
+while$ -- 164
 width$ -- 0
-write$ -- 602
+write$ -- 588

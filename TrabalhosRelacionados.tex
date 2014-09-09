@@ -1,6 +1,10 @@
 \pagestyle{empty}
 \cleardoublepage
 \pagestyle{fancy}
+
+%espaco entre linhas
+\onehalfspacing
+
 \chapter{Trabalhos Relacionados}\label{cap2}
 
 \section{Introdução}\label{cap2:intro}
@@ -22,7 +26,7 @@ Em outro estudo~\citep{tasks} com balanceamento de carga em GPUs, os autores pro
 
 \citep{acosta} propôs um algoritmo de balanceamento de carga
 dinâmico, que busca, interativamente, uma boa distribuição de trabalho entre as
-GPUs durante a execução da aplicação. O algoritmo de balanceamento consiste em obrigar todos os processadores a realizarem uma chamada a uma função chamada ULL_MPI_calibrate(). Nesta chamada todos os processadores realizam as mesmas operações de balanceamento, que são as seguintes. (1) Cada processador precisa determinar o tempo que levou para processar uma certa quantia de dados em cada iteração. (2) Testar se o tempo para processar é maior que um certo limiar, se sim, balancear a carga entre os processadores. (3) Calcular o que é chamado de \emph{relative power}, que corresponde ao relacionamento entre o tempo gasto para processar um certo tamanho de dados em função do tamanho do problema. (4) Por fim, calcular a quantidade de dados atribuida a cada processador, assim todos os processadores realizam o próprio balanceamento de carga. Os autores avaliaram os problemas de
+GPUs durante a execução da aplicação. O algoritmo de balanceamento consiste em obrigar todos os processadores a realizarem uma chamada a uma função chamada ULL\_MPI\_calibrate(). Nesta chamada todos os processadores realizam as mesmas operações de balanceamento, que são as seguintes. (1) Cada processador precisa determinar o tempo que levou para processar uma certa quantia de dados em cada iteração. (2) Testar se o tempo para processar é maior que um certo limiar, se sim, balancear a carga entre os processadores. (3) Calcular o que é chamado de \emph{relative power}, que corresponde ao relacionamento entre o tempo gasto para processar um certo tamanho de dados em função do tamanho do problema. (4) Por fim, calcular a quantidade de dados atribuida a cada processador, assim todos os processadores realizam o próprio balanceamento de carga. Os autores avaliaram os problemas de
 multiplicação de matrizes e alocação de recursos. O método iterativo pode
 demorar para atingir uma distribuição de carga adequada, reduzindo o desempenho
 da aplicação. Além disso, não é possível utilizar informações relativas a tempos

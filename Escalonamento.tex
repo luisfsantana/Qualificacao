@@ -187,6 +187,8 @@ Distribuição de carga estática, também conhecida como planejamento determin�
 
 Balanceamento de carga dinâmico leva em conta que os parâmetros do sistema não podem ser conhecidos com antecedência e, por conseguinte, utilizando um esquema fixo ou estático irão eventualmente produzir resultados ruins. A estratégia dinâmica geralmente é executado várias vezes e poderá realocar um trabalho previamente escalonado para um novo nó com base na dinâmica atual do ambiente de sistema.
 
+Os problemas tratados neste trabalho se restringem aos problemas que não apresentam dependência de dados entre si. A técnica ultilizada é chamada de decomposição de domínio. Que consiste em dividir um conjunto inicial em subconjuntos. O problema restringe a determinar a quantidade de dados que devem ser enviados a cada processador de forma a minimizar o tempo total de processamento em um ambiente de processadores heterogêneos. 
+
 \subsubsection{Balanceamento de carga Distribuido e Centralizado}
 
 Essa divisão geralmente cai sob o esquema de balanceamento de carga dinâmico, onde uma questão natural surge sobre o local onde a decisão é tomada. Políticas centralizadas armazenam informações globais em um local central e usa essas informações para fazer o escaonamento de decisões tomadas pelos que utilizam os recursos de armazenamento de um ou mais processadores. Este esquema é o mais adequado para sistemas em que as informações de estado de um processador individual podem ser facilmente coletados por uma estação central a baixo custo, e novos postos de trabalho que chegam a este local centralizado serão depois encaminhados para nós subseqüentes. A principal desvantagem deste sistema é que ele tem um ponto único de falha. 

@@ -20,17 +20,6 @@ Augonnet, C., Thibault, S., and Namyst, R. (2010).
   Informatique - LaBRI, RUNTIME - INRIA Bordeaux - Sud-Ouest,
   http://hal.inria.fr/inria-00467677/PDF/RR-7240.pdf.
 
-\bibitem[Ayguade et~al., 2009]{StarSs}
-Ayguade, E., Badia, R., Cabrera, D., Duran, A., Gonzalez, M., Igual, F.,
-  Jimenez, D., Labarta, J., Martorell, X., Mayo, R., Perez, J., and
-  Quintana-Ort{\'\i}, E. (2009).
-\newblock A proposal to extend the openmp tasking model for heterogeneous
-  architectures.
-\newblock In M{\"u}ller, M., Supinski, B., and Chapman, B., editors, {\em
-  Evolving OpenMP in an Age of Extreme Parallelism}, volume 5568 of {\em
-  Lecture Notes in Computer Science}, pages 154--167. Springer Berlin
-  Heidelberg.
-
 \bibitem[Belviranli et~al., 2013]{HDSS}
 Belviranli, M.~E., Bhuyan, L.~N., and Gupta, R. (2013).
 \newblock A dynamic self-scheduling scheme for heterogeneous multiprocessor
@@ -125,14 +114,6 @@ Devarakonda, M. and Iyer, R. (1989).
   on unix.
 \newblock {\em Software Engineering, IEEE Transactions on}, 15(12):1579--1586.
 
-\bibitem[Diamos and Yalamanchili, 2008]{harmony}
-Diamos, G.~F. and Yalamanchili, S. (2008).
-\newblock Harmony: an execution model and runtime for heterogeneous many core
-  systems.
-\newblock In {\em Proceedings of the 17th international symposium on High
-  performance distributed computing}, HPDC '08, pages 197--200, New York, NY,
-  USA. ACM.
-
 \bibitem[Fan et~al., 2004]{cluster}
 Fan, Z., Qiu, F., Kaufman, A., and Yoakum-Stover, S. (2004).
 \newblock Gpu cluster for high performance computing.
@@ -164,6 +145,15 @@ Guevara, M., Gregg, C., Hazelwood, K., and Skadron, K. (2009).
 \newblock In {\em Workshop on Programming Models for Emerging Architectures},
   PMEA, pages 69--76, Raleigh, NC.
 
+\bibitem[Hermann et~al., 2010]{hermann:inria-00502448}
+Hermann, E., Raffin, B., Faure, F., Gautier, T., and Allard, J. (2010).
+\newblock {Multi-GPU and Multi-CPU Parallelization for Interactive Physics
+  Simulations}.
+\newblock In D'Ambra, P., Guarracino, M.~R., and Talia, D., editors, {\em
+  {Europar 2010 - 16th International Euro-Par Conference on Parallel
+  Processing}}, volume 6272 of {\em Lecture Notes in Computer Science}, pages
+  235--246, Ischia-Naples, Italie. Springer.
+
 \bibitem[Kim et~al., 2012]{snucl}
 Kim, J., Seo, S., Lee, J., Nah, J., Jo, G., and Lee, J. (2012).
 \newblock Snucl: an opencl framework for heterogeneous cpu/gpu clusters.
@@ -184,6 +174,13 @@ Kunzman, D., Zhang, G., Bohm, E., and Kale, L.~V. (2006).
 Li, Q., Salman, R., Test, E., Strack, R., and Kecman, V. (2011).
 \newblock Gpusvm: a comprehensive cuda based support vector machine package.
 \newblock {\em Central European Journal of Computer Science}, 1(4):387--405.
+
+\bibitem[Lima et~al., 2012]{lima2012exploiting}
+Lima, J.~V., Gautier, T., Maillard, N., and Danjean, V. (2012).
+\newblock Exploiting concurrent gpu operations for efficient work stealing on
+  multi-gpus.
+\newblock In {\em Computer Architecture and High Performance Computing
+  (SBAC-PAD), 2012 IEEE 24th International Symposium on}, pages 75--82. IEEE.
 
 \bibitem[Linderman et~al., 2008]{merge}
 Linderman, M.~D., Collins, J.~D., Wang, H., and Meng, T.~H. (2008).
@@ -255,14 +252,6 @@ Singh, A., Korupolu, M., and Mohapatra, D. (2008).
 Tanenbaum, A. and Woodhull, A. (2006).
 \newblock {\em Sistemas Operacionais: Projetos e Implementa{\c{c}}{\~a}o}.
 \newblock Bookman Companhia ed.
-
-\bibitem[Teodoro et~al., 2009]{Anthill}
-Teodoro, G., Sachetto, R., Sertel, O., Gurcan, M., Meira, W., Catalyurek, U.,
-  and Ferreira, R. (2009).
-\newblock Coordinating the use of gpu and cpu for improving performance of
-  compute intensive applications.
-\newblock In {\em Cluster Computing and Workshops, 2009. CLUSTER '09. IEEE
-  International Conference on}, pages 1--10.
 
 \bibitem[Vouzis and Sahinidis, 2011]{Vouzis15012011}
 Vouzis, P.~D. and Sahinidis, N.~V. (2011).
