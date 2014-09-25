@@ -62,11 +62,17 @@ Cederman, D. and Tsigas, P. (2008).
   on Graphics hardware}, GH '08, pages 57--64, Aire-la-Ville, Switzerland,
   Switzerland. Eurographics Association.
 
-\bibitem[Chen et~al., 2010]{dynamicLoad}
-Chen, L., Villa, O., Krishnamoorthy, S., and Gao, G. (2010).
+\bibitem[Chen et~al., 2010a]{dynamicLoad}
+Chen, L., Villa, O., Krishnamoorthy, S., and Gao, G. (2010a).
 \newblock Dynamic load balancing on single- and multi-gpu systems.
 \newblock In {\em Parallel Distributed Processing (IPDPS), 2010 IEEE
   International Symposium on}, pages 1--12.
+
+\bibitem[Chen et~al., 2010b]{chen2010dynamic}
+Chen, L., Villa, O., Krishnamoorthy, S., and Gao, G.~R. (2010b).
+\newblock Dynamic load balancing on single-and multi-gpu systems.
+\newblock In {\em Parallel \& Distributed Processing (IPDPS), 2010 IEEE
+  International Symposium on}, pages 1--12. IEEE.
 
 \bibitem[Clarke et~al., 2012]{Clarke:2012:HPA:2402420.2402479}
 Clarke, D., Ilic, A., Lastovetsky, A., and Sousa, L. (2012).

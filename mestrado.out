@@ -10,28 +10,27 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{Modelo de escalonamento para uma \372nica m\341quina}{section.2.1}% 10
 \BOOKMARK [1][-]{section.2.2}{Balancemento de Carga}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.3}{GPUs}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.4}{CUDA}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.5}{Suporte ao Paralelismo de Tarefas}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.5.1}{StarPU}{section.2.5}% 15
-\BOOKMARK [2][-]{subsection.2.5.2}{Charm++}{section.2.5}% 16
-\BOOKMARK [2][-]{subsection.2.5.3}{Kaapi}{section.2.5}% 17
-\BOOKMARK [2][-]{subsection.2.5.4}{Cilk}{section.2.5}% 18
-\BOOKMARK [2][-]{subsection.2.5.5}{Intel TBB}{section.2.5}% 19
-\BOOKMARK [2][-]{subsection.2.5.6}{OpenMP}{section.2.5}% 20
-\BOOKMARK [2][-]{subsection.2.5.7}{Merge}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.3.1}{CUDA}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Suporte ao Paralelismo de Tarefas}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{StarPU}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Charm++}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.3}{Kaapi}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.4}{Cilk}{section.2.4}% 18
+\BOOKMARK [2][-]{subsection.2.4.5}{Intel TBB}{section.2.4}% 19
+\BOOKMARK [2][-]{subsection.2.4.6}{OpenMP}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.7}{Merge}{section.2.4}% 21
 \BOOKMARK [0][-]{chapter.3}{Trabalhos Relacionados}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Introdu\347\343o}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Algoritmo Proposto}{}% 24
-\BOOKMARK [0][-]{chapter.5}{Implementa\347\343o}{}% 25
-\BOOKMARK [1][-]{subsection.5.0.1}{StarPU}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.0.2}{Multiplica\347\343o de Matrizes}{subsection.5.0.1}% 27
-\BOOKMARK [2][-]{subsection.5.0.3}{Blackscholes}{subsection.5.0.1}% 28
-\BOOKMARK [2][-]{subsection.5.0.4}{Explica\347\343o dos algoritmos}{subsection.5.0.1}% 29
-\BOOKMARK [2][-]{subsection.5.0.5}{IPOPT}{subsection.5.0.1}% 30
-\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 31
-\BOOKMARK [1][-]{section.6.1}{Resultados dos experimentos}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.2}{Multiplica\347\343o de Matrizes}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.3}{Blackscholes}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.4}{Conclus\365es}{chapter.6}% 35
-\BOOKMARK [0][-]{chapter.7}{Plano de Trabalho}{}% 36
-\BOOKMARK [0][-]{chapter*.32}{Refer\352ncias Bibliogr\341ficas}{}% 37
+\BOOKMARK [0][-]{chapter.4}{Algoritmo Proposto}{}% 23
+\BOOKMARK [0][-]{chapter.5}{Implementa\347\343o}{}% 24
+\BOOKMARK [1][-]{subsection.5.0.8}{StarPU}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.0.9}{Multiplica\347\343o de Matrizes}{subsection.5.0.8}% 26
+\BOOKMARK [2][-]{subsection.5.0.10}{Blackscholes}{subsection.5.0.8}% 27
+\BOOKMARK [2][-]{subsection.5.0.11}{Explica\347\343o dos algoritmos}{subsection.5.0.8}% 28
+\BOOKMARK [2][-]{subsection.5.0.12}{IPOPT}{subsection.5.0.8}% 29
+\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Resultados dos experimentos}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Multiplica\347\343o de Matrizes}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.3}{Blackscholes}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.4}{Conclus\365es}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Plano de Trabalho}{}% 35
+\BOOKMARK [0][-]{chapter*.32}{Refer\352ncias Bibliogr\341ficas}{}% 36

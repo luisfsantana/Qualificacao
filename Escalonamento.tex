@@ -175,9 +175,9 @@ O problema de balanceamento de carga é estudado por pesquisadores da área de T
 O balanceamento de carga é uma técnica aplicada para distribuir a carga de trabalho entre dois ou mais servidores, enlaces de rede, CPU, ou outros recursos; a fim de otimizar a utilização destes recursos, maximizar o desempenho e evitar sobrecarga. Em geral o balanceamento de carga consiste em três fases~\citep{carga}. A primeira, consiste na coleta de informações. A segunda, busca determinar qual seria a distribuição ótima para o estado em que o sistema se encontra. E por fim a terceira fase, que a ação de balanceamento é executada. O balanceador de carga pode ter uma das seguintes classificações:
 
 \begin{itemize}
-\item Estático A regra de balanceamento é definida uma única vez, baseada em informações estáticas do sistema ou aplicações.
+\item \textit{Estático:} A regra de balanceamento é definida uma única vez, baseada em informações estáticas do sistema ou aplicações.
 
-\item Dinâmico A regra de balanceamento é modificada em resposta ao estado atual do sistema ou das aplicações. O estado do sistema será constantemente atualizado e as decisões tomadas são baseadas nas informações atuais e possivelmente, dos estados anteriores do sistema.
+\item \textit{Dinâmico:} A regra de balanceamento é modificada em resposta ao estado atual do sistema ou das aplicações. O estado do sistema será constantemente atualizado e as decisões tomadas são baseadas nas informações atuais e possivelmente, dos estados anteriores do sistema.
 \end{itemize}
 
 Ao balancear a carga, tenta-se evitar que no sistema, existam simultaneamente máquinas com recursos subutilizados e máquinas com recursos super utilizados. Na maioria dos casos, realizar balanceamento de carga ótimo é impraticável, devido a complexidade computacional para resolver o problema. O problema de balanceamento de carga  é similar a problemas de alta complexidade computacional~\citep{virtual}, NP-Completo que não podem ser resolvido de maneira exata em tempo polinomial. Para contornar esta limitação, heurísticas ou algoritmos de aproximação, são usados para apresentarem soluções aproximadas do balanceamento de carga ótimo.
@@ -189,11 +189,11 @@ Balanceamento de carga dinâmico leva em conta que os parâmetros do sistema nã
 
 Os problemas tratados neste trabalho se restringem aos problemas que não apresentam dependência de dados entre si. A técnica ultilizada é chamada de decomposição de domínio. Que consiste em dividir um conjunto inicial em subconjuntos. O problema restringe a determinar a quantidade de dados que devem ser enviados a cada processador de forma a minimizar o tempo total de processamento em um ambiente de processadores heterogêneos. 
 
-\subsubsection{Balanceamento de carga Distribuido e Centralizado}
+\subsubsection{Balanceamento de carga Distribuído e Centralizado}
 
 Essa divisão geralmente cai sob o esquema de balanceamento de carga dinâmico, onde uma questão natural surge sobre o local onde a decisão é tomada. Políticas centralizadas armazenam informações globais em um local central e usa essas informações para fazer o escaonamento de decisões tomadas pelos que utilizam os recursos de armazenamento de um ou mais processadores. Este esquema é o mais adequado para sistemas em que as informações de estado de um processador individual podem ser facilmente coletados por uma estação central a baixo custo, e novos postos de trabalho que chegam a este local centralizado serão depois encaminhados para nós subseqüentes. A principal desvantagem deste sistema é que ele tem um ponto único de falha. 
 
-Na programação distribuída, as informações de estado é distribuída entre os nós que são responsáveis na gestão dos seus próprios recursos ou distribuiem as tarefas que residem em suas filas a outros processadores. Em alguns casos, o sistema permite que os processadores ociosos atribuam tarefas a si mesmos em tempo de execução, acessando uma fila global compartilhada. Note-se que as falhas ocorrem em um determinado nó irão permanecer localizado e não pode prejudicar o funcionamento global do sistema. 
+No balanceamento de carga distribuído, as informações de estado são distribuídas entre os nós que são responsáveis na gestão dos seus próprios recursos ou distribuiem as tarefas que residem em suas filas a outros processadores. Em alguns casos, o sistema permite que os processadores ociosos atribuam tarefas a si mesmos em tempo de execução, acessando uma fila global compartilhada. Note-se que as falhas ocorrem em um determinado nó irão permanecer localizado e não pode prejudicar o funcionamento global do sistema. 
 
 Em um escalonamento de balanceamento de carga local, cada processador pesquisa outros processadores em sua vizinhança e usa esta informação local para decidir sobre a transferência de carga. Esta vizinhança é geralmente indicada como o espaço de migração. O principal objetivo é minimizar a comunicação remota, bem como de forma eficiente equilibrar a carga sobre os processadores. No entanto, em um esquema de balanceamento global, informação global ou  parte da informação do sistema é utilizado para iniciar o balanceamento de carga. Este sistema exige uma quantidade considerável de informações a serem trocadas no sistema o que pode afetar sua capacidade de expansão.
 
@@ -211,8 +211,7 @@ As GPUs vêm se mostrando uma excelente alternativa na área de computação de 
 
 Muitas aplicações já utilizam o poder de processamento das GPUs, exemplos são mecânica dos fluidos~\citep{fluido}, visualização científica~\citep{visualizacao},  aprendizado de máquina~\citep{Aprendizado}, entre outras. Devido ao relativo baixo custo de placas gráficas contendo GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes a instituições com poucos recursos financeiros e com grande necessidade de recursos computacionais.
 
-
-\section{CUDA}\label{intro:contexto}
+\subsection{CUDA}
 
 \textit{Compute Unified Device Architecture} (CUDA)~\citep{cuda} é uma arquitetura de computação paralela desenvolvida pela Nvidia para processamento gráfico.
 Com esta tecnologia é possível desenvolver não só aplicações convencionais de processamento gráfico, mas é possivel fazer programas de propósito geral, esta abordagem de se desenvolver programas de propósito geral em GPU é denominado GPGPU (\textit{General-Purpose Computing on Graphics Processor Units})~\citep{GPGPU}.
@@ -238,14 +237,14 @@ paralelização. Ele também pode ser tratado como um código que pode ser utili
 
 A GPU contém milhares de threads. CUDA faz a formatação do código de uma maneira que threads sejam alocadas paralelamente e o usuário usufrua dessa característica, podendo fazer chamadas de kernel que serão independentes entre si, o que permite a GPU rodar vários algoritmos.
 
-Podemos ver na Figura 1.2 a diferença de potencial que uma GPU, com seu paralelismo, possui em relação a um processador (CPU):
+Podemos ver na figura \ref{fig: graficosCuda2} a diferença de potencial que uma GPU, com seu paralelismo, possui em relação a um processador (CPU):
 
 \begin{figure}[!htb]
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.8]{ImageSub.png}
-	\label{fig: graficosCuda1}
 	\caption{Operações de Ponto Flutuante por segundo para CPU e GPU(adaptado de~\citep{cuda})}
+	\label{fig: graficosCuda1}
 	\end{center}
 \end{figure}
 
@@ -255,20 +254,20 @@ Na figura \ref{fig: graficosCuda1} gráfico temos informações sobre o pico de 
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.8]{ImageSub2.png}
-	\label{fig: graficosCuda2}
 	\caption{Tamanho de banda de memória para CPU e GPU(adaptado de~\citep{cuda})}
+	\label{fig: graficosCuda2}
 	\end{center}
 \end{figure}
 
 A GPU é voltada para computação intensiva, com alta paralelização, que são características do problema de renderização gráfica. Além disso, sua arquitetura é especializada no processamento deste tipo de dados e não no controle de fluxo. Podemos visualizar essa diferença quando
-observamos a Figura 1.3.
+observamos a figura \ref{fig: transistores}.
 
 \begin{figure}[!htb]
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.6]{transistores.png}
-	\label{fig: transistores}
 	\caption{Quantidade de transistores para processamento de dados(adaptado de~\citep{cuda})}
+	\label{fig: transistores}
 	\end{center}
 \end{figure}
 
@@ -277,18 +276,18 @@ cores. Podemos assim certificar que a GPU é um manycore, apresentando de 32 at�
 
 Um ponto importante a ser lembrado é que, para a execução na GPU, o algoritmo paralelizado não pode ter muita dependência de dados em cada passo de computação, pois a GPU não faz paralelização de tarefas e sim de processamento de dados. Caso essa otimização não seja feita no algoritmo, a GPU tem seu desempenho bastante afetado.
 
-Com relação à hierarquia de compilação para o CUDA, a Figura 1.4 ilustra a arquitetura da sua pilha de software.
+Com relação à hierarquia de compilação para o CUDA, a figura \ref{fig: pilhaSoftware} ilustra a arquitetura da sua pilha de software. Essa pilha de software mostra a hierarquia de execução de CUDA. A API de CUDA fornece suporte a diversas funções matemáticas, bibliotecas, suporte ao runtime e ao driver.
 
 \begin{figure}[!htb]
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.6]{pilhaSoftware.png}
-	\label{fig: pilhaSoftware}
 	\caption{Pilha de Software(adaptado de~\citep{cuda})}
+	\label{fig: pilhaSoftware}
 	\end{center}
 \end{figure}
 
-Essa pilha de software mostra a hierarquia de execução de CUDA. A API de CUDA fornece suporte a diversas funções matemáticas, bibliotecas, suporte ao runtime e ao driver.
+
 
 O CUDA \textit{runtime} ~\citep{cuda} é a camada de alto nível de programação, enquanto a camada do driver é a camada baixa para manipulação de dados. O CUDA driver gerencia e otimiza os recursos relacionados diretamente à GPU. CUDA é baseada em programação paralela, permitindo milhares de threads executando uma mesma tarefa. Neste caso, a GPU funciona como um co-processador da CPU, a qual chamamos de \textit{HOST} e a GPU de \textit{DEVICE}.
 
@@ -330,8 +329,8 @@ Cada bloco é identificado por um block ID, e tem sua ID única em relação ao 
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.6]{ThreadBatching.png}
-	\label{fig: ThreadBatching}
 	\caption{Batching de Threads(adaptado de~\citep{cuda})}
+	\label{fig: ThreadBatching}
 	\end{center}
 \end{figure}
 
@@ -347,8 +346,8 @@ A arquitetura SIMD(\textit{Single Instruction Multiple Data}) é implementada co
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.6]{SIMT.png}
-	\label{fig: SIMT}
 	\caption{Conjunto de Multiprocessadores e Organização das Memórias(adaptado de~\citep{cuda})}
+	\label{fig: SIMT}
 	\end{center}
 \end{figure}
 
@@ -359,8 +358,8 @@ Um ponto forte de CUDA é que há uma separação na memória DRAM entre o HOST 
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.6]{HierarquiaMemoriasCuda.png}
-	\label{fig: HierarquiaMemoriasCuda}
 	\caption{Hierarquia de memórias da GPU(adaptado de~\citep{cuda})}
+	\label{fig: HierarquiaMemoriasCuda}
 	\end{center}
 \end{figure}
 
@@ -375,16 +374,18 @@ Diversas ferramentas de programação suportam paralelismo de tarefas em CPUs mu
 
  StarPU~\citep{starpu} é um \textit{framework} para o escalonamento de tarefas em
 plataformas heterogêneas, onde informações sobre o modelo de desempenho das
-tarefas podem ser passadas para orientar as políticas de escalonamento. Os dois
-princípios básicos da StarPU são (i) as tarefas podem ter várias implementações,
+tarefas podem ser passadas para orientar as políticas de escalonamento. 
+
+Os dois princípios básicos da StarPU são (i) as tarefas podem ter várias implementações,
 para alguns ou para cada uma das várias unidades de processamento heterogêneas
 disponíveis na máquina, e (ii) a transferência de dados para estas unidades de
-processamento são tratadas de forma transparente pelo StarPU. Escalona dinamicamente
-tarefas em todos as unidades de processamento. Evita as transferências de dados  desnecessário entre aceleradores. Aceita tarefas que podem ter várias implementações. Fornece uma camada alto nível de gerenciamento de dados. Quando uma tarefa é submetida, pela primeira vez entra em um "pool" de "Tarefas congeladas" até que todas as dependências sejam atendidas. Em seguida, a tarefa é "empurrado" para o escalonador. Algumas politicas de escalonamento foram testadas utilizando a interface Starpu, entre elas greedy, no-prio, ws, w-rand, heft-tm. 
+processamento são tratadas de forma transparente pelo StarPU. 
 
-A estratégia greedy, no-prior e ws são estratégias gulosas, no qual  a greedy se diferencia da no-pior pois a greedy tem suporte a prioridades, então pode ponderar pesos de prioridade a tarefas enquanto na no-prior não é possível. E a ws é uma estratégia gulosa baseada no "work-stealing" que é uma estratégia que consiste em as unidades de processamento terem uma pilha de tarefas e se houver o término das tarefas pode haver o "roubo" da tarefa de outras unidades. 
+O StarPU escalona dinamicamente tarefas em todas as unidades de processamento, assim evita que  transferências de dados desnecessárias entre aceleradores aconteça. Também aceita tarefas que podem ter várias implementações, dependendo da plataforma. Este \textit{framework} fornece uma camada alto nível de gerenciamento de dados, ou seja, quando uma tarefa é submetida, pela primeira vez, a tarefa entra em um "pool" de "Tarefas congeladas", até que todas as dependências sejam atendidas. Em seguida, a tarefa é "empurrada" para o escalonador. O StarPU apresenta algumas politicas de escalonamento, entre elas greedy, no-prio, ws, w-rand, heft-tm. 
 
-Na estratégia w-rand, cada unidade de processamento está associada com uma relação que pode ser considerada como um fator de aceleração. Cada vez que uma tarefa é submetida, uma das unidades de processamento é selecionada com probabilidade proporcional à sua relação. Essa relação pode, por exemplo, ser definida pelo programador, ou ser medida com benchmarks de referência. A estratégia w-rand é normalmente adequado para tarefas independentes de igual tamanho.
+A estratégia \textit{greedy}, \textit{no-prior} e \textit{ws} são estratégias gulosas, o qual assim que um recurso é liberado o escalonador submete uma tarefa. A \textit{greedy} se diferencia da \textit{no-prior}, pois a \textit{greedy} tem suporte a prioridades, então pode ponderar pesos de prioridade a tarefas enquanto na \textit{no-prior} não é possível. E a \textit{ws} é uma estratégia gulosa baseada no "work-stealing" que é uma estratégia que consiste em as unidades de processamento terem uma pilha de tarefas e se houver o término das tarefas pode haver o "roubo" da tarefa de outras unidades. 
+
+Na estratégia \textit{w-rand}, cada unidade de processamento está associada com uma relação que pode ser considerada como um fator de aceleração. Cada vez que uma tarefa é submetida, uma das unidades de processamento é selecionada com probabilidade proporcional à sua relação. Essa relação pode, por exemplo, ser definida pelo programador, ou ser medida com benchmarks de referência. A estratégia \textit{w-rand} é normalmente adequado para tarefas independentes de igual tamanho.
 
 A tarefa de distribuir uniformemente sobre as unidades de processamento baseado na velocidade não significa necessariamente fazer sentido para as tarefas que não são igualmente custosas, ou quando existem dependências entre eles. Assim, os programadores podem especificar um modelo de custo para cada tarefa. Este modelo pode por exemplo representar a quantidade de trabalho e ser usado em conjunto com a velocidade relativa de cada um das unidades de processamento. É também possível modelar diretamente o tempo de execução de cada uma das arquiteturas. Usando esses modelos, implementa-se a estratégia heft-tm. Dada a sua duração esperada nas várias arquiteturas, é atribuída uma tarefa para as unidades de processamento que minimiza o tempo de término, no que diz respeito à quantidade de trabalho já atribuída a esta unidade de processamento.
 
@@ -436,7 +437,7 @@ O objetivo é gerenciar automaticamente as alocações de memória e transferên
 
 \subsection{Charm++}
 
-Charme++ é uma linguagem de programação paralela orientada a objetos baseada em C++ e desenvolvida no Laboratório de Programação Paralela na Universidade de Illinois. Charme++ foi concebido com o objetivo de aumentar a produtividade do programador, fornecendo uma abstração de alto nível de um programa paralelo e ao mesmo tempo um bom desempenho em uma ampla variedade de plataformas de hardware. Programas escritos em Charme++ são decompostos em uma série de objetos controlados por mensagem chamados Chares. Quando um programador invoca um método em um objeto, o sistema de execução do Charme++ envia uma mensagem para o objeto chamado, que pode estar em um processador local ou em um processador remoto. A mensagem inicia a execução de código dentro do chare que aguarda a  mensagem de forma assíncrona. 
+Charm++ é uma linguagem de programação paralela orientada a objetos baseada em C++ e desenvolvida no Laboratório de Programação Paralela na Universidade de Illinois. Charme++ foi concebido com o objetivo de aumentar a produtividade do programador, fornecendo uma abstração de alto nível de um programa paralelo e ao mesmo tempo um bom desempenho em uma ampla variedade de plataformas de hardware. Programas escritos em Charme++ são decompostos em uma série de objetos controlados por mensagem chamados Chares. Quando um programador invoca um método em um objeto, o sistema de execução do Charme++ envia uma mensagem para o objeto chamado, que pode estar em um processador local ou em um processador remoto. A mensagem inicia a execução de código dentro do chare que aguarda a  mensagem de forma assíncrona. 
 
 Chares podem ser organizados em matrizes indexadas chamadas \emph{Chare arrays} e mensagens podem ser enviadas para Chares individuais dentro de uma matriz chare ou para toda a matriz chare simultaneamente. 
 

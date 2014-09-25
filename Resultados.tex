@@ -7,6 +7,8 @@
 
 \chapter{Resultados}\label{cap6}
 
+Nesta seção são apresentados os resultados obtidos utilizando o algoritmo de balanceamento de carga dinâmico em um \emph{clusters} heterogêneo. Foram realizados experimentos para duas aplicações, a multiplicação de matrizes e para a aplicação Blackscholes. 
+
 \section{Resultados dos experimentos}\label{cap6:intro}
 
 Foram usadas três diferentes máquinas para testar o algoritmo, apresentadas na tabela \ref{table: machines}. A máquina A tem uma CPU i7 a20, com 4 cores com velocidade de clock de 2,67 GHz, 8192 MB de cache, 8 GB de RAM and 2 nVidia GTX 295, cada GTX 295 tem 280 cores por GPU, clock da memória de 999 MHz e tamanho da banda de memória de 223,8 GB/segundos com 2 GPUs em cada. 
@@ -18,7 +20,7 @@ A máquina C tem um processador CPU i7 3939K, com 6 cores, velocidade de clock d
 Foram considerados os cenários com apenas a máquina A, com a máquina A e B, e com a três máquinas (A, B e C). Os computadores estão conectados por uma rede Gigabit Ethernet. Foi usado o sistema operacional Ubuntu 12.04 e CUDA 5.5.
 
 
-\begin{table}[!t]
+\begin{table}[htt]
 \centering
 \tiny
 \caption{Configuração das máquinas}
@@ -34,13 +36,12 @@ C                             & Intel i7 3930K & 2 x GK110     & 6GB            
 \end{table}
 
 
-Para usar todos os n multiprocessadores da GPU, é necessário criar ao menos n blocos. Mais que isso, cada multiprocessador simultaneamente executa grupos (chamados de warps) de m threads de um único bloco. e muitos warps estão presentes em cada GPU para o uso eficiente dos processadores.
+Para usar todos os $n$ multiprocessadores da GPU, é necessário criar ao menos $n$ blocos. Mais que isso, cada multiprocessador simultaneamente executa grupos (chamados de warps) de m threads de um único bloco. e muitos warps estão presentes em cada GPU para o uso eficiente dos processadores. Warp é um grupo de threads presentes em um bloco da GPU.
 
 Em todos os testes, usa-se todos os multiprocessadores das GPUs lançando kernels com $k$ blocos com 1024 threads por bloco, onde $k$ é o numero de processadores na GPU. Para as GPUs usadas, $k$ é 14, 8 e 30 na GTX Titan, GTX 680 e GTX 295 respectivamente. Para as CPUs, foram usados todos os cores das CPUs, lançando uma tarefa por core.
 
 \section{Multiplicação de Matrizes}
 
-A multiplicação de matrizes é uma importante operação da álgebra linear. Um grande número de aplicações científicas e da engenharia incluem esta operação. Devido a sua fundamental importância, muitos esforços tem sido devotados ao estudo e implementação da multiplicação de matrizes. A multiplicação de A e B, onde A é uma matriz de N linhas por P colunas e a matriz B é de P linhas por M colunas. O resultado é a matriz C de N linhas e M colunas. No StarPU, foram implementadas duas versões uma para CPU e outra para GPU. Para GPU foi utilizado o kernel da NVidia com uso de memória compartilhada.  Nesta implementação, cada bloco de threads é responsável por computar uma submatriz quadrada $C_sub$ de $C$ e cada thread dentro do bloco é responsável por um elemento de computação $C_sub$. $C_sub$ é igual ao produto de duas matrizes retangulares: a submatriz de A de dimensão (A.largura, tamanho\_bloco) que tem os mesmos índices das linhas de $C_sub$, e a submatriz de B de dimensão (block\_size, A.largura), que tem os mesmos índices de coluna de $C_sub$. As duas matrizes retangulares são divididas em tantas matrizes quadradas de dimensão block\_size quanto for necessário e $C_sub$ é computada como a soma dos produtos destas matrizes quadradas. Com o StarPU, o conceito foi fornecer a cada processador as partes correspondentes das matrizes, para que seja respeitada a execução do kernel. Para a CPU, cada core foi responsável por computar uma linha de A e coluna de B, escrevendo o resultado em C.
 
 O algoritmo foi testado para a multiplicação de matrizes usando uma, duas e três máquinas e quatro diferentes algoritmos de escalonamento: (1) algoritmo proposto, (2) estático, (3) HDSS, e (4) StarPU (guloso).
 
@@ -55,7 +56,7 @@ O algoritmo foi testado para a multiplicação de matrizes usando uma, duas e tr
 
 A figure \ref{fig:todosJuntos} apresenta os resultados para matrizes com tamanhos 10.000 x 10.000 a 50.000 x 50.000 elementos. Em todos os cenários, o algoritmo de escalonamento proposto obteve melhores resultados, com o HDSS em segundo. O estático e o StarPU foram claramente inferiores.
 
-Com uma máquina a diferença foi pequena porque há poucos tipos de dispositivos para o escalonador selecionar. Com duas máquinas nosso algoritmo começa a ter melhor desempenho, especialemente para casos de matrizes grandes, que é explicado pelo fato de que o tempo de execução da maultiplicação de matrizes aumenta rapidamente como aumenta-se o tamanho da matriz. Com três máquinas obteve-se o ambiente mais heterogêneo e o ganho de desempenho usando o algoritmo proposto é o maior. Como nos outros cenários, aumentando-se o tamanho da matriz também aumenta-se o ganho de desempenho como o algoritmo proposto. Para matrizes 10.000 x 10.000, o algoritmo proposto gastou 20 segundos enquanto o HDSS gastou 36, que resulta em 22,2\% mais rápido. E para matrizes 50.000 x 50.000, o algoritmo proposto gastou 433 segundos enquanto o HDSS 473, que resulta em 8,49\% mais rápido, o resumos está na tabela \ref{able: comparativo}
+Com uma máquina a diferença foi pequena porque há poucos tipos de dispositivos para o escalonador selecionar. Com duas máquinas nosso algoritmo começa a ter melhor desempenho, especialemente para casos de matrizes grandes, que é explicado pelo fato de que o tempo de execução da maultiplicação de matrizes aumenta rapidamente como aumenta-se o tamanho da matriz. Com três máquinas obteve-se o ambiente mais heterogêneo e o ganho de desempenho usando o algoritmo proposto é o maior. Como nos outros cenários, aumentando-se o tamanho da matriz também aumenta-se o ganho de desempenho como o algoritmo proposto. Para matrizes 10.000 x 10.000, o algoritmo proposto gastou 20 segundos enquanto o HDSS gastou 36, que resulta em 22,2\% mais rápido. E para matrizes 50.000 x 50.000, o algoritmo proposto gastou 433 segundos enquanto o HDSS 473, que resulta em 8,49\% mais rápido, o resumos está na tabela \ref{table: comparativo}
 
 \begin{table}[h]
 \centering
@@ -89,7 +90,7 @@ O algoritmo guloso do StarPU teve um bom desempenho, considerando que ele não t
 
 HDSS utiliza o início da execução para estimar o melhor tamanho de bloco e usa essa distribuição até o fim da execução. Além disso, grandes blocos são usados no início da execução, causando um atraso maior devido ao desbalanceamento quando usa diferentes tipos de dispositivos, como GPUs e CPUs. Por fim, HDSS utiliza uma aproximação bruta para a capacidade do dispositivo. 
 
-Uma das medidas realizadas foi de tempo utilizada para por exemplo o HDSS realizar o balanceamento, comparado ao algoritmo proposto. No HDSS, o tempo de balanceamento é de 0,2 segundo, enquanto para o algoritmo proposto é de 0,6 segundos. Diferença considerável, mas imperceptível dado que a melhor precisão do balanceamento compensa, o tempo gasto em cada balanceamento.
+Uma das medidas realizadas foi de tempo utilizada para por exemplo o HDSS realizar o balanceamento, comparado ao algoritmo proposto. No HDSS, o tempo de balanceamento é de 0,2 segundo, enquanto para o algoritmo proposto é de 0,6 segundos. Diferença considerável, mas a melhor precisão do balanceamento compensa, o tempo gasto em cada balanceamento.
  
 O algoritmo proposto tem  bastante precisão na estimativa,  a quantidade de dados que devem ser fornecida para cada unidade de processamento, a solução de um problema de optimização com o restrição de que todas as unidades devem terminar a execução das tarefas ao mesmo 
 tempo. Quando a diferença entre terminar a execução de threads para certos 
@@ -98,11 +99,15 @@ distribuição.
 
 \section{Blackscholes}
 
+Os experimentos para o blackscholes seguiram a mesma linha apresentados na multiplicação de matrizes. O algoritmo Blackscholes tem complexidade linear no tempo, diferente da multiplicação de matrizes que apresenta complexidade $O(n^3/2)$. 
+
+A transferência de dados é feita dividindo as opções que devem ser calculadas entre os diferentes processadores. O número de opções atribuidas a cada processador depende do algoritmo de balanceamento de carga. 
+
 \begin{figure}[htb]
 	\begin{center}
 	\centering
 			\includegraphics[scale=0.459]{MaquinaBlack.eps}
-	\caption{Diferença no tempo de execução para diferentes números de opção}
+	\caption{Diferença no tempo de execução para diferentes números de opções}
 	\label{fig:black}
 	\end{center}
 \end{figure}
@@ -125,7 +130,7 @@ Foram realizados testes de tempo de execução para a aplicação chamada blacks
 \label{table: black}
 \end{table}
 
-Também, considerou-se que a aplicação termina em menos que 4 segundos, para o cenário com 3 máquinas, é possível notar que o \emph{overhead} imposto pelo solucionador do sistema de equações para determinar a melhor distribuição é pequeno e o ganho obtido ultrapassa o custo dos cálculos. Para as aplicações testadas, em poucas iterações, foi possível obter a solução do sistema de equações, o que resultou em poucos milissegundos, na ordem de 10 ms.
+Também, considerou-se que a aplicação termina em menos que 4 segundos, para o cenário com 3 máquinas, é possível notar que o \emph{overhead} imposto pelo solucionador do sistema de equações para determinar a melhor distribuição é pequeno e o ganho obtido ultrapassa o custo dos cálculos. Para as aplicações testadas, em poucas iterações, foi possível obter a solução do sistema de equações, o que resultou em poucos milissegundos, na ordem de 0.4 s.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -136,7 +141,7 @@ Também, considerou-se que a aplicação termina em menos que 4 segundos, para o
 	\end{center}
 \end{figure}
 
-A figura~\ref{fig:diferencaThreadsBlack} confirma o resultado de que a diferença entre a primeira a terminar  e a última, no cenário com três máquinas é sempre menor para o algoritmo proposto.
+A figura~\ref{fig:diferencaThreadsBlack} confirma o resultado de que a diferença entre a primeira a terminar e a última, no cenário com três máquinas é sempre menor para o algoritmo proposto.
 
 
 \section{Conclusões}\label{cap6:conclusao}

@@ -7,11 +7,8 @@
 
 \chapter{Trabalhos Relacionados}\label{cap2}
 
-\section{Introdução}\label{cap2:intro}
-
 
 A crescente demanda de processamento de informação levantou especial interesse no campo de balanceamento de carga. Muitos trabalhos foram feitos neste campo buscando o aprimoramento de técnicas e o tratamento específico para os problemas de escalonamento e balanceamento mais recorrentes, em especial em arquiteturas heterogêneas. Neste capítulo são abordados os trabalhos que serviram como base para esta dissertação ou que exploraram algum assunto diretamente relacionado ao tema aqui apresentado. 
-
 
 As novas possibilidades trazidas com as novas arquiteturas de GPU
 estão instigando pesquisadores a rever o problema do balanceamento de
@@ -20,7 +17,7 @@ carga neste novo contexto. Apesar do balanceamento de carga ser crítico para o 
 \citep{graphics} analisaram várias estratégias de balanceamento de carga estática
 e dinâmica para um problema de partição de octree em GPUs. O balanceamento de
 carga é realizado internamente em uma única GPU, sem interação com a CPU. Neste trabalho foram testados os seguintes métodos de balanceamento de carga: (1) lista de tarefas estática, que consiste em dividir os dados em lista de tarefas, no qual cada unidade processamento retira uma tarefa da lista e executa-a, o trabalho termina quando a lista estiver vazia e o controle é retornado a CPU. (2) Lista de tarefas dinâmica bloqueante, que consiste em uma lista de tarefas que em tempo de execução pode receber novas tarefas. É bloqueante pois apenas um bloco de threads pode acessar a lista em um dado tempo. (3) Lista de tarefas dinâmica lock-free: consiste  
-em fazer com seja controlado o acesso na inserção  e remoção de tarefas na lista, dois blocos de threads podem acessar a lista, um para inserir e outro para remover tarefas, melhorando o paralelismo. (4) Roupo de tarefas: cada unidade de processamento recebe um conjunto de tarefas e quando completa as tarefas do conjunto tenta roubar uma tarefa de outra unidade de processamento que ainda não concluiu suas tarefas atribuídas. Se uma unidade cria uma nova tarefa, a unidade acrescenta a seu próprio conjunto local de tarefas. Este estudo se diferencia do apresentado, pois é analisado apenas o comportamento em GPUs, não adicionando CPUs e clusters. 
+em fazer com seja controlado o acesso na inserção  e remoção de tarefas na lista, dois blocos de threads podem acessar a lista, um para inserir e outro para remover tarefas, melhorando o paralelismo. (4) Roubo de tarefas: cada unidade de processamento recebe um conjunto de tarefas e quando completa as tarefas do conjunto tenta roubar uma tarefa de outra unidade de processamento que ainda não concluiu suas tarefas atribuídas. Se uma unidade cria uma nova tarefa, a unidade acrescenta a seu próprio conjunto local de tarefas. Este estudo se diferencia do apresentado, pois é analisado apenas o comportamento em GPUs, não adicionando CPUs e clusters. 
 
 Em outro estudo~\citep{tasks} com balanceamento de carga em GPUs, os autores propõem uma fila que mescla as cargas de trabalho que são subutilizados na GPU podendo ser executadas simultaneamente em uma GPU, através da fusão em um \textit{super-kernel}. No entanto, esta fusão precisa ser realizada estaticamente, e assim o equilíbrio dinâmico de carga não pode ser sempre garantido. O trabalho foca somente em GPUs, apesar de apresentar a característica dinâmica, de modificar o escalonamento em tempo de execução.
 
@@ -45,9 +42,10 @@ dados.
 
 Em~\citep{Clarke:2012:HPA:2402420.2402479}  os autores fizeram um balanceamento de carga dinâmico heterogêneo baseado na partição de matrizes, ou seja, apenas serve para problemas que envolvem matrizes. Há uma divisão da matriz entre as unidades, que se subdivide entre as subunidades e assim por diante. 
 
+No trabalho \citep{chen2010dynamic}, os autores propõe uma solução baseada em tarefas para o balanceamento de carga para sistema com várias GPUs. Atualmente no paradigma de programação em CUDA, para executar multiplas tarefas, o processo na CPU tem que lançar sequencialemente múltiplos \emph{kernels} e o hardware é responsável por arranjar como os kernel rodarão na GPU, isto faz com que se execute um kernel, o controle retorne para a CPU, que submete um novo kernel e assim por diante. No balanceamento de carga propoto neste trabalho, a ideia é manter os blocos de threads sempre ativos e fazer com que uma fila de tarefas seja criada. Para cada GPU uma fila de tarefas é criada e assim multiplas GPUs realizam o processamento da carga. O trabalho é diferente do nosso, pois é voltado para o conceito de tarefas, em vez de decomposição de domínio, além do que no nosso trabalho é considerado CPUs como elementos de processamento, também de uma forma mais geral tem o foco no algoritmo de balanceamento de carga, não em características da GPU.
 
 
-
+Por fim, \citep{HDSS} desenvolveram o que eles chamaram de Heterogeneous Dynamic Self-Scheduler (HDSS) que fornece um algoritmo de balanceamento de carga dinâmico, dividido em duas fases. A primeira fase é a fase adaptativa, que determina pesos que refletem a velocidade de cada processador. Esses pesos são determinados com base em ajustes de curvas logarítmicas em gráficos de velocidade de processamento. Estas ponderações são utilizadas durante a fase de acabamento, que é a segunda fase, onde é dividido os dados a serem processados nas iterações restantes entre as GPUs, com base nos pesos relativos de cada GPU. As principais diferenças com o nosso algoritmo é que  eles restringem os modelos de execução a curvas logaritmicas, que são apropriados para GPUs, mas não são apropriadas para CPUs na faixa de interesse. Além disso, nosso algoritmo pode realizar ajustes até o fim da execução.
 
 
 

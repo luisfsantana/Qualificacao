@@ -32,7 +32,7 @@ GPUs, sua utilização é uma ótima alternativa para pesquisadores pertencentes
 instituições com poucos recursos financeiros e com grande necessidade de
 recursos computacionais.
 
-Em diversos caso, o uso de GPUs ocasionam ganhos superiores a 100 vezes, quando
+Em diversos casos, o uso de GPUs ocasionam ganhos superiores a 100 vezes, quando
 comparado às CPUs tradicionais~\citep{Vouzis15012011}. No entanto, para muitos problemas, o uso de uma
 única GPU ainda limita o tamanho e complexidade do problema que pode ser
 resolvido. Neste caso, é possível utilizar múltiplas GPUs localizados em
@@ -77,27 +77,27 @@ balanceamento de carga em sistemas heterogêneos baseados em GPUs. Os existentes
 são \emph{frameworks} que requerem a reescrita da aplicação para que seja
 possível a execução nestes \emph{clusters}.
 
-\citep{acosta} propuseram um algoritmo de balanceamento de carga dinâmico que interativamente tenta encontrar uma boa distribuição do trabalho entre GPUs durante o exe- cução da aplicação. Uma biblioteca se concentra nas diferenças de tempos de códigos paralelos, com base em um esquema iterativo. É um esquema descentralizado em que as sincronizações são feitas a cada iteração para determinar se há uma necessidade de reequilibrar a carga. Cada processador executa uma redistribuição da carga de trabalho de acordo com o tamanho da tarefa atribuída e as capacidades do processador atribuído. O balanceamento de carga é obtido através da comparação do tempo de execução da tarefa atual para cada processador com a redistribuição da tarefa subseqüente, se o tempo atinge um limite a redistribuição de carga é feito. Nosso algoritmo é diferente porque cria curvas para cada unidade de processamento, e com base nessas curvas realiza o balanceamento de carga. 
+\citep{acosta} propuseram um algoritmo de balanceamento de carga dinâmico que interativamente tenta encontrar uma boa distribuição do trabalho entre GPUs durante o exe- cução da aplicação. Uma biblioteca se concentra nas diferenças de tempos de códigos paralelos, com base em um esquema iterativo. É um esquema descentralizado em que as sincronizações são feitas a cada iteração para determinar se há uma necessidade de reequilibrar a carga. Cada processador executa uma redistribuição da carga de trabalho de acordo com o tamanho da tarefa atribuída e as capacidades do processador atribuído. O balanceamento de carga é obtido através da comparação do tempo de execução da tarefa atual para cada processador com a redistribuição da tarefa subseqüente, se o tempo gasto para precessar a tarefa atingir um limite a redistribuição de carga é feito. 
 
-Um algoritmo estático que determina a distribuição antes de iniciar a execução da aplicação, utilizando os perfis estáticos de execuções anteriores, também foi proposta~\citep{raphael}. O algoritmo foi avaliado usando uma simulação de rede neural. O algoritmo encontra a distribuição de dados que minimiza o tempo de execução da aplicação, com base em perfis de execuções anteriores, assegurando que todas as GPUs para passar mesma quantidade de tempo que executa o processamento. Mas esta abordagem não permite alterações dinâmicas na distribuição de dados. 
+Um algoritmo estático que determina a distribuição antes de iniciar a execução da aplicação, utilizando os perfis estáticos de execuções anteriores, também foi proposta~\citep{raphael}. O algoritmo foi avaliado usando uma simulação de rede neural. O algoritmo encontra a distribuição de dados que minimiza o tempo de execução da aplicação, com base em perfis de execuções anteriores, assegurando que todas as GPUs para passar mesma quantidade de tempo que executa o processamento. 
 
-O  (HDSS)~\citep{HDSS} fornece um algoritmo de balanceamento de carga dinâmico, dividido em duas fases. O primeiro é a fase adaptativo, que determina pesos que refletem a velocidade de cada processador. Esses pesos são determinados com base em ajustes de curvas logarítmicas em gráficos de velocidade de processamento. Estas ponderações são utilizadas durante a fase de acabamento, onde se divide nas iterações restantes entre as GPUs com base nos pesos relativos de cada GPU. As principais diferenças com o nosso algoritmo é que não restringem os modelos de execução de curvas de logaritmos, que são apropriados para GPUs, mas não ou CPUs na faixa de interesse. Além disso, nosso algoritmo pode realizar ajustes até o fim da execução.
+O  (HDSS)~\citep{HDSS} fornece um algoritmo de balanceamento de carga dinâmico, dividido em duas fases. O primeiro é a fase adaptativo, que determina pesos que refletem a velocidade de cada processador. Esses pesos são determinados com base em ajustes de curvas logarítmicas em gráficos de velocidade de processamento. Estas ponderações são utilizadas durante a fase de acabamento, onde se divide nas iterações restantes entre as GPUs com base nos pesos relativos de cada GPU.
 
 
 \section{Objetivos e Contribuições}\label{cap1:objetivos}
 
 O presente trabalho tem como objetivo o desenvolvimento de um algoritmo de balanceamento de carga para aglomerados de GPUs heterogêneos, ou seja, todo o planejamento e respaldo para a criação de um algoritmo eficiente que minimize o tempo total de processamento.
 
-O algoritmo está implementando usando o \textit{framework} denominado StarPu, que é voltado para aglomerados. A estrutura do arcabouço facilitou e acelerou a implementação do algoritmo.
+O algoritmo será implementando usando o \textit{framework} denominado StarPu, que é voltado para aglomerados. A estrutura do arcabouço facilitará a implementação do algoritmo.
 
-Por fim, foram feitos testes de comparação de desempenho do algoritmo desenvolvido com os atuais algoritmos para a execução das mesmas tarefas.
+Por fim, serão feitos testes de comparação de desempenho do algoritmo desenvolvido com os atuais algoritmos para a execução das mesmas tarefas.
 
 
 \section{Organização da Dissertação}\label{cap1:organizacao}
 
 Esta dissertação se divide em seis capítulos. O Capítulo 2 apresenta a fundamentação utilizada neste trabalho. Neste capítulo são discutidos os conceitos, classes e técnicas de escalonamento. O Capítulo 3 descreve os trabalhos relacionados ao que tange o escalonamento de tarefas e mais especificadamente ao balanceamento de carga em aglomerados heterogêneos.
-O Capítulo 4, mostra os detalhes referentes ao ambiente experimental e implementação.
-O Capítulo 5 apresenta os resultados e conclusões desta dissertação, assim como sugestões de trabalhos futuros.
-Por fim o capítulo 6 apresenta o plano de trabalho, das atividades já desenvolvidas e as próximas atividades a serem desenvolvidas.
+O Capítulo 4, apresenta o detalhadamento do algoritmo proposto. O capitulo 5, mostra detalhes de implementação, e os problemas testados. 
+O Capítulo 6 apresenta os resultados e conclusões desta dissertação, assim como sugestões de trabalhos futuros.
+Por fim o capítulo 7 apresenta o plano de trabalho, das atividades já desenvolvidas e as próximas atividades a serem desenvolvidas.
 
 
